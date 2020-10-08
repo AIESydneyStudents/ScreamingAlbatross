@@ -6,7 +6,7 @@ Rapid delivery is a endless runner where the player must drive around a city wit
 ### Contributors:
 Contributors to the project are strictly limated to AIE Students as part of their group work project.
 
-Members (example):
+Developers:
  - Oscar Smith (Programmer)
  - Thomas Lamb (Programmer)
  - Andrew Spinks (Game Designer)
