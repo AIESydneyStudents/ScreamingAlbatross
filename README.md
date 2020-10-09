@@ -1,12 +1,12 @@
 # PROJECT NAME
 
 ## About the Game
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Rapid delivery is a endless runner where the player must drive around a city with different cultures, dodging obstacles to deliver tea through the means of a tea cannon on the back of the car
 
 ### Contributors:
 Contributors to the project are strictly limated to AIE Students as part of their group work project.
 
-Members (example):
+Developers:
  - Oscar Smith (Programmer)
  - Thomas Lamb (Programmer)
  - Andrew Spinks (Game Designer)
