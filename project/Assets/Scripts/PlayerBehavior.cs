@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerBehavior : MonoBehaviour
 {
     public float time = 0f;
-    public float dTime = 0.2f;
+    public float dTime = 0.1f;
     private int intLane = 0;
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPos;
@@ -31,7 +31,7 @@ public class PlayerBehavior : MonoBehaviour
         // moveable == 0 means the player may move at any point 
 
         // on "A" or "LeftArrow" press
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (intLane != -1)
             {
@@ -76,7 +76,6 @@ public class PlayerBehavior : MonoBehaviour
             yield return null;
         }
         time = 0;
-        Debug.Log("Target Reached");
     }
 
 }
