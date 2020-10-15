@@ -228,13 +228,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyboardOrMouse: 0
+  mouseSensitivity: 0.034
   time: 0
   dTime: 0.2
   leftLane: {fileID: 1202497142}
   middleLane: {fileID: 633626946}
   rightLane: {fileID: 1486109988}
   lanes: []
-  temp: {fileID: 1491745834}
 --- !u!1 &516722000
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,8 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        #region MOVEMENT
+
         Vector3 pos = transform.position;
         // moveable == 0 means the player may move at any point 
 
@@ -62,6 +64,8 @@ public class PlayerBehavior : MonoBehaviour
                 Debug.Log("Illegal Move!");
             }
         }
+
+        #endregion
     }
 
     // move script
@@ -70,8 +74,6 @@ public class PlayerBehavior : MonoBehaviour
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
-
-            
 
             yield return null;
         }

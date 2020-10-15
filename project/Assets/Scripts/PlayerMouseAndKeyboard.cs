@@ -6,6 +6,10 @@ public class PlayerMouseAndKeyboard : MonoBehaviour
 {
     public bool KeyboardOrMouse = true;
 
+    [SerializeField]
+    [Range(0, 1)]
+    public float mouseSensitivity;
+
     public float time = 0f;
     public float dTime = 0.1f;
     private int intLane = 0;
@@ -17,7 +21,6 @@ public class PlayerMouseAndKeyboard : MonoBehaviour
     public Transform rightLane;
 
     public List<Transform> lanes;
-    public Camera maincamera;
 
     // Start is called before the first frame update
     void Start()
@@ -72,24 +75,20 @@ public class PlayerMouseAndKeyboard : MonoBehaviour
         // if mouse is used
         else if (!KeyboardOrMouse)
         {
-            var target = Input.mousePosition;
-            //target.z = transform.position.z;
-            target = Camera.main.ScreenToWorldPoint(target);
-
-            Debug.Log(target);
-            if (target.z > 3)
+            float mouseX = Input.GetAxis("Mouse X");
+            pos.z += mouseX * mouseSensitivity;
+            if (pos.z > 3)
             {
                 pos.z = lanes[2].position.z;
                 transform.position = pos;
             }
-            else if (target.z < -3)
+            else if (pos.z < -3)
             {
                 pos.z = lanes[0].position.z;
                 transform.position = pos;
             }
             else
             {
-                pos.z = target.z;
                 transform.position = pos;
             }
         }
@@ -101,8 +100,6 @@ public class PlayerMouseAndKeyboard : MonoBehaviour
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
-
-
 
             yield return null;
         }
