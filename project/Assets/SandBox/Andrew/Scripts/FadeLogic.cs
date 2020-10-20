@@ -5,6 +5,7 @@ public class FadeLogic : MonoBehaviour
 {
     [SerializeField] float m_fadeSpeed;
     [SerializeField] Image m_image;
+    [SerializeField] Text m_text;
 
     bool m_run;
 
@@ -20,6 +21,9 @@ public class FadeLogic : MonoBehaviour
             if (m_image != null)
             {
                 m_image.color = UpdateAlpha(m_image.color);
+            }else if (m_text != null)
+            {
+                m_text.color = UpdateAlpha(m_text.color);
             }
         }
     }
