@@ -25,7 +25,7 @@ public class PlayerBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         #region MOVEMENT
 
@@ -66,13 +66,6 @@ public class PlayerBehavior : MonoBehaviour
         }
 
         #endregion
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag == "GameEnd")
-        {
-            gameObject.SetActive(false);
-        }
     }
 
     // move script
