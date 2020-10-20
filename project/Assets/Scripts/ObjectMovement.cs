@@ -14,7 +14,10 @@ public class ObjectMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "DeathCollider")
         {
-            transform.position = m_spawner.gameObject.transform.position;
+            Vector3 pos = m_spawner.gameObject.transform.position;
+            float iterator = Random.Range(-1, 1);
+            pos.z += iterator;
+            transform.position = pos;
         }
     }
 
