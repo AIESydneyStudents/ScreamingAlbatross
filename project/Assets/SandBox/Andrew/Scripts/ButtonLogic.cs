@@ -35,7 +35,7 @@ public class ButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         m_text.color = m_defaultColour;
         m_buttonTransferObject.m_Value = m_button;
-        //m_audioTransferVariable.m_Value = m_myClip;
+        m_audioTransferVariable.m_Value = m_myClip;
         m_buttonClicked.Raise();
     }
 }

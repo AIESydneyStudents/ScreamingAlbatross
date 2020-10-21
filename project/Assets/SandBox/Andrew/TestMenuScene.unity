@@ -1569,7 +1569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_audioTransferVariable: {fileID: 11400000, guid: d85d2d422be23934782b9ace8af7ed21,
     type: 2}
-  m_source: {fileID: 0}
+  m_source: {fileID: 1428533286}
 --- !u!1 &1450326690
 GameObject:
   m_ObjectHideFlags: 0
