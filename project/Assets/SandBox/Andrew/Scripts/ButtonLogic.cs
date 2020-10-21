@@ -6,6 +6,11 @@ public class ButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 {
     [SerializeField] Text m_text;
     [SerializeField] Color m_highlightColor;
+    [SerializeField] MenuButtons m_button;
+    [SerializeField] ScriptableButtonEnum m_buttonTransferObject;
+    [SerializeField] GameEvent m_buttonClicked;
+    [SerializeField] ScriptableAudioClip m_audioTransferVariable;
+    [SerializeField] AudioClip m_myClip;
     Color m_defaultColour;
     private void OnEnable()
     {
@@ -28,5 +33,9 @@ public class ButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     }
     public void OnPointerUp(PointerEventData eventData)
     {
+        m_text.color = m_defaultColour;
+        m_buttonTransferObject.m_Value = m_button;
+        m_audioTransferVariable.m_Value = m_myClip;
+        m_buttonClicked.Raise();
     }
 }

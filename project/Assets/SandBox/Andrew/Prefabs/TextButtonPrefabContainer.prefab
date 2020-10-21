@@ -51,6 +51,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_text: {fileID: 1123881319369792103}
   m_highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  m_button: 0
+  m_buttonTransferObject: {fileID: 11400000, guid: ff922af41c0a1784e86dcb9c3c6bde49,
+    type: 2}
+  m_buttonClicked: {fileID: 11400000, guid: 580e9b98f79305f4f8e33431211949f9, type: 2}
+  m_audioTransferVariable: {fileID: 11400000, guid: d85d2d422be23934782b9ace8af7ed21,
+    type: 2}
+  m_myClip: {fileID: 8300000, guid: dcd235e01bca6604fbb028d28d0f51a6, type: 3}
 --- !u!1 &1123881319369792101
 GameObject:
   m_ObjectHideFlags: 0
