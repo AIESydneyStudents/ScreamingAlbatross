@@ -13,6 +13,6 @@ public class Test2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // This is a test to test to see if it works plz help me :)
     }
 }
