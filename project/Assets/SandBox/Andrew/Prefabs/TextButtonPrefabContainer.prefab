@@ -55,6 +55,8 @@ MonoBehaviour:
   m_buttonTransferObject: {fileID: 11400000, guid: ff922af41c0a1784e86dcb9c3c6bde49,
     type: 2}
   m_buttonClicked: {fileID: 11400000, guid: 580e9b98f79305f4f8e33431211949f9, type: 2}
+  m_audioTransferVariable: {fileID: 11400000, guid: d85d2d422be23934782b9ace8af7ed21,
+    type: 2}
 --- !u!1 &1123881319369792101
 GameObject:
   m_ObjectHideFlags: 0
