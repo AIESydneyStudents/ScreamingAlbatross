@@ -17,7 +17,7 @@ public class Builder
         var scenes = EditorBuildSettings.scenes;
         var levels = scenes.Select(z => z.path).ToArray();
 
-        BuildPipeline.BuildPlayer(levels, webFileName, BuildTarget.WebGL, BuildOptions.None);
+        //BuildPipeline.BuildPlayer(levels, webFileName, BuildTarget.WebGL, BuildOptions.None);
         BuildPipeline.BuildPlayer(levels, pcFileName, BuildTarget.StandaloneWindows, BuildOptions.None);
         
         Thread.Sleep(2000);
