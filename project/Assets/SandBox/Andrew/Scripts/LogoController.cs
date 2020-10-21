@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LogoController : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class LogoController : MonoBehaviour
         if(m_elapsedTime >= m_targetTime)
         {
             //load menu screen
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 }
