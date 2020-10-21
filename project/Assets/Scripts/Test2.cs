@@ -14,5 +14,6 @@ public class Test2 : MonoBehaviour
     void Update()
     {
         // This is a test to test to see if it works plz help me :)
+        // No help will be given to u.
     }
 }
