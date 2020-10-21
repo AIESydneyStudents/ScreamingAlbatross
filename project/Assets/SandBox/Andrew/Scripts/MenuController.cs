@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
@@ -21,6 +22,9 @@ public class MenuController : MonoBehaviour
                 break;
             case MenuButtons.Back:
                 BackButton();
+                break;
+            case MenuButtons.Continue:
+                ContinueButton();
                 break;
             case MenuButtons.None:
                 break;
@@ -51,5 +55,9 @@ public class MenuController : MonoBehaviour
         //return to the main menu
         m_mainMenuObject.SetActive(true);
         m_optionsMenuObject.SetActive(false);
+    }
+    private void ContinueButton()
+    {
+        //load game from saved data
     }
 }
