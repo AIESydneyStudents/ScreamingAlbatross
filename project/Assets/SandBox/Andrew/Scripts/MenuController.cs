@@ -8,13 +8,16 @@ public class MenuController : MonoBehaviour
     [SerializeField] ScriptableButtonEnum e_buttonPressed;
     [SerializeField] GameObject m_mainMenuObject;
     [SerializeField] GameObject m_optionsMenuObject;
-    [SerializeField] Text m_themeText;
+    [SerializeField] GameObject m_confirmationPrompt;
+    [SerializeField] Text m_themeText, m_mouseControlsText;
+    [SerializeField] ScriptableVariableTransferObject m_vto;
     Themes m_currentTheme;
 
     private void OnEnable()
     {
         m_currentTheme = Themes.Indian;
         ThemeButton();
+        m_vto.Reset();
     }
     public void ButtonPressed()
     {
@@ -38,6 +41,9 @@ public class MenuController : MonoBehaviour
             case MenuButtons.Theme:
                 ThemeButton();
                 break;
+            case MenuButtons.MouseControls:
+                MouseControlsButton();
+                break;
             case MenuButtons.None:
                 break;
         }
@@ -52,7 +58,7 @@ public class MenuController : MonoBehaviour
     private void ExitButton()
     {
         //ends the application
-        Application.Quit();
+        m_confirmationPrompt.SetActive(true);
     }
 
     private void OptionsButton()
@@ -82,5 +88,21 @@ public class MenuController : MonoBehaviour
             m_currentTheme = Themes.Random;
         }
         m_themeText.text = Enum.GetName(typeof(Themes), m_currentTheme);
+    }
+    private void MouseControlsButton()
+    {
+        m_vto.m_MouseControls = !m_vto.m_MouseControls;
+        if(m_vto.m_MouseControls)
+        {
+            m_mouseControlsText.text = "Enabled";
+        }else
+        {
+            m_mouseControlsText.text = "Disabled";
+        }
+    }
+
+    public void QuitApplication()
+    {
+        Application.Quit();
     }
 }

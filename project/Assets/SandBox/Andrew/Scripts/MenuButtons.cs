@@ -9,5 +9,6 @@
     MasterVolume,
     SFXVolume,
     MusicVolume,
-    Theme
+    Theme,
+    MouseControls
 }
