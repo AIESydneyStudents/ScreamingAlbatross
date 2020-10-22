@@ -73,17 +73,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             Time.timeScale = 1.0f;
         }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            if (Time.timeScale == 0.0f)
-            {
-                Time.timeScale = 1.0f;
-            }
-            else if (Time.timeScale == 0.0f)
-            {
-                Time.timeScale = 1.0f;
-            }
-        }
+ 
     }
 
     // move script
