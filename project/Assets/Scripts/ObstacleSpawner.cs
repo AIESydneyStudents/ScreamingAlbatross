@@ -29,10 +29,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        
         spawnTimer += Time.deltaTime;
 
         if (spawnTimer > spawnChargeTimer)

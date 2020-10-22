@@ -1272,8 +1272,8 @@ MonoBehaviour:
   ObstaclePrefab: {fileID: 744425651221590910, guid: 09312be0879c4f04780063416751a510,
     type: 3}
   repeatAllowed: 1
-  spawnChargeTimer: 2
-  spawnDelay: 4
+  spawnChargeTimer: 1.5
+  spawnDelay: 3
 --- !u!4 &85476282
 Transform:
   m_ObjectHideFlags: 0
