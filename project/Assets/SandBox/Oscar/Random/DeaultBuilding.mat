@@ -63,7 +63,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - X_Axis: 0
-    - Y_Axis: -8
+    - Y_Axis: 0
     - Z_Axis: 0
     - _AlphaClip: 0
     - _Blend: 0
