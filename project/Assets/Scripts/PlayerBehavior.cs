@@ -11,6 +11,8 @@ public class PlayerBehavior : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPos;
 
+    public Transform target;
+
     public Transform leftLane;
     public Transform middleLane;
     public Transform rightLane;
@@ -71,6 +73,17 @@ public class PlayerBehavior : MonoBehaviour
         {
             Time.timeScale = 1.0f;
         }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (Time.timeScale == 0.0f)
+            {
+                Time.timeScale = 1.0f;
+            }
+            else if (Time.timeScale == 0.0f)
+            {
+                Time.timeScale = 1.0f;
+            }
+        }
     }
 
     // move script
@@ -91,5 +104,5 @@ public class PlayerBehavior : MonoBehaviour
             FailMenu.SetActive(true);
             Time.timeScale = 0.0f;
         }
-    }   
+    }
 }
