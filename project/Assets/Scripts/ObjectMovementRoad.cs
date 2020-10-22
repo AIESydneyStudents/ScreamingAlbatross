@@ -9,6 +9,10 @@ public class ObjectMovementRoad : MonoBehaviour
     public float speed = 5;
 
     public GameObject m_spawner;
+    void FixedUpdate()
+    {
+        transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime, Space.World);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,16 +20,16 @@ public class ObjectMovementRoad : MonoBehaviour
         {
             transform.position = m_spawner.gameObject.transform.position;
         }
+        if (other.gameObject.tag == "DeleteBox")
+        {
+            Destroy(this.gameObject);
+        }
     }
-
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime, Space.World);
+        if (collision.gameObject.tag == "DeleteBox")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

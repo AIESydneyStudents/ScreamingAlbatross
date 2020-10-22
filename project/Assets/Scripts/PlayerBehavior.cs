@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
+    public GameObject FailMenu;
     public float time = 0f;
     public float dTime = 0.1f;
     private int intLane = 0;
@@ -66,6 +67,10 @@ public class PlayerBehavior : MonoBehaviour
         }
 
         #endregion
+        if (FailMenu.activeSelf == false && Time.timeScale != 1.0f)
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 
     // move script
@@ -79,5 +84,12 @@ public class PlayerBehavior : MonoBehaviour
         }
         time = 0;
     }
-
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            FailMenu.SetActive(true);
+            Time.timeScale = 0.0f;
+        }
+    }   
 }
