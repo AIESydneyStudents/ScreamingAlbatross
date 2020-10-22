@@ -13,10 +13,13 @@ public class CannonAiming : MonoBehaviour
             cannonControl.target = collision.gameObject;
         }
     }
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    cannonControl.target = null;
-    //    cannonControl.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
-    //}
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Customer")
+        {
+            cannonControl.target = null;
+            cannonControl.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
+    }
 
 }
