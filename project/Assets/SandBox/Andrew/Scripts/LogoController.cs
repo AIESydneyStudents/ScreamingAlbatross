@@ -7,6 +7,8 @@ public class LogoController : MonoBehaviour
     [SerializeField] GameObject[] m_textObjects;
     [SerializeField] GameObject[] m_revealObject;
     [SerializeField] float[] m_revealObjectDelays;
+    [SerializeField] ScriptableVolumeObject m_volumeTransferObject;
+    [SerializeField] AudioSource m_source;
 
     float m_elapsedTime;
     int m_revealIndex;
@@ -14,6 +16,7 @@ public class LogoController : MonoBehaviour
     {
         m_elapsedTime = 0f;
         m_revealIndex = 0;
+        m_source.volume = m_volumeTransferObject.m_Master * m_volumeTransferObject.m_Music;
     }
     void Update()
     {
@@ -23,6 +26,9 @@ public class LogoController : MonoBehaviour
         {
             m_textObjects[m_revealIndex].SetActive(true);
             m_revealObject[m_revealIndex].SetActive(true);
+
+            if(m_revealIndex == 1)
+                m_source.Play();
 
             m_revealIndex++;
         }
