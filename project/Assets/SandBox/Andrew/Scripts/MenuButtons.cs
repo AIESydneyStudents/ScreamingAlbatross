@@ -4,5 +4,10 @@
     Play,
     Exit,
     Options,
-    Back
+    Back,
+    Continue,
+    MasterVolume,
+    SFXVolume,
+    MusicVolume,
+    Theme
 }

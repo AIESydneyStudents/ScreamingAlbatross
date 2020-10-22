@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - DeathCollider
+  - DeleteBox
+  - Obstacle
+  - Customer
   layers:
   - Default
   - TransparentFX
