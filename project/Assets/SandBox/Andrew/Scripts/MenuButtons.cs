@@ -8,5 +8,6 @@
     Continue,
     MasterVolume,
     SFXVolume,
-    MusicVolume
+    MusicVolume,
+    Theme
 }
