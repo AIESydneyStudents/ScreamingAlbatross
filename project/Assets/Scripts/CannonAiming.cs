@@ -6,6 +6,7 @@ public class CannonAiming : MonoBehaviour
 {
     [SerializeField] CannonRotationTest cannonControl;
 
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Customer")
@@ -21,5 +22,6 @@ public class CannonAiming : MonoBehaviour
             cannonControl.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
         }
     }
+
 
 }

@@ -12,6 +12,11 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject scoreMenu;
     [SerializeField] GameObject mainGameMenu;
 
+    [SerializeField] CannonRotationTest teaDeliverAmount;
+    private int teaAmount;
+    [SerializeField] GameObject teaAmountMenu;
+    private Text teaText;
+
     [SerializeField] GameObject endScoreMenu;
     private Text endScoreText;
     [SerializeField] GameObject finalScoreMenu;
@@ -21,6 +26,7 @@ public class UIController : MonoBehaviour
 
     private float score;
     private Text scoreText;
+    private float amountOfDeliveries;
 
     private void Start()
     {
@@ -28,6 +34,7 @@ public class UIController : MonoBehaviour
         endScoreText = endScoreMenu.GetComponent<Text>();
         finalScoreText = finalScoreMenu.GetComponent<Text>();
         timeText = timeTextMenu.GetComponent<Text>();
+        teaText = teaAmountMenu.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -39,10 +46,10 @@ public class UIController : MonoBehaviour
             int scoreRounded = (int)score;
             endScoreText.text = "Score: " + scoreRounded.ToString();
             timeText.text = "Time: " + (int)Time.timeSinceLevelLoad;
-            int finalScore = (int)(score + Time.timeSinceLevelLoad);
+            teaAmount = teaDeliverAmount.amountOfTeaDelivered;
+            teaText.text = "Tea Delivered: " + teaAmount.ToString();
+            int finalScore = (int)(score + Time.timeSinceLevelLoad) + teaAmount;
             finalScoreText.text = "Final Score: " + finalScore.ToString();
-
-            
         }
         if (failMenu.activeInHierarchy == false)
         {
@@ -82,6 +89,10 @@ public class UIController : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+    public void AddDelivery()
+    {
+        amountOfDeliveries++;
     }
     
 }
