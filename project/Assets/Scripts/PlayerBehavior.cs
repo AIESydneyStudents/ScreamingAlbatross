@@ -19,6 +19,8 @@ public class PlayerBehavior : MonoBehaviour
 
     public List<Transform> lanes;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,10 +71,7 @@ public class PlayerBehavior : MonoBehaviour
         }
 
         #endregion
-        if (FailMenu.activeSelf == false && Time.timeScale != 1.0f)
-        {
-            Time.timeScale = 1.0f;
-        }
+        
  
     }
 
@@ -94,5 +93,6 @@ public class PlayerBehavior : MonoBehaviour
             FailMenu.SetActive(true);
             Time.timeScale = 0.0f;
         }
+        
     }
 }
