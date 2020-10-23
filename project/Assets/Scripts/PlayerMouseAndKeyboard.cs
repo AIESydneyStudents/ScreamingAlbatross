@@ -18,6 +18,9 @@ public class PlayerMouseAndKeyboard : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPos;
 
+    public Animation animLeft;
+    public Animation animRight;
+
     public Transform leftLane;
     public Transform middleLane;
     public Transform rightLane;
@@ -45,7 +48,7 @@ public class PlayerMouseAndKeyboard : MonoBehaviour
             {
                 if (intLane != -1)
                 {
-                    StopCoroutine(MoveDirection(true));
+                    //StopCoroutine(MoveDirection(true));
                     targetPos = new Vector3(pos.x, pos.y, lanes[intLane].position.z);
                     intLane--;
                     time += dTime;
@@ -61,7 +64,7 @@ public class PlayerMouseAndKeyboard : MonoBehaviour
             {
                 if (intLane != 1)
                 {
-                    StopCoroutine(MoveDirection(false));
+                    //StopCoroutine(MoveDirection(false));
                     targetPos = new Vector3(pos.x, pos.y, lanes[intLane + 2].position.z);
                     intLane++;
                     time += dTime;
@@ -99,21 +102,8 @@ public class PlayerMouseAndKeyboard : MonoBehaviour
     // move script
     IEnumerator MoveDirection(bool LR)
     {
-        float t = 0f;
-        float direction = 0;
-        if (LR == true) { direction = -15; }
-        else { direction = 15; }
-
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
-            if (t < dTime / 2)
-            {
-                transform.rotation = Quaternion.Lerp(transform.rotation, (transform.rotation * Quaternion.AngleAxis(direction, Vector3.up)), dTime / 2);
-            }
-            else if (t > dTime / 2 && t < dTime)
-            {
-                transform.rotation = Quaternion.Lerp(transform.rotation, (transform.rotation * Quaternion.AngleAxis(-direction, Vector3.up)), dTime / 2);
-            }
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
 
             yield return null;
