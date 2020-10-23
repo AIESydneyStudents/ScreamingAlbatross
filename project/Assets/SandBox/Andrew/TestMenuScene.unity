@@ -2499,7 +2499,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f1b98a1302d8ba84d935d15dae68f92f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3626,7 +3626,7 @@ PrefabInstance:
     - target: {fileID: 7567100490694683549, guid: 19f6f34860952854090ccb33bb751d27,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7567100490694683549, guid: 19f6f34860952854090ccb33bb751d27,
         type: 3}
@@ -3636,7 +3636,7 @@ PrefabInstance:
     - target: {fileID: 7567100490694683549, guid: 19f6f34860952854090ccb33bb751d27,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7567100490694683549, guid: 19f6f34860952854090ccb33bb751d27,
         type: 3}
@@ -4036,7 +4036,7 @@ PrefabInstance:
     - target: {fileID: 7567100490694683549, guid: 19f6f34860952854090ccb33bb751d27,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7567100490694683549, guid: 19f6f34860952854090ccb33bb751d27,
         type: 3}

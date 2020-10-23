@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Volume Transfer Object
   m_EditorClassIdentifier: 
   m_Master: 1
-  m_SFX: 1
-  m_Music: 1
+  m_SFX: 0.86234766
+  m_Music: 0.041669168

@@ -10,6 +10,7 @@ public class MenuAudioController : MonoBehaviour
     private void OnEnable()
     {
         UpdateVolume();
+        m_musicSource.Play();
     }
 
     public void UpdateVolume()
