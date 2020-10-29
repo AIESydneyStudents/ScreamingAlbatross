@@ -4,23 +4,32 @@ using UnityEngine;
 
 public class CannonRotationTest : MonoBehaviour
 {
+    private float speed = 2f;
     public GameObject target;
-    [SerializeField] GameObject projectile;
-    private GameObject recentShot;
-    public int amountOfTeaDelivered;
-    
+    private Quaternion normalDirection;
+
+    private void Start()
+    {
+        normalDirection = transform.rotation;
+    }
+
     void Update()
     {
         if (target != null)
         {
-            transform.LookAt(target.transform);
-            transform.Rotate(0, 90, 0);
+            speed = 10;
+            Vector3 dirToTarget = target.transform.position - transform.position;
+            dirToTarget.y = 0f;
+
+            Quaternion lookAt = Quaternion.LookRotation(dirToTarget);
+            lookAt.eulerAngles += new Vector3(0, 90, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookAt, Time.deltaTime * speed);
         }
-        if (Input.GetKey(KeyCode.Space))
+        else
         {
-            Instantiate(projectile, transform.position, transform.rotation);
-            amountOfTeaDelivered++;
+            speed = 2;
+            Quaternion lookAt = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookAt, Time.deltaTime * speed);
         }
     }
-
 }
