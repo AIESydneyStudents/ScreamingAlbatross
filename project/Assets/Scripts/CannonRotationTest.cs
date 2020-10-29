@@ -7,6 +7,7 @@ public class CannonRotationTest : MonoBehaviour
     private float speed = 2f;
     public GameObject target;
     private Quaternion normalDirection;
+    private ProjectileMovement projectilTarget;
 
     private void Start()
     {

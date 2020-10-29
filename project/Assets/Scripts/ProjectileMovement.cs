@@ -17,6 +17,8 @@ public class ProjectileMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt();
+
         transform.position += -transform.forward * shootSpeed * Time.deltaTime;
     }
     private void OnTriggerEnter(Collider other)
