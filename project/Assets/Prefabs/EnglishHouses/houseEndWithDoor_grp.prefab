@@ -439,6 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466019755552814240}
   - component: {fileID: 4853869541831887418}
+  - component: {fileID: 6692341490001661694}
   m_Layer: 0
   m_Name: houseEndWithDoor_grp
   m_TagString: Untagged
@@ -479,6 +480,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+--- !u!65 &6692341490001661694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619599748017160197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 566.14905, y: 676.599, z: 269.37753}
+  m_Center: {x: -31.340887, y: 337.7995, z: -134.18874}
 --- !u!1 &5826068483819569947
 GameObject:
   m_ObjectHideFlags: 0

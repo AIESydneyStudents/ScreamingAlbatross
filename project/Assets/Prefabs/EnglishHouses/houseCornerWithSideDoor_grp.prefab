@@ -996,6 +996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4833554381933559510}
   - component: {fileID: -1398158469628903942}
+  - component: {fileID: 5860519247910502834}
   m_Layer: 0
   m_Name: houseCornerWithSideDoor_grp
   m_TagString: Untagged
@@ -1036,6 +1037,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+--- !u!65 &5860519247910502834
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8261993946287356246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 566.14905, y: 676.599, z: 269.37753}
+  m_Center: {x: -31.340887, y: 337.7995, z: -134.18874}
 --- !u!1 &9035842028853451678
 GameObject:
   m_ObjectHideFlags: 0
