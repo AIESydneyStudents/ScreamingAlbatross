@@ -24,8 +24,7 @@ public class EnvironmentSpawner : MonoBehaviour
         timerRight += Time.deltaTime;
         timerLeft += Time.deltaTime;
 
-        Debug.Log(timerRight);
-        Debug.Log(timerLeft);
+        
 
 
 

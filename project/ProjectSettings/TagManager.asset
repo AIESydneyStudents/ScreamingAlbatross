@@ -8,6 +8,7 @@ TagManager:
   - DeleteBox
   - Obstacle
   - Customer
+  - Road
   layers:
   - Default
   - TransparentFX

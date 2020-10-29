@@ -18,6 +18,7 @@ public class RoadMovement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        
         transform.position = spawner.transform.position;
     }
 }

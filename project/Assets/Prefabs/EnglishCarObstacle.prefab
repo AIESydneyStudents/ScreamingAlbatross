@@ -882,8 +882,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1916066634135650500}
-  - component: {fileID: 3621425945925491176}
   - component: {fileID: 8587283587688685722}
+  - component: {fileID: -8302294731812542479}
   m_Layer: 0
   m_Name: EnglishCarObstacle
   m_TagString: Obstacle
@@ -913,20 +913,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3621425945925491176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3228066819545019095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca910ce71aa87434f904a71504987d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  m_moveSpeed: 80
 --- !u!65 &8587283587688685722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -940,6 +926,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 346.5511, y: 333.5489, z: 634.8585}
   m_Center: {x: 4.206723, y: 14.52148, z: 0.21085739}
+--- !u!114 &-8302294731812542479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228066819545019095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9e61e9fc932c59449cf7e07c896da1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
 --- !u!1 &3978592861466750500
 GameObject:
   m_ObjectHideFlags: 0
