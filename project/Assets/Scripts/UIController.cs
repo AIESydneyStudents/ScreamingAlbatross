@@ -46,7 +46,7 @@ public class UIController : MonoBehaviour
             int scoreRounded = (int)score;
             endScoreText.text = "Score: " + scoreRounded.ToString();
             timeText.text = "Time: " + (int)Time.timeSinceLevelLoad;
-            teaAmount = teaDeliverAmount.amountOfTeaDelivered;
+            
             teaText.text = "Tea Delivered: " + teaAmount.ToString();
             int finalScore = (int)(score + Time.timeSinceLevelLoad) + teaAmount;
             finalScoreText.text = "Final Score: " + finalScore.ToString();
