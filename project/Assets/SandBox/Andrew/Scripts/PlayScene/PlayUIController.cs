@@ -10,7 +10,10 @@ public class PlayUIController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseGame();
+            if (m_pauseContainer.activeInHierarchy)
+                UnpauseGame();
+            else
+                PauseGame();
         }
     }
     public void PauseGame()
