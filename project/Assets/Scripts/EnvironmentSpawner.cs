@@ -11,6 +11,9 @@ public class EnvironmentSpawner : MonoBehaviour
 
     [SerializeField] float spawnRate = 2;
 
+    [SerializeField] float rotateLeft = 0;
+    [SerializeField] float rotateRight = 0;
+
     private float timerRight;
     private float timerLeft;
 
@@ -28,12 +31,14 @@ public class EnvironmentSpawner : MonoBehaviour
 
         if (timerRight > spawnRate)
         {
-            Instantiate(houses[Random.Range(0, houses.Length)], rightSpawner.transform);
+            GameObject temp = Instantiate(houses[Random.Range(0, houses.Length)], rightSpawner.transform);
+            temp.transform.Rotate(0, rotateRight, 0);
             timerRight = 0;
         }
         if (timerLeft > spawnRate)
         {
-            Instantiate(houses[Random.Range(0, houses.Length)], leftSpawner.transform.position,);
+            GameObject temp = Instantiate(houses[Random.Range(0, houses.Length)], leftSpawner.transform);
+            temp.transform.Rotate(0, rotateLeft, 0);
             timerLeft = 0;
         }
         

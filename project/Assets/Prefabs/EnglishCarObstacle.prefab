@@ -926,7 +926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
-  m_moveSpeed: 50
+  m_moveSpeed: 80
 --- !u!65 &8587283587688685722
 BoxCollider:
   m_ObjectHideFlags: 0
