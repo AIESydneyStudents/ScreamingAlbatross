@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleMove : MonoBehaviour
+public class ObjMove : MonoBehaviour
 {
     [SerializeField]
     [Range(0, 100)]

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonAiming : MonoBehaviour
+public class NpcCollider : MonoBehaviour
 {
-    [SerializeField] CannonRotationTest cannonControl;
+    [SerializeField] Cannon cannonControl;
 
     public void OnCollisionEnter(Collision collision)
     {

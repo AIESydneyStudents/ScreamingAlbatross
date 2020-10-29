@@ -12,7 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject scoreMenu;
     [SerializeField] GameObject mainGameMenu;
 
-    [SerializeField] CannonRotationTest teaDeliverAmount;
+    
     private int teaAmount;
     [SerializeField] GameObject teaAmountMenu;
     private Text teaText;

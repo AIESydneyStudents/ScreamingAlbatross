@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileMovement : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     [SerializeField] float scale;
     [SerializeField] float shootSpeed;

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonRotationTest : MonoBehaviour
+public class Cannon : MonoBehaviour
 {
     private float speed = 2f;
     public GameObject target;
     private Quaternion normalDirection;
-    private ProjectileMovement projectilTarget;
+    private Projectile projectilTarget;
 
     private void Start()
     {

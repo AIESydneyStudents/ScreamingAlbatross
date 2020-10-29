@@ -11,7 +11,7 @@ public class PlayerBehavior : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPos;
 
-    public Transform target;
+    
 
     public Transform leftLane;
     public Transform middleLane;
@@ -71,8 +71,6 @@ public class PlayerBehavior : MonoBehaviour
         }
 
         #endregion
-        
- 
     }
 
     // move script
