@@ -1,5 +1,10 @@
+    mipMapsPreserveCoverage: 0
 fileFormatVersion: 2
-guid: 0e8a8b7e626fb3b478eabb06642683cc
+<<<<<<< Updated upstream
+guid: d8e8fb61dcf2a1148a014df6bb2c667c
+=======
+guid: 480dc26419b0a6143ab9b7859ed909b3
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

@@ -95,7 +95,7 @@ Material:
     m_Colors:
     - Color_44FF0981: {r: 0, g: 0, b: 0, a: 0}
     - Color_C731D09E: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0}
-    - _BaseColor: {r: 0, g: 0.046749115, b: 1, a: 1}
+    - _BaseColor: {r: 0, g: 0.41903496, b: 1, a: 1}
     - _Color: {r: 0, g: 0.046749115, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

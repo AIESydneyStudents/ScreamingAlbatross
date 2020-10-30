@@ -8,15 +8,14 @@ public class StencilGeneration : MonoBehaviour
 
     [SerializeField] GameObject DefaultSpawn;
 
-    [SerializeField] GameObject Stencil1;
-    [SerializeField] GameObject Stencil2;
+    [SerializeField] List<GameObject> Stencils = new List<GameObject>();
 
     private int StencilsLength = 0;
-    List<GameObject> Stencils;
+    private List<GameObject> GameObjectStencils;
     // Start is called before the first frame update
     void Start()
     {
-
+        GameObjectStencils = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -26,11 +25,11 @@ public class StencilGeneration : MonoBehaviour
         if (spawner <= 0)
         {
             // if stencils is empty
-            if (Stencils.Count > 0)
+            if (GameObjectStencils.Count > 0)
             {
                 Vector3 newPos = Vector3.zero;
 
-                foreach (Transform child in Stencils[StencilsLength - 1].transform)
+                foreach (Transform child in GameObjectStencils[GameObjectStencils.Count - 1].transform)
                 {
                     if (child.name == "BACK")
                     {
@@ -38,27 +37,36 @@ public class StencilGeneration : MonoBehaviour
                         break;
                     }
                 }
-                // error tracing
-                if (newPos == Vector3.zero)
-                { Debug.Log("No Existing Stencils!"); }
-
                 StencilsLength++;
 
                 //initialise and add new object to stencils list to track existing objects
-                GameObject newStencil = Instantiate(Stencil1);
+                GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
                 newStencil.transform.position = newPos;
-                Stencils.Add(newStencil);
+                GameObjectStencils.Add(newStencil);
             }
             else
             {
                 Vector3 newPos = DefaultSpawn.transform.position;
                 StencilsLength++;
-                GameObject newStencil = Instantiate(Stencil2);
+                GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
                 newStencil.transform.position = newPos;
-                Stencils.Add(newStencil);
+                GameObjectStencils.Add(newStencil);
             }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Stencil")
+        {
+            spawner--;
+        }
+    }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Stencil")
+        {
+            spawner++;
+        }
+    }
 }
