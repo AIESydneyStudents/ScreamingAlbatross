@@ -11,9 +11,7 @@ public class ObjMove : MonoBehaviour
 
     void Update()
     {
-        
         transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime, Space.World);
-        
     }
 
     private void OnTriggerEnter(Collider other)
