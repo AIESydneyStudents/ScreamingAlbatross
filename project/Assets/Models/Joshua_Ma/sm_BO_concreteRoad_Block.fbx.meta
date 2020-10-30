@@ -1,16 +1,11 @@
 fileFormatVersion: 2
-guid: c029e67d802c53146add39fd09283345
+guid: 919d7aed88d3d8e4f940a6e1c501ec55
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: trafficCone_MAT
-    second: {fileID: 2100000, guid: 34fefb1403dee64479345da846547ed3, type: 2}
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1

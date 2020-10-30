@@ -10,6 +10,7 @@ TagManager:
   - Customer
   - Road
   - Stencil
+  - Projectile
   layers:
   - Default
   - TransparentFX

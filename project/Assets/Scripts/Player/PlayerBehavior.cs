@@ -80,13 +80,13 @@ public class PlayerBehavior : MonoBehaviour
         }
         time = 0;
     }
-    public void OnCollisionEnter(Collision other)
+    
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Obstacle")
         {
             FailMenu.SetActive(true);
             Time.timeScale = 0.0f;
         }
-        
     }
 }

@@ -7,10 +7,13 @@ public class ObjMove : MonoBehaviour
     [SerializeField]
     [Range(0, 100)]
     public float speed = 5;
+  
 
     void Update()
     {
+        
         transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime, Space.World);
+        
     }
 
     private void OnTriggerEnter(Collider other)
