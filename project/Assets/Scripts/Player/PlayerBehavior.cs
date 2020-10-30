@@ -7,7 +7,6 @@ public class PlayerBehavior : MonoBehaviour
     private float time = 0f;
     public float dTime = 0.1f;
     private int intLane = 0;
-    public int 
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPos;
     public GameObject projectile;

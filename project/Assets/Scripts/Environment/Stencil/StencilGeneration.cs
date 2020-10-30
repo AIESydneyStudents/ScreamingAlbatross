@@ -34,12 +34,5 @@ public class StencilGeneration : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Stencil") { spawner++; }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Stencil") { spawner--; }
-    }
+
 }
