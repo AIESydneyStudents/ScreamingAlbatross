@@ -8,15 +8,15 @@ public class StencilGeneration : MonoBehaviour
 
     [SerializeField] GameObject DefaultSpawn;
 
-    [SerializeField] GameObject Stencil1;
-    [SerializeField] GameObject Stencil2;
+    public int StencilsAmount = 1;
+    [SerializeField] List<GameObject> Stensils = new List<GameObject>();
 
     private int StencilsLength = 0;
-    List<GameObject> Stencils;
+    private List<GameObject> Stencils;
     // Start is called before the first frame update
     void Start()
     {
-
+        Stencils = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class StencilGeneration : MonoBehaviour
             {
                 Vector3 newPos = Vector3.zero;
 
-                foreach (Transform child in Stencils[StencilsLength - 1].transform)
+                foreach (Transform child in Stencils[Stencils.Count - 1].transform)
                 {
                     if (child.name == "BACK")
                     {
@@ -38,14 +38,10 @@ public class StencilGeneration : MonoBehaviour
                         break;
                     }
                 }
-                // error tracing
-                if (newPos == Vector3.zero)
-                { Debug.Log("No Existing Stencils!"); }
-
                 StencilsLength++;
 
                 //initialise and add new object to stencils list to track existing objects
-                GameObject newStencil = Instantiate(Stencil1);
+                GameObject newStencil = Instantiate();
                 newStencil.transform.position = newPos;
                 Stencils.Add(newStencil);
             }
@@ -53,12 +49,25 @@ public class StencilGeneration : MonoBehaviour
             {
                 Vector3 newPos = DefaultSpawn.transform.position;
                 StencilsLength++;
-                GameObject newStencil = Instantiate(Stencil2);
+                GameObject newStencil = Instantiate();
                 newStencil.transform.position = newPos;
                 Stencils.Add(newStencil);
             }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Stencil")
+        {
+            spawner--;
+        }
+    }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Stencil")
+        {
+            spawner++;
+        }
+    }
 }
