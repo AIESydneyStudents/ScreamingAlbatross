@@ -9,7 +9,6 @@ public class PlayerBehavior : MonoBehaviour
     private int intLane = 0;
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPos;
-    public GameObject projectile;
     public GameObject FailMenu;
 
     public Transform leftLane;

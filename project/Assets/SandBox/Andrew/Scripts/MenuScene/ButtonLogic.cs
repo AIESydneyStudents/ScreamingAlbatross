@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class ButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] Text m_text;
+    [SerializeField] Image m_image;
     [SerializeField] Color m_highlightColor;
     [SerializeField] MenuButtons m_button;
     [SerializeField] ScriptableButtonEnum m_buttonTransferObject;
