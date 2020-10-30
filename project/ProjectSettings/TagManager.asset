@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Customer
   - Road
+  - Stencil
   - Projectile
   layers:
   - Default
