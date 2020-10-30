@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3724044058526125862}
   - component: {fileID: 7445621689286552785}
+  - component: {fileID: 851634848591253664}
   m_Layer: 0
   m_Name: ParkPrefab 1
   m_TagString: Stencil
@@ -79,6 +80,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+--- !u!65 &851634848591253664
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4471604829279100882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.48770124, y: 1, z: 1}
+  m_Center: {x: -0.25614938, y: 0, z: 0}
 --- !u!1 &7547828668863225957
 GameObject:
   m_ObjectHideFlags: 0

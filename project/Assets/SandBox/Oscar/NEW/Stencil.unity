@@ -495,9 +495,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014bba68a21914a42afaa3be8a04e64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSpawn: {fileID: 0}
-  Stencil1: {fileID: 0}
-  Stencil2: {fileID: 0}
+  DefaultSpawn: {fileID: 544734451}
+  Stencils:
+  - {fileID: 4471604829279100882, guid: ea7b9d73e3bcf9a4aabad717537f0297, type: 3}
+  - {fileID: 4471604829279100882, guid: cb00a3293e0ab6146836060f743e88e3, type: 3}
 --- !u!1 &2133095947
 GameObject:
   m_ObjectHideFlags: 0

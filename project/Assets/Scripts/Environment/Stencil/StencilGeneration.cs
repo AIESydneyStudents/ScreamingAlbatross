@@ -8,15 +8,14 @@ public class StencilGeneration : MonoBehaviour
 
     [SerializeField] GameObject DefaultSpawn;
 
-    public int StencilsAmount = 1;
-    [SerializeField] List<GameObject> Stensils = new List<GameObject>();
+    [SerializeField] List<GameObject> Stencils = new List<GameObject>();
 
     private int StencilsLength = 0;
-    private List<GameObject> Stencils;
+    private List<GameObject> GameObjectStencils;
     // Start is called before the first frame update
     void Start()
     {
-        Stencils = new List<GameObject>();
+        GameObjectStencils = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -26,11 +25,11 @@ public class StencilGeneration : MonoBehaviour
         if (spawner <= 0)
         {
             // if stencils is empty
-            if (Stencils.Count > 0)
+            if (GameObjectStencils.Count > 0)
             {
                 Vector3 newPos = Vector3.zero;
 
-                foreach (Transform child in Stencils[Stencils.Count - 1].transform)
+                foreach (Transform child in GameObjectStencils[GameObjectStencils.Count - 1].transform)
                 {
                     if (child.name == "BACK")
                     {
@@ -41,17 +40,17 @@ public class StencilGeneration : MonoBehaviour
                 StencilsLength++;
 
                 //initialise and add new object to stencils list to track existing objects
-                GameObject newStencil = Instantiate();
+                GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
                 newStencil.transform.position = newPos;
-                Stencils.Add(newStencil);
+                GameObjectStencils.Add(newStencil);
             }
             else
             {
                 Vector3 newPos = DefaultSpawn.transform.position;
                 StencilsLength++;
-                GameObject newStencil = Instantiate();
+                GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
                 newStencil.transform.position = newPos;
-                Stencils.Add(newStencil);
+                GameObjectStencils.Add(newStencil);
             }
         }
     }
