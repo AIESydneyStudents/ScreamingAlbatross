@@ -66,6 +66,7 @@ public class PlayerBehavior : MonoBehaviour
         {
 
         }
+        #endregion
     }
 
     // move script
