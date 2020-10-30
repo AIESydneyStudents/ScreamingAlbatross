@@ -1,16 +1,11 @@
 fileFormatVersion: 2
-guid: c25eeb53c2a2a4949bc8d662307dc2f6
+guid: 919d7aed88d3d8e4f940a6e1c501ec55
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: londonBuilding_MAT
-    second: {fileID: 2100000, guid: 263bcb3d2cc1dfa4891231686077848f, type: 2}
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
