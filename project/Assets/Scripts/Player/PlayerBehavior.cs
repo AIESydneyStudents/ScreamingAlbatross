@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    public GameObject FailMenu;
-    public float time = 0f;
+    private float time = 0f;
     public float dTime = 0.1f;
     private int intLane = 0;
+    public int 
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPos;
-
-    
+    public GameObject projectile;
+    public GameObject FailMenu;
 
     public Transform leftLane;
     public Transform middleLane;
     public Transform rightLane;
 
     public List<Transform> lanes;
-
-    
 
     // Start is called before the first frame update
     void Start()
@@ -48,10 +46,6 @@ public class PlayerBehavior : MonoBehaviour
                 time += dTime;
                 StartCoroutine(MoveDirection());
             }
-            else
-            {
-                Debug.Log("Illegal Move!");
-            }
         }
         // on "D" or "RightArrow" press
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
@@ -64,13 +58,15 @@ public class PlayerBehavior : MonoBehaviour
                 time += dTime;
                 StartCoroutine(MoveDirection());
             }
-            else
-            {
-                Debug.Log("Illegal Move!");
-            }
         }
-
         #endregion
+
+        #region SHOOTING
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+
+        }
     }
 
     // move script
