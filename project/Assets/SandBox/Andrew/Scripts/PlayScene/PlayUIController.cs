@@ -8,7 +8,7 @@ public class PlayUIController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && m_gameOverContainer.activeInHierarchy == false)
         {
             if (m_pauseContainer.activeInHierarchy)
                 UnpauseGame();

@@ -11,6 +11,7 @@ public class PlayerBehavior : MonoBehaviour
     private Vector3 targetPos;
     public GameObject FailMenu;
 
+
     public Transform leftLane;
     public Transform middleLane;
     public Transform rightLane;
@@ -74,7 +75,7 @@ public class PlayerBehavior : MonoBehaviour
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
-
+            
             yield return null;
         }
         time = 0;
