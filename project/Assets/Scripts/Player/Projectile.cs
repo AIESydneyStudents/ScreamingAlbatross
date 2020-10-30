@@ -5,7 +5,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float scale;
-    [SerializeField] float shootSpeed;
+    public float shootSpeed;
+    public GameObject projectileTarget = null;
+
     
     // Start is called before the first frame update
     void Start()
@@ -17,15 +19,17 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.LookAt();
 
-        transform.position += -transform.forward * shootSpeed * Time.deltaTime;
+        transform.LookAt(projectileTarget.transform);
+        transform.position += transform.forward * shootSpeed * Time.deltaTime;
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 3f, 90), transform.position.z);
+
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Customer")
         {
-            Destroy(transform.gameObject);
+            Destroy(this.gameObject);
 
         }
     }

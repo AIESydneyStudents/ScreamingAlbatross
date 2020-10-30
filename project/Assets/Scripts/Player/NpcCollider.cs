@@ -11,6 +11,7 @@ public class NpcCollider : MonoBehaviour
         if (collision.gameObject.tag == "Customer")
         {
             cannonControl.target = collision.gameObject;
+            cannonControl.newCustomer = true;
         }
     }
     private void OnCollisionExit(Collision collision)
@@ -20,5 +21,6 @@ public class NpcCollider : MonoBehaviour
             cannonControl.target = null;
         }
     }
+    
 
 }

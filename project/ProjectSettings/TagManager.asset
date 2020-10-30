@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Customer
   - Road
+  - Projectile
   layers:
   - Default
   - TransparentFX
