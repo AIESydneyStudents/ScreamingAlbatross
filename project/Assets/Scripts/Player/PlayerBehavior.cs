@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,21 @@ public class PlayerBehavior : MonoBehaviour
     private Vector3 targetPos;
     public GameObject FailMenu;
 
+    private int score;
+    public int teaAmount;
+    [SerializeField] GameObject scoreUI;
+    Text scoreText;
+    [SerializeField] GameObject timeUI;
+    Text timeText;
+    [SerializeField] GameObject teaDeliveredUI;
+    Text teaAmountText;
+    [SerializeField] GameObject totalScoreUI;
+    Text totalScoreText;
+
+    [SerializeField] GameObject inGameScoreUI;
+    Text inGameScoreText;
+
+    private float totalRunTime = 0;
 
     public Transform leftLane;
     public Transform middleLane;
@@ -18,9 +34,18 @@ public class PlayerBehavior : MonoBehaviour
 
     public List<Transform> lanes;
 
+    int scoreTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
+        scoreText = scoreUI.GetComponent<Text>();
+        timeText = timeUI.GetComponent<Text>();
+        teaAmountText = teaDeliveredUI.GetComponent<Text>();
+        totalScoreText = totalScoreUI.GetComponent<Text>();
+        inGameScoreText = inGameScoreUI.GetComponent<Text>();
+
+
+
         lanes.Add(leftLane);
         lanes.Add(middleLane);
         lanes.Add(rightLane);
@@ -29,6 +54,18 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        scoreTimer++;
+        if (scoreTimer > 3)
+        {
+            if (FailMenu.activeInHierarchy == false)
+            {
+
+                score++;
+                scoreTimer = 0;
+                inGameScoreText.text = "Score: " + score;
+            }
+        }
+        totalRunTime += Time.deltaTime;
         #region MOVEMENT
 
         Vector3 pos = transform.position;
@@ -85,8 +122,19 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            FailMenu.SetActive(true);
-            Time.timeScale = 0.0f;
+            LoadFail();
         }
+    }
+    private void LoadFail()
+    {
+        FailMenu.SetActive(true);
+        Time.timeScale = 0.0f;
+
+        timeText.text = "Time: " + (int)totalRunTime;
+        scoreText.text = "Score: " + score;
+        teaAmountText.text = "Tea Delivered: " + teaAmount;
+
+        int totalScore = (int)totalRunTime + score + (teaAmount * 3);
+        totalScoreText.text = "Total Score: " + totalScore;
     }
 }

@@ -19,7 +19,7 @@ public class EnvironmentSpawner : MonoBehaviour
 
     
 
-    void Update()
+    void FixedUpdate()
     {
         timerRight += Time.deltaTime;
         timerLeft += Time.deltaTime;

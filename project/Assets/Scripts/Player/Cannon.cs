@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
+    [SerializeField] PlayerBehavior playerCar;
     private float speed = 2f;
     public GameObject target;
     private Quaternion normalDirection;
@@ -45,6 +46,7 @@ public class Cannon : MonoBehaviour
             giveTarget.projectileTarget = target;
             giveTarget.shootSpeed = projectileSpeed;
             newCustomer = false;
+            playerCar.teaAmount++;
         }
     }
 }

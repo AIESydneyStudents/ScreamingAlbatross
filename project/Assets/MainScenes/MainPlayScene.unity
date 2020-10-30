@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -200,6 +200,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138857281}
   m_Mesh: {fileID: 5444486716537454154, guid: dde370280c5bf6740a28d0d8be0e3a7f, type: 3}
+--- !u!1 &159799241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 802834901732108189, guid: a62f9a23cefebf341afac2918d9dfc51,
+    type: 3}
+  m_PrefabInstance: {fileID: 207587857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &207587857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -466,6 +472,12 @@ Transform:
   m_Father: {fileID: 1899498484}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &417726063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 802834901463909801, guid: a62f9a23cefebf341afac2918d9dfc51,
+    type: 3}
+  m_PrefabInstance: {fileID: 207587857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &425639534
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e778dec7ee6ec4fb851e8569ed6521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCar: {fileID: 1899498485}
   target: {fileID: 0}
   projectile: {fileID: 6667815299456275858, guid: 8ecec5daf9dbd0248a56dfa8dc279bb4,
     type: 3}
@@ -818,6 +831,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbc54132dc0226242879526119f2523f, type: 3}
+--- !u!1 &705079903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3770381787517476983, guid: a62f9a23cefebf341afac2918d9dfc51,
+    type: 3}
+  m_PrefabInstance: {fileID: 207587857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &743862813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1184,6 +1203,12 @@ Transform:
   m_Father: {fileID: 814009321}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1102357426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 802834901429462889, guid: a62f9a23cefebf341afac2918d9dfc51,
+    type: 3}
+  m_PrefabInstance: {fileID: 207587857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1138635380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1288,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138635380}
   m_Mesh: {fileID: 6697709092352624125, guid: dde370280c5bf6740a28d0d8be0e3a7f, type: 3}
+--- !u!1 &1150123170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8734378454460455960, guid: a62f9a23cefebf341afac2918d9dfc51,
+    type: 3}
+  m_PrefabInstance: {fileID: 207587857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1163869100
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,7 +2466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789629096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -58.5, y: 0.2, z: 0}
+  m_LocalPosition: {x: -57.93, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1599247554}
@@ -2775,6 +2806,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dTime: 0.1
   FailMenu: {fileID: 207587858}
+  teaAmount: 0
+  scoreUI: {fileID: 1150123170}
+  timeUI: {fileID: 1102357426}
+  teaDeliveredUI: {fileID: 159799241}
+  totalScoreUI: {fileID: 417726063}
+  inGameScoreUI: {fileID: 705079903}
   leftLane: {fileID: 1599247554}
   middleLane: {fileID: 606978940}
   rightLane: {fileID: 425639535}
