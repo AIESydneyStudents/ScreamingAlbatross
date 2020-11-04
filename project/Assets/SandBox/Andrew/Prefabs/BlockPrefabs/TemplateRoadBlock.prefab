@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 3724044058526125862}
   - component: {fileID: 7445621689286552785}
   m_Layer: 0
-  m_Name: RoadBlock-FRONT
+  m_Name: TemplateRoadBlock
   m_TagString: Stencil
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17c612e5d2d4d94fbbbe8356fdff7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
 --- !u!1 &7547828668863225957
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,13 +5,12 @@ using UnityEngine;
 public class ObjMove : MonoBehaviour
 {
     [SerializeField]
-    [Range(0, 100)]
-    public float speed = 5;
+    public ScriptableFloat speed;
   
 
     void Update()
     {
-        transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime, Space.World);
+        transform.Translate(new Vector3(speed.m_Value, 0, 0) * Time.deltaTime, Space.World);
     }
 
     private void OnTriggerEnter(Collider other)
