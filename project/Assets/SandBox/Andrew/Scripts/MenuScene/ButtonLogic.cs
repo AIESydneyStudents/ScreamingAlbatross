@@ -29,6 +29,7 @@ public class ButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         m_text.color = m_highlightColor;
+        m_image.color = m_highlightColor;
         m_audioTransferVariable.m_Value = m_mouseOverSound;
         m_mouseOverEvent.Raise();
 
@@ -36,6 +37,7 @@ public class ButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerExit(PointerEventData eventData)
     {
         m_text.color = m_defaultColour;
+        m_image.color = m_defaultColour;
     }
     public void OnPointerUp(PointerEventData eventData)
     {
