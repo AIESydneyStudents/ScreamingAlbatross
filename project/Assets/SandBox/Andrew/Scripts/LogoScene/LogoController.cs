@@ -34,7 +34,7 @@ public class LogoController : MonoBehaviour
         }
 
 
-        if(m_elapsedTime >= m_targetTime)
+        if(m_elapsedTime >= m_targetTime || Input.GetKeyDown(KeyCode.Escape))
         {
             //load menu screen
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
