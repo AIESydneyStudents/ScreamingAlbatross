@@ -16,7 +16,7 @@ public class SpawnerLogic : MonoBehaviour
     [SerializeField] float houseWidth = 10;
 
     //change back to a array later
-    [SerializeField] GameObject roadPrefabs;
+    [SerializeField] GameObject[] roadPrefabs;
 
     [SerializeField] GameObject[] housePrefabs;
     [SerializeField] GameObject sideWalkPrefab;
@@ -31,20 +31,35 @@ public class SpawnerLogic : MonoBehaviour
     //length of road, sidewalk, general prefabs of houses
     //spawner at 0,0,0 and go off that in the - and + sides
 
-    
+    bool addedLeftLane = false;
+    bool addedRightLane = false;
+    bool spawnCrossLeft = false;
+    bool spawnCrossRight = false;
+
+    private Rigidbody rb;
     private float timer;
     public float spawnTimer;
-
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     void FixedUpdate()
     {
+
+        #region Spawning
+        
         //DEBUGGING ONLY
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             roadCountLeft++;
+            addedLeftLane = true;
+            spawnCrossLeft = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             roadCountRight++;
+            addedRightLane = true;
+            spawnCrossRight = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -68,26 +83,74 @@ public class SpawnerLogic : MonoBehaviour
             {
                 for (int i = 0; i <= roadCountRight; ++i)
                 {
-                    GameObject temp = Instantiate(roadPrefabs, transform);
-                    if (i == 0)
-                        temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + roadWidth);
+                    if (addedRightLane == true && i == roadCountRight)
+                    {
+                        addedRightLane = false;
+                        break;
+                    }
+                    if (roadCountRight == 1 && addedRightLane)
+                    {
+                        addedRightLane = false;
+                        break;
+                    }
+                    if (spawnCrossRight == false)
+                    {
+                        GameObject temp = Instantiate(roadPrefabs[0], transform);
+                        if (i == 0)
+                            temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + roadWidth);
+                        else
+                            temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + (roadWidth * i));
+                    }
                     else
-                        temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + (roadWidth * i));
+                    {
+                        spawnCrossRight = false;
+                        GameObject temp = Instantiate(roadPrefabs[1], transform);
+                        if (i == 0)
+                            temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + roadWidth);
+                        else
+                            temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + (roadWidth * i));
+                        break;
+                    }
                 }
             }
-
             //spawnLeft
             if (roadCountLeft >= 1)
             {
+
                 for (int i = 0; i <= roadCountLeft; ++i)
                 {
-                    GameObject temp = Instantiate(roadPrefabs, transform);
-                    if (i == 0)
-                        temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - roadWidth);
+                    if (addedLeftLane == true && i == roadCountLeft)
+                    {
+                        addedLeftLane = false;
+                        break;
+                    }
+                    if (roadCountLeft == 1 && addedLeftLane)
+                    {
+                        addedLeftLane = false;
+                        break;
+                    }
+                    if (spawnCrossLeft == false)
+                    {
+                        GameObject temp = Instantiate(roadPrefabs[0], transform);
+                        if (i == 0)
+                            temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - roadWidth);
+                        else
+                            temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - (roadWidth * i));
+                    }
                     else
-                        temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - (roadWidth * i));
+                    {
+                        spawnCrossLeft = false;
+                        GameObject temp = Instantiate(roadPrefabs[1], transform);
+                        if (i == 0)
+                            temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - roadWidth);
+                        else
+                            temp.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - (roadWidth * i));
+                        break;
+                    }
                 }
             }
+
+
 
             //spawn House;
             GameObject tempHouseLeft = Instantiate(housePrefabs[Random.Range(0, housePrefabs.Length)], transform);
@@ -102,5 +165,16 @@ public class SpawnerLogic : MonoBehaviour
             else
                 tempHouseRight.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + roadWidth + (roadWidth * roadCountRight));
         }
+    
+    #endregion
+
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Road")
+        {
+            Instantiate(housePrefabs[0], transform);
+        }
+    }
+
 }

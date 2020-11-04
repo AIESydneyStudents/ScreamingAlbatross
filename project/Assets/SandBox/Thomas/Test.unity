@@ -1128,8 +1128,9 @@ MonoBehaviour:
   roadWidth: 25
   sideWalkWidth: 3
   houseWidth: 10
-  roadPrefabs: {fileID: 7863437850600597419, guid: 72b680db2571f75498eb5e28879c3da5,
-    type: 3}
+  roadPrefabs:
+  - {fileID: 7863437850600597419, guid: 72b680db2571f75498eb5e28879c3da5, type: 3}
+  - {fileID: 7863437850600597419, guid: 60b42335ebb53414bbc2e813025c428c, type: 3}
   housePrefabs:
   - {fileID: 4471604829279100882, guid: cb00a3293e0ab6146836060f743e88e3, type: 3}
   sideWalkPrefab: {fileID: 0}
@@ -1144,7 +1145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699638012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalPosition: {x: -59.7, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

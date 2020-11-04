@@ -42,6 +42,7 @@ public class ButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerUp(PointerEventData eventData)
     {
         m_text.color = m_defaultColour;
+        m_image.color = m_defaultColour;
         m_buttonTransferObject.m_Value = m_button;
         m_audioTransferVariable.m_Value = m_clickSound;
         m_buttonClicked.Raise();
