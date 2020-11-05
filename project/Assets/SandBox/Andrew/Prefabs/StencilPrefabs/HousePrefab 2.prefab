@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17c612e5d2d4d94fbbbe8356fdff7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
+  speed: 0
 --- !u!1 &7547828668863225957
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +473,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Garden_02
       objectReference: {fileID: 0}
+    - target: {fileID: 5373401852289271528, guid: 674887e55224ff840b9422605349be09,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0ad0cfa86a8b44aa6e28273312e044, type: 2}
+    - target: {fileID: 7181818936469468963, guid: 674887e55224ff840b9422605349be09,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0ad0cfa86a8b44aa6e28273312e044, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674887e55224ff840b9422605349be09, type: 3}
 --- !u!4 &7770435872831928326 stripped
@@ -548,6 +558,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Garden_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5373401852289271528, guid: 674887e55224ff840b9422605349be09,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0ad0cfa86a8b44aa6e28273312e044, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674887e55224ff840b9422605349be09, type: 3}
 --- !u!4 &8161208404942762152 stripped
@@ -563,6 +578,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3724044058526125862}
     m_Modifications:
+    - target: {fileID: -7397747007168068069, guid: 68997183edd4eb344ac6540904bc454e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0ad0cfa86a8b44aa6e28273312e044, type: 2}
     - target: {fileID: -4216859302048453862, guid: 68997183edd4eb344ac6540904bc454e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,6 +718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Garden_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5373401852289271528, guid: 674887e55224ff840b9422605349be09,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0ad0cfa86a8b44aa6e28273312e044, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674887e55224ff840b9422605349be09, type: 3}
 --- !u!4 &82052131859821365 stripped
@@ -773,6 +798,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Garden_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5373401852289271528, guid: 674887e55224ff840b9422605349be09,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0ad0cfa86a8b44aa6e28273312e044, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674887e55224ff840b9422605349be09, type: 3}
 --- !u!4 &111913909243438086 stripped
@@ -1013,6 +1043,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3724044058526125862}
     m_Modifications:
+    - target: {fileID: -4528964487895135422, guid: 9e9be77b13c5eb143b33cd9262800411,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0ad0cfa86a8b44aa6e28273312e044, type: 2}
     - target: {fileID: -4216859302048453862, guid: 9e9be77b13c5eb143b33cd9262800411,
         type: 3}
       propertyPath: m_LocalPosition.x
