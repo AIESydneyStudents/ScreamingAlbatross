@@ -1,17 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class StencilGeneration : MonoBehaviour
 {
+    // objects in spawn count
     private int spawner = 0;
-
+    
+    // spawnpoints
     [SerializeField] GameObject SpawnOnStartPos;
     [SerializeField] GameObject DefaultSpawn;
+    public Position Left;
+    public Position Right;
 
+    // gameobject lists
     [SerializeField] List<GameObject> Stencils = new List<GameObject>();
+    [SerializeField] List<GameObject> Environments = new List<GameObject>();
+    [SerializeField] List<GameObject> Roads = new List<GameObject>();
 
-    private int StencilsLength = 0;
+    // 
     private List<GameObject> GameObjectStencils;
 
 
@@ -26,7 +34,6 @@ public class StencilGeneration : MonoBehaviour
         // spawns one stencil then spawn multiple until the playing feild is full, then proceeds to fill any empty spots as the game runs
 
         Vector3 newPos = SpawnOnStartPos.transform.position;
-        StencilsLength++;
         GameObject firstStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
         firstStencil.transform.position = newPos;
         GameObjectStencils.Add(firstStencil);
@@ -49,8 +56,7 @@ public class StencilGeneration : MonoBehaviour
                 }
             }
 
-            //initialise and add new object to stencils list to track existing objects
-            StencilsLength++;
+            // initialise and add new object to stencils list to track existing objects
             GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
             newStencil.transform.position = newPos;
             GameObjectStencils.Add(newStencil);
@@ -82,7 +88,6 @@ public class StencilGeneration : MonoBehaviour
                 }
 
                 //initialise and add new object to stencils list to track existing objects
-                StencilsLength++;
                 GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
                 newStencil.transform.position = newPos;
                 GameObjectStencils.Add(newStencil);
@@ -90,7 +95,6 @@ public class StencilGeneration : MonoBehaviour
             else
             {
                 Vector3 newPos = DefaultSpawn.transform.position;
-                StencilsLength++;
                 GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
                 newStencil.transform.position = newPos;
                 GameObjectStencils.Add(newStencil);
