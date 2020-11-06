@@ -3,12 +3,22 @@ guid: c5a8238c3e603234e900a830268497c4
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mergeRoad_MAT
+    second: {fileID: 2100000, guid: 52fc2a3adafe89448b9583c272a0661c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: modularRoad_MAT
+    second: {fileID: 2100000, guid: bd2aa76b0b6a2aa4fb64229e174594a6, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

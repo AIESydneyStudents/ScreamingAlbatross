@@ -657,6 +657,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_mergeRoad_GEO
       objectReference: {fileID: 0}
+    - target: {fileID: 6772971806255025770, guid: 3c2f316f381ff4c47901a9d8bf8ed9df,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8664cca17434ef743803f10576e937e2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c2f316f381ff4c47901a9d8bf8ed9df, type: 3}
 --- !u!1 &963194225
@@ -841,6 +846,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_sideWalk_L_GEO
       objectReference: {fileID: 0}
+    - target: {fileID: 8020208972351517052, guid: 174f9005493c2cb4ca77d3fe3a0d8b5b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7d75a1ab4166574e892499dbd9c4e8c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 174f9005493c2cb4ca77d3fe3a0d8b5b, type: 3}
 --- !u!1001 &994919654
@@ -1177,6 +1187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_road_roadLines_GEO
       objectReference: {fileID: 0}
+    - target: {fileID: 2168831638685035021, guid: c8f45e27cf3ba5b45a3990329e1662e5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7d75a1ab4166574e892499dbd9c4e8c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8f45e27cf3ba5b45a3990329e1662e5, type: 3}
 --- !u!1001 &1579329845
@@ -1493,6 +1508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_sideWalk_R_GEO
       objectReference: {fileID: 0}
+    - target: {fileID: 7368694664305307020, guid: 684868285a53e454485d1886322d3574,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7d75a1ab4166574e892499dbd9c4e8c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684868285a53e454485d1886322d3574, type: 3}
 --- !u!1001 &1878909963
@@ -1775,5 +1795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_blank_road_GEO
       objectReference: {fileID: 0}
+    - target: {fileID: 682522971486297439, guid: a60d8c6a6d1c70c48971ade6f7fe1be1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7d75a1ab4166574e892499dbd9c4e8c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a60d8c6a6d1c70c48971ade6f7fe1be1, type: 3}
