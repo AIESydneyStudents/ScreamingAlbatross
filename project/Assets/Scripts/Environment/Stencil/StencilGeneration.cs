@@ -6,17 +6,17 @@ using UnityEngine.UIElements;
 public class StencilGeneration : MonoBehaviour
 {
     // objects in spawn count
-    private int spawner = 0;
-    
+    private int RoadSpawner = 0;
+    private int ScenerySpawner = 0;
+
     // spawnpoints
     [SerializeField] GameObject SpawnOnStartPos;
     [SerializeField] GameObject DefaultSpawn;
-    public Position Left;
-    public Position Right;
+    public Transform LeftScenery;
+    public Transform RightScenery;
 
     // gameobject lists
-    [SerializeField] List<GameObject> Stencils = new List<GameObject>();
-    [SerializeField] List<GameObject> Environments = new List<GameObject>();
+    [SerializeField] List<GameObject> Scenery = new List<GameObject>();
     [SerializeField] List<GameObject> Roads = new List<GameObject>();
 
     // 
@@ -34,7 +34,7 @@ public class StencilGeneration : MonoBehaviour
         // spawns one stencil then spawn multiple until the playing feild is full, then proceeds to fill any empty spots as the game runs
 
         Vector3 newPos = SpawnOnStartPos.transform.position;
-        GameObject firstStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
+        GameObject firstStencil = Instantiate(Roads[Random.Range(0, Roads.Count)]);
         firstStencil.transform.position = newPos;
         GameObjectStencils.Add(firstStencil);
 
@@ -43,7 +43,7 @@ public class StencilGeneration : MonoBehaviour
 
     private IEnumerator OnStart()
     {
-        while (spawner <= 0)
+        while (RoadSpawner <= 0)
         {
             Vector3 newPos = Vector3.zero;
 
@@ -57,7 +57,7 @@ public class StencilGeneration : MonoBehaviour
             }
 
             // initialise and add new object to stencils list to track existing objects
-            GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
+            GameObject newStencil = Instantiate(Roads[Random.Range(0, Roads.Count)]);
             newStencil.transform.position = newPos;
             GameObjectStencils.Add(newStencil);
 
@@ -71,7 +71,7 @@ public class StencilGeneration : MonoBehaviour
     void Update()
     {
         // if spawner is empty and a new stencil needs to be spawned
-        if (spawner <= 0)
+        if (RoadSpawner <= 0)
         {
             // if stencils is empty
             if (GameObjectStencils.Count > 0)
@@ -88,32 +88,47 @@ public class StencilGeneration : MonoBehaviour
                 }
 
                 //initialise and add new object to stencils list to track existing objects
-                GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
+                GameObject newStencil = Instantiate(Roads[Random.Range(0, Roads.Count - 1)]);
                 newStencil.transform.position = newPos;
                 GameObjectStencils.Add(newStencil);
             }
             else
             {
                 Vector3 newPos = DefaultSpawn.transform.position;
-                GameObject newStencil = Instantiate(Stencils[Random.Range(0, Stencils.Count)]);
+                GameObject newStencil = Instantiate(Roads[Random.Range(0, Roads.Count - 1)]);
                 newStencil.transform.position = newPos;
                 GameObjectStencils.Add(newStencil);
             }
         }
+
+        // 
+        GameObject newSceneryLeft = Instantiate(Scenery[Random.Range(0, Scenery.Count - 1)]);
+        newSceneryLeft.transform.position = LeftScenery.position;
+
+        GameObject newSceneryRight = Instantiate(Scenery[Random.Range(0, Scenery.Count - 1)]);
+        newSceneryRight.transform.position = LeftScenery.position;
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Stencil")
+        if (other.gameObject.tag == "Road")
         {
-            spawner--;
+            RoadSpawner--;
+        }
+        else if (other.gameObject.tag == "Scenery")
+        {
+            RoadSpawner--;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Stencil")
+        if (other.gameObject.tag == "Road")
         {
-            spawner++;
+            RoadSpawner++;
+        }
+        else if (other.gameObject.tag == "Scenery")
+        {
+            RoadSpawner++;
         }
     }
 }
