@@ -9,8 +9,8 @@ TagManager:
   - Obstacle
   - Customer
   - Road
-  - Stencil
   - Projectile
+  - Scenery
   layers:
   - Default
   - TransparentFX
