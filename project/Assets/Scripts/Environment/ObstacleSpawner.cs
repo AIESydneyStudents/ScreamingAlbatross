@@ -9,8 +9,6 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] GameObject middle;
     [SerializeField] GameObject right;
 
-    [SerializeField] GameObject road;
-
     [SerializeField] GameObject ObstaclePrefab;
     [SerializeField] int repeatAllowed;
     //this is having a "limit" on the spawns, its max of 2 spawns per set
@@ -23,8 +21,6 @@ public class ObstacleSpawner : MonoBehaviour
     float spawnTimer;
     private int spawnCount = 3;
 
-    public float roadSpawnTime = 0.622f;
-    private float roadTimer;
     int laneSelect;
 
     int leftRepeats = 0;
@@ -33,13 +29,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Update()
     {
-        roadTimer += Time.deltaTime;
         spawnTimer += Time.deltaTime;
-        if (roadTimer >= roadSpawnTime)
-        {
-            Instantiate(road, transform);
-            roadTimer = 0;
-        }
 
         if (spawnTimer > spawnChargeTimer)
         {

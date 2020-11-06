@@ -12,7 +12,6 @@ public class StencilGeneration : MonoBehaviour
 
     // spawnpoints
     [SerializeField] GameObject SpawnOnStartPos;
-    [SerializeField] GameObject DefaultSpawn;
     [SerializeField] GameObject OnStartLeftScenery;
     [SerializeField] GameObject OnStartRightScenery;
 
@@ -47,8 +46,6 @@ public class StencilGeneration : MonoBehaviour
             GameObject firstStencil = Instantiate(Roads[Random.Range(0, Roads.Count)]);
             firstStencil.transform.position = newPos;
             GameObjectRoads.Add(firstStencil);
-
-            StartCoroutine("OnStartRoad");
         }
 
         // start sceneryspawn
@@ -63,74 +60,13 @@ public class StencilGeneration : MonoBehaviour
             GameObject newSceneryRight = Instantiate(Scenery[Random.Range(0, Scenery.Count - 1)]);
             newSceneryRight.transform.position = OnStartRightScenery.transform.position;
             GameObjectSceneryRight.Add(newSceneryRight);
-
-            StartCoroutine("OnStartScenery");
-        }
-    }
-
-    private IEnumerator OnStartRoad()
-    {
-        while (RoadSpawner <= 0)
-        {
-            Vector3 newPos = Vector3.zero;
-
-            foreach (Transform child in GameObjectRoads[GameObjectRoads.Count - 1].transform)
-            {
-                if (child.name == "BACK")
-                {
-                    newPos = child.position;
-                    break;
-                }
-            }
-
-            // initialise and add new object to stencils list to track existing objects
-            GameObject newStencil = Instantiate(Roads[Random.Range(0, Roads.Count)]);
-            newStencil.transform.position = newPos;
-            GameObjectRoads.Add(newStencil);
-
-            yield return null;
-        }
-    }
-    private IEnumerator OnStartScenery()
-    {
-        while (ScenerySpawner <= 0)
-        {
-            Vector3 newPosLeft = Vector3.zero;
-            Vector3 newPosRight = Vector3.zero;
-
-            foreach (Transform child in GameObjectSceneryLeft[GameObjectSceneryLeft.Count - 1].transform)
-            {
-                if (child.name == "BACK")
-                {
-                    newPosLeft = child.position;
-                    break;
-                }
-            }
-            foreach (Transform child in GameObjectSceneryRight[GameObjectSceneryRight.Count - 1].transform)
-            {
-                if (child.name == "BACK")
-                {
-                    newPosRight = child.position;
-                    break;
-                }
-            }
-
-            GameObject newSceneryLeft = Instantiate(Scenery[Random.Range(0, Scenery.Count)]);
-            newSceneryLeft.transform.position = newPosLeft;
-            GameObjectSceneryLeft.Add(newSceneryLeft);
-
-            GameObject newSceneryRight = Instantiate(Scenery[Random.Range(0, Scenery.Count)]);
-            newSceneryRight.transform.position = newPosRight;
-            GameObjectSceneryRight.Add(newSceneryRight);
-
-            yield return null;
         }
     }
 
     #endregion
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         #region ROAD SPAWNING
         // if spawner is empty and a new stencil needs to be spawned
@@ -151,15 +87,7 @@ public class StencilGeneration : MonoBehaviour
                 }
 
                 //initialise and add new object to stencils list to track existing objects
-                GameObject newStencil = Instantiate(Roads[Random.Range(0, Roads.Count)]);
-                newStencil.transform.position = newPos;
-                GameObjectRoads.Add(newStencil);
-            }
-            else
-            {
-                Vector3 newPos = DefaultSpawn.transform.position;
-                GameObject newStencil = Instantiate(Roads[Random.Range(0, Roads.Count)]);
-                newStencil.transform.position = newPos;
+                GameObject newStencil = Instantiate(Roads[Random.Range(0, Roads.Count)], newPos, transform.rotation);
                 GameObjectRoads.Add(newStencil);
             }
         }
@@ -189,13 +117,11 @@ public class StencilGeneration : MonoBehaviour
             }
 
             // adding scenery to left
-            GameObject newSceneryLeft = Instantiate(Scenery[Random.Range(0, Scenery.Count)]);
-            newSceneryLeft.transform.position = newPosLeft;
+            GameObject newSceneryLeft = Instantiate(Scenery[Random.Range(0, Scenery.Count)], newPosLeft, transform.rotation);
             GameObjectSceneryLeft.Add(newSceneryLeft);
 
             // adding scenery to right
-            GameObject newSceneryRight = Instantiate(Scenery[Random.Range(0, Scenery.Count)]);
-            newSceneryRight.transform.position = newPosRight;
+            GameObject newSceneryRight = Instantiate(Scenery[Random.Range(0, Scenery.Count)], newPosRight, transform.rotation);
             GameObjectSceneryRight.Add(newSceneryRight);
         }
         #endregion
