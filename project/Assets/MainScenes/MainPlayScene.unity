@@ -725,7 +725,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610291887}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 40.23958, y: 1, z: 1}
@@ -743,12 +743,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnOnStartPos: {fileID: 1986355112}
-  DefaultSpawn: {fileID: 24577168}
   OnStartLeftScenery: {fileID: 1637755357}
   OnStartRightScenery: {fileID: 2132847676}
   LeftScenery: {fileID: 1596897498}
   RightScenery: {fileID: 2108976120}
-  Scenery: []
+  Scenery:
+  - {fileID: 4471604829279100882, guid: cb00a3293e0ab6146836060f743e88e3, type: 3}
+  - {fileID: 4471604829279100882, guid: ea7b9d73e3bcf9a4aabad717537f0297, type: 3}
   Roads:
   - {fileID: 4471604829279100882, guid: 0cc6d08c75b67e24caa4a13866822a9f, type: 3}
 --- !u!54 &610291891

@@ -167,7 +167,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Road '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1061985412070813041, guid: 72b680db2571f75498eb5e28879c3da5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 72b680db2571f75498eb5e28879c3da5, type: 3}
 --- !u!4 &6800122545061669133 stripped
 Transform:

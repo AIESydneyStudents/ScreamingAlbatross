@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b61f7739b9d5d4598a269080150543, type: 3}
   m_Name: BlockPrefabSpeedVariable
   m_EditorClassIdentifier: 
-  m_value: 5
+  m_value: 30
