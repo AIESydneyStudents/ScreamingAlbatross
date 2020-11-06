@@ -3,17 +3,12 @@ guid: 91511d46e85fa404ab3c5f2f263b0809
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: trafficLight_MAT
-    second: {fileID: 2100000, guid: 66d53b396ab38e741bc89d2d1b7527e4, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
