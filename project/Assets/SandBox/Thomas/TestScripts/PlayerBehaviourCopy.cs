@@ -18,9 +18,9 @@ public class PlayerBehaviourCopy : MonoBehaviour
     private int intLane = 0;
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPos;
-    
 
-    
+
+    public Transform CustomerCollider;
 
     private float totalRunTime = 0;
 
@@ -91,7 +91,7 @@ public class PlayerBehaviourCopy : MonoBehaviour
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
-
+            CustomerCollider.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
             yield return null;
         }
         time = 0;

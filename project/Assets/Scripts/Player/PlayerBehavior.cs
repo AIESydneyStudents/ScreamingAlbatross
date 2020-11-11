@@ -28,6 +28,8 @@ public class PlayerBehavior : MonoBehaviour
 
     private float totalRunTime = 0;
 
+    public Transform CustomerCollider;
+
     public Transform leftLane;
     public Transform middleLane;
     public Transform rightLane;
@@ -112,7 +114,7 @@ public class PlayerBehavior : MonoBehaviour
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
-            
+            CustomerCollider.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
             yield return null;
         }
         time = 0;

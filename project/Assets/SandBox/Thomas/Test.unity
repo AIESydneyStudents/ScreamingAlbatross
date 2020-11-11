@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221070331}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 79.74, y: 0.90000004, z: -0.26014203}
+  m_LocalPosition: {x: 79.74, y: 0.90000004, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 24266731}
@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dTime: 0.1
+  CustomerCollider: {fileID: 1916403969}
   leftLane: {fileID: 1478118054}
   middleLane: {fileID: 703213925}
   rightLane: {fileID: 1827951255}
@@ -1883,7 +1884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364873604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.8}
+  m_LocalPosition: {x: 0, y: 0, z: 0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 221070332}
@@ -2110,13 +2111,11 @@ MonoBehaviour:
   left: {fileID: 1478118053}
   middle: {fileID: 703213924}
   right: {fileID: 1827951254}
-  road: {fileID: 7863437850600597419, guid: 72b680db2571f75498eb5e28879c3da5, type: 3}
   ObstaclePrefab: {fileID: 2795966770613748664, guid: 78a6e7785f5f93749acdc1f7f7176910,
     type: 3}
   repeatAllowed: 1
   spawnChargeTimer: 0.8
   spawnDelay: 0.7
-  roadSpawnTime: 0.628
 --- !u!1 &1501620874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,6 +2665,8 @@ GameObject:
   - component: {fileID: 1916403972}
   - component: {fileID: 1916403971}
   - component: {fileID: 1916403970}
+  - component: {fileID: 1916403974}
+  - component: {fileID: 1916403973}
   m_Layer: 0
   m_Name: PlayerCustomerDetector
   m_TagString: Untagged
@@ -2681,7 +2682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916403968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77, y: 4, z: 0}
+  m_LocalPosition: {x: 79.74, y: 0.90000004, z: -0.26014203}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1364873605}
@@ -2698,8 +2699,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 53.95162, y: 16.54132, z: 26.63777}
-  m_Center: {x: -20.2689, y: 5.435169, z: 0.07274723}
+  m_Size: {x: 6.5654907, y: 39.742493, z: 37.6}
+  m_Center: {x: 2.6727524, y: 17.035751, z: 0.07274723}
 --- !u!54 &1916403971
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2729,3 +2730,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannonControl: {fileID: 24266730}
+--- !u!65 &1916403973
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916403968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 39.486473, z: 5.26}
+  m_Center: {x: -21.02, y: 16.907742, z: 0.0080862045}
+--- !u!65 &1916403974
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916403968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.493805, y: 39.357704, z: 15}
+  m_Center: {x: -5.6441574, y: 16.843357, z: 0.066101074}
