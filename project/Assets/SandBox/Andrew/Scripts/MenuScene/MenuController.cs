@@ -6,17 +6,16 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] ScriptableButtonEnum e_buttonPressed;
-    [SerializeField] GameObject m_mainMenuObject;
-    [SerializeField] GameObject m_optionsMenuObject;
-    [SerializeField] GameObject m_confirmationPrompt;
-    [SerializeField] Text m_themeText, m_mouseControlsText;
+    [SerializeField] GameObject m_mainMenuObject, m_optionsMenuObject, m_confirmationPrompt, m_continueButton;
+    [SerializeField] Text m_mouseControlsText;
     [SerializeField] ScriptableVariableTransferObject m_vto;
-    Themes m_currentTheme;
 
     private void OnEnable()
     {
-        m_currentTheme = Themes.Indian;
-        ThemeButton();
+        /*if(//has saved game data)
+        {
+            m_continueButton.SetActive(true);
+        }*/
         m_vto.Reset();
     }
     public void ButtonPressed()
@@ -37,9 +36,6 @@ public class MenuController : MonoBehaviour
                 break;
             case MenuButtons.Continue:
                 ContinueButton();
-                break;
-            case MenuButtons.Theme:
-                ThemeButton();
                 break;
             case MenuButtons.MouseControls:
                 MouseControlsButton();
@@ -77,17 +73,6 @@ public class MenuController : MonoBehaviour
     private void ContinueButton()
     {
         //load game from saved data
-    }
-
-    private void ThemeButton()
-    {
-        //change theme selected
-        m_currentTheme++;
-        if(m_currentTheme > Themes.Indian)
-        {
-            m_currentTheme = Themes.Random;
-        }
-        m_themeText.text = Enum.GetName(typeof(Themes), m_currentTheme);
     }
     private void MouseControlsButton()
     {
