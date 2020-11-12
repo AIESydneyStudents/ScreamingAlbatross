@@ -11,17 +11,19 @@ public class ObstacleSpawner : MonoBehaviour
 
     [SerializeField] GameObject ObstaclePrefab;
     [SerializeField] int repeatAllowed;
-    //this is having a "limit" on the spawns, its max of 2 spawns per set
-    //interval so the obstacles at most spawn twice at a certain point so 
-    //the game isnt impossible at times.
+    
     [SerializeField] float spawnChargeTimer;
-    //when the spawnTimer hits the spawnchargetimer amount the spawncount will -1
-    //so another object can be spawned
+    
     [SerializeField] float spawnDelay;
     float spawnTimer;
     private int spawnCount = 3;
 
     int laneSelect;
+
+    bool leftUsed = false;
+    bool rightUsed = false;
+    bool middleUsed = false;
+
 
     int leftRepeats = 0;
     int rightRepeats = 0;
@@ -41,28 +43,61 @@ public class ObstacleSpawner : MonoBehaviour
         {
             spawnCount++;
             laneSelect = Random.Range(0, 150);
-            if (laneSelect < 50 && leftRepeats < repeatAllowed)
+            if (laneSelect < 50 && leftRepeats < repeatAllowed && leftUsed == false)
             {
-                Instantiate(ObstaclePrefab, left.transform);
+                leftUsed = true;
+                GameObject temp = Instantiate(ObstaclePrefab, left.transform);
+                temp.tag = "Left";
                 leftRepeats++;
                 rightRepeats = 0;
                 middleRepeats = 0;
             }
-            if (laneSelect >= 50 && laneSelect < 100 && middleRepeats < repeatAllowed)
+            if (laneSelect >= 50 && laneSelect < 100 && middleRepeats < repeatAllowed && middleUsed == false)
             {
-                Instantiate(ObstaclePrefab, middle.transform);
+                middleUsed = true;
+                GameObject temp = Instantiate(ObstaclePrefab, middle.transform);
+                temp.tag = "Middle";
                 middleRepeats++;
                 leftRepeats = 0;
                 rightRepeats = 0;
             }
-            if (laneSelect >= 100 && rightRepeats < repeatAllowed)
+            if (laneSelect >= 100 && rightRepeats < repeatAllowed && rightUsed == false)
             {
-                Instantiate(ObstaclePrefab, right.transform);
+                rightUsed = true;
+                GameObject temp = Instantiate(ObstaclePrefab, right.transform);
+                temp.tag = "Right";
                 rightRepeats++;
                 leftRepeats = 0;
                 middleRepeats = 0;
+
             }
         }
     }
-    
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Help");
+        if (other.tag == "Left")
+        {
+            Debug.Log("Left");
+            leftUsed = false;
+            other.tag = "Obstacle";
+        }
+        if (other.tag == "Middle")
+        {
+            Debug.Log("Middle");
+            middleUsed = false;
+            other.tag = "Obstacle";
+        }
+        if (other.tag == "Right")
+        {
+            Debug.Log("Right");
+            rightUsed = false;
+            other.tag = "Obstacle";
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("Help");
+    }
+
 }

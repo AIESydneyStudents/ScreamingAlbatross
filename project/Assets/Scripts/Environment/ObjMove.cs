@@ -6,7 +6,7 @@ public class ObjMove : MonoBehaviour
 {
     [SerializeField]
     public ScriptableFloat speed;
-  
+    
 
     void Update()
     {

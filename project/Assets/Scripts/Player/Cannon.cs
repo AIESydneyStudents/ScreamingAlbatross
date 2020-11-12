@@ -12,6 +12,10 @@ public class Cannon : MonoBehaviour
     [SerializeField] float projectileSpeed;
     public bool newCustomer = true;
 
+    public float shootTimer;
+    private float shootTimeSinceLast = 0;
+
+
     private void Start()
     {
         normalDirection = transform.rotation;
@@ -19,6 +23,8 @@ public class Cannon : MonoBehaviour
 
     void Update()
     {
+        shootTimeSinceLast += Time.deltaTime;
+
         if (target != null)
         {
             speed = 10;
@@ -35,9 +41,9 @@ public class Cannon : MonoBehaviour
             Quaternion lookAt = Quaternion.Euler(0, 0, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, lookAt, Time.deltaTime * speed);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && target != null && newCustomer == true)
+        if (Input.GetKeyDown(KeyCode.Space) && target != null && shootTimeSinceLast > shootTimer)
         {
-            
+            shootTimeSinceLast = 0;
             Vector3 tempPos = transform.position;
             Quaternion tempRotate = transform.rotation;
 
@@ -45,7 +51,6 @@ public class Cannon : MonoBehaviour
             Projectile giveTarget = temp.GetComponent<Projectile>();
             giveTarget.projectileTarget = target;
             giveTarget.shootSpeed = projectileSpeed;
-            newCustomer = false;
             playerCar.teaAmount++;
         }
     }

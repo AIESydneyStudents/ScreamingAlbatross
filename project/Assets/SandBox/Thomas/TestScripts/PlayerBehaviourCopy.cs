@@ -30,6 +30,10 @@ public class PlayerBehaviourCopy : MonoBehaviour
 
     public List<Transform> lanes;
 
+    public Animation turningAnimations;
+
+
+
     int scoreTimer = 0;
     // Start is called before the first frame update
     void Start()
@@ -53,8 +57,10 @@ public class PlayerBehaviourCopy : MonoBehaviour
         // on "A" or "LeftArrow" press
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
+
             if (intLane != -1)
             {
+                turningAnimations.Play("TurningLeft");
                 StopCoroutine(MoveDirection());
                 targetPos = new Vector3(pos.x, pos.y, lanes[intLane].position.z);
                 intLane--;
@@ -67,6 +73,7 @@ public class PlayerBehaviourCopy : MonoBehaviour
         {
             if (intLane != 1)
             {
+                turningAnimations.Play("TurningRight");
                 StopCoroutine(MoveDirection());
                 targetPos = new Vector3(pos.x, pos.y, lanes[intLane + 2].position.z);
                 intLane++;
@@ -90,12 +97,14 @@ public class PlayerBehaviourCopy : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
+            
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
             CustomerCollider.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
+           
             yield return null;
         }
         time = 0;
     }
 
-    
+
 }

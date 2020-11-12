@@ -11,6 +11,10 @@ TagManager:
   - Road
   - Projectile
   - Scenery
+  - Stencil
+  - Left
+  - Right
+  - Middle
   layers:
   - Default
   - TransparentFX
