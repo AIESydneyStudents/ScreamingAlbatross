@@ -43,29 +43,23 @@ public class ObstacleSpawner : MonoBehaviour
         {
             spawnCount++;
             laneSelect = Random.Range(0, 150);
-            if (laneSelect < 50 && leftRepeats < repeatAllowed && leftUsed == false)
+            if (laneSelect < 50 && leftRepeats < repeatAllowed)
             {
-                leftUsed = true;
-                GameObject temp = Instantiate(ObstaclePrefab, left.transform);
-                temp.tag = "Left";
+                Instantiate(ObstaclePrefab, left.transform);
                 leftRepeats++;
                 rightRepeats = 0;
                 middleRepeats = 0;
             }
-            if (laneSelect >= 50 && laneSelect < 100 && middleRepeats < repeatAllowed && middleUsed == false)
+            if (laneSelect >= 50 && laneSelect < 100 && middleRepeats < repeatAllowed )
             {
-                middleUsed = true;
-                GameObject temp = Instantiate(ObstaclePrefab, middle.transform);
-                temp.tag = "Middle";
+                Instantiate(ObstaclePrefab, middle.transform);
                 middleRepeats++;
                 leftRepeats = 0;
                 rightRepeats = 0;
             }
-            if (laneSelect >= 100 && rightRepeats < repeatAllowed && rightUsed == false)
+            if (laneSelect >= 100 && rightRepeats < repeatAllowed)
             {
-                rightUsed = true;
-                GameObject temp = Instantiate(ObstaclePrefab, right.transform);
-                temp.tag = "Right";
+                Instantiate(ObstaclePrefab, right.transform);
                 rightRepeats++;
                 leftRepeats = 0;
                 middleRepeats = 0;
@@ -73,31 +67,6 @@ public class ObstacleSpawner : MonoBehaviour
             }
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("Help");
-        if (other.tag == "Left")
-        {
-            Debug.Log("Left");
-            leftUsed = false;
-            other.tag = "Obstacle";
-        }
-        if (other.tag == "Middle")
-        {
-            Debug.Log("Middle");
-            middleUsed = false;
-            other.tag = "Obstacle";
-        }
-        if (other.tag == "Right")
-        {
-            Debug.Log("Right");
-            rightUsed = false;
-            other.tag = "Obstacle";
-        }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        Debug.Log("Help");
-    }
+   
 
 }
