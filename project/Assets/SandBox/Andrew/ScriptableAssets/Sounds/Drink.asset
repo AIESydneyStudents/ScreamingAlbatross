@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2d2f0ef739d33846b3a669e7ec6d606, type: 3}
-  m_Name: Pickup
+  m_Name: Drink
   m_EditorClassIdentifier: 
   m_clips:
   - {fileID: 8300000, guid: 58dae3e163e47d646a993b5090a6c3d3, type: 3}
