@@ -118,6 +118,18 @@ public class StencilGeneration : MonoBehaviour
 
             // adding scenery to left
             GameObject newSceneryLeft = Instantiate(Scenery[Random.Range(0, Scenery.Count)], newPosLeft, transform.rotation);
+            GameObject rotateChildGroup = new GameObject();
+
+            foreach (Transform child in newSceneryLeft.transform)
+            {
+                if (child.name == "GameObject")
+                {
+                    rotateChildGroup = child.gameObject;
+                    break;
+                }
+            }
+
+            rotateChildGroup.transform.rotation = Quaternion.Euler(rotateChildGroup.transform.rotation.x, rotateChildGroup.transform.rotation.y + 180, rotateChildGroup.transform.rotation.z);
             GameObjectSceneryLeft.Add(newSceneryLeft);
 
             // adding scenery to right
