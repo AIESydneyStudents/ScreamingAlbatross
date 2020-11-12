@@ -6,11 +6,23 @@ public class MenuAudioController : MonoBehaviour
     [SerializeField] AudioSource m_musicSource;
     [SerializeField] AudioSource m_SFXSource;
     [SerializeField] ScriptableVolumeObject m_volumeTransferObject;
-
+    [SerializeField] ScriptableAudioClipRunTimeSet m_musicClips;
+    private float m_musicElapsed, m_musicTarget;
     private void OnEnable()
     {
+        m_musicElapsed = m_musicTarget = 0f;
         UpdateVolume();
-        m_musicSource.Play();
+        MusicPlay();
+    }
+
+    private void FixedUpdate()
+    {
+        m_musicElapsed += Time.fixedDeltaTime;
+        if(m_musicElapsed >= m_musicTarget)
+        {
+            m_musicElapsed = 0f;
+            MusicPlay();
+        }
     }
 
     public void UpdateVolume()
@@ -22,5 +34,12 @@ public class MenuAudioController : MonoBehaviour
     public void PlayClip()
     {
         m_SFXSource.PlayOneShot(m_audioTransferVariable.m_Value);
+    }
+
+    public void MusicPlay()
+    {
+        m_musicSource.clip = m_musicClips.GetRandomItem();
+        m_musicTarget = m_musicSource.clip.length;
+        m_musicSource.Play();
     }
 }

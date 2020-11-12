@@ -245,6 +245,7 @@ MonoBehaviour:
   m_SFXSource: {fileID: 3397619622637369892}
   m_volumeTransferObject: {fileID: 11400000, guid: 087031cb19f970446b6f03fe5a37c882,
     type: 2}
+  m_musicClips: {fileID: 11400000, guid: 2a7aaf4210b6efd4997cee53d279c4c2, type: 2}
 --- !u!114 &3397619622637369895
 MonoBehaviour:
   m_ObjectHideFlags: 0
