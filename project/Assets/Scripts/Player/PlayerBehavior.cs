@@ -36,6 +36,10 @@ public class PlayerBehavior : MonoBehaviour
 
     public List<Transform> lanes;
 
+    private bool movingLeft = false;
+    private bool movingRight = false;
+    public float turningSpeed = 2;
+
     int scoreTimer = 0;
     // Start is called before the first frame update
     void Start()
@@ -76,6 +80,7 @@ public class PlayerBehavior : MonoBehaviour
         // on "A" or "LeftArrow" press
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            movingLeft = true;
             if (intLane != -1)
             {
                 StopCoroutine(MoveDirection());
@@ -88,6 +93,7 @@ public class PlayerBehavior : MonoBehaviour
         // on "D" or "RightArrow" press
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
+            movingRight = true;
             if (intLane != 1)
             {
                 StopCoroutine(MoveDirection());
@@ -113,6 +119,14 @@ public class PlayerBehavior : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
+            if (movingLeft)
+            {
+                transform.Rotate(0, -turningSpeed * Time.deltaTime, 0);
+            }
+            else if (movingRight)
+            {
+                transform.Rotate(0, turningSpeed * Time.deltaTime, 0);
+            }
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
             CustomerCollider.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
             yield return null;

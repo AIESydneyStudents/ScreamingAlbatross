@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjMove : MonoBehaviour
+public class roadrespawnBUGTESTING : MonoBehaviour
 {
     [SerializeField]
     public ScriptableFloat speed;
-    
+
 
     void Update()
     {
@@ -17,7 +17,7 @@ public class ObjMove : MonoBehaviour
     {
         if (other.gameObject.tag == "DeleteBox")
         {
-            Destroy(this.gameObject);
+            transform.position = new Vector3(-58.5f, 0.2f, 0);
         }
     }
 }
