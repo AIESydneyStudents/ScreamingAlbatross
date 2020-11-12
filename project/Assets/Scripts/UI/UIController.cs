@@ -23,6 +23,7 @@ public class UIController : MonoBehaviour
     private Text finalScoreText;
     [SerializeField] GameObject timeTextMenu;
     private Text timeText;
+    [SerializeField] Image blackfader;
 
     private float score;
     private Text scoreText;
@@ -35,6 +36,8 @@ public class UIController : MonoBehaviour
         finalScoreText = finalScoreMenu.GetComponent<Text>();
         timeText = timeTextMenu.GetComponent<Text>();
         teaText = teaAmountMenu.GetComponent<Text>();
+
+        blackfader.CrossFadeAlpha(0, 1.5f, true);
     }
 
     // Update is called once per frame

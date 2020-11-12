@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class PlayUIController : MonoBehaviour
 {
     [SerializeField] GameObject m_pauseContainer;
     [SerializeField] GameObject m_gameOverContainer;
+    [SerializeField] Image fader;
 
+    private void Start()
+    {
+        fader.CrossFadeAlpha(0, 1.5f, true);
+    }
 
     private void Update()
     {
@@ -14,6 +21,7 @@ public class PlayUIController : MonoBehaviour
                 UnpauseGame();
             else
                 PauseGame();
+
         }
     }
     public void PauseGame()
