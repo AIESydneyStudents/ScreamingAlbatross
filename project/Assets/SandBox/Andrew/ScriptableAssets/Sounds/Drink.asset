@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d2f0ef739d33846b3a669e7ec6d606, type: 3}
+  m_Name: Pickup
+  m_EditorClassIdentifier: 
+  m_clips:
+  - {fileID: 8300000, guid: 58dae3e163e47d646a993b5090a6c3d3, type: 3}
+  - {fileID: 8300000, guid: ea91281a13fe50b42a3a86fc55f48e34, type: 3}
+  - {fileID: 8300000, guid: b88f4af9f0aabbf49ab2437df42ba26e, type: 3}
+  m_toPlay: {fileID: 11400000, guid: d85d2d422be23934782b9ace8af7ed21, type: 2}
+  m_playOneShot: {fileID: 11400000, guid: 7d3ba351e25b68046929191148b434c2, type: 2}
