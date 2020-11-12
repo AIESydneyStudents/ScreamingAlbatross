@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -978,10 +978,24 @@ MonoBehaviour:
   LeftScenery: {fileID: 1596897498}
   RightScenery: {fileID: 2108976120}
   Scenery:
-  - {fileID: 4471604829279100882, guid: cb00a3293e0ab6146836060f743e88e3, type: 3}
-  - {fileID: 4471604829279100882, guid: ea7b9d73e3bcf9a4aabad717537f0297, type: 3}
+  - {fileID: 4471604829279100882, guid: 74663ed8faccd8040acf2d3338a71930, type: 3}
+  - {fileID: 4471604829279100882, guid: b54e25c06b565be4690da1afde652973, type: 3}
+  - {fileID: 4471604829279100882, guid: 75909aeb9531fa1498f7043d507e3c62, type: 3}
+  - {fileID: 4471604829279100882, guid: 5e36400aeca71e841aeb83fd1eb104ac, type: 3}
+  - {fileID: 4471604829279100882, guid: 149171d6d9ee8414080085268a055040, type: 3}
+  - {fileID: 4471604829279100882, guid: 86d00a1191540f1418c03cb4e7739936, type: 3}
   Roads:
-  - {fileID: 4471604829279100882, guid: 0cc6d08c75b67e24caa4a13866822a9f, type: 3}
+  - {fileID: 4471604829279100882, guid: 681b3e1f72751fc43aa6d57aee542c27, type: 3}
+  - {fileID: 4471604829279100882, guid: d02a97999da3f6a4eb6a68a1b9ec25d7, type: 3}
+  - {fileID: 4471604829279100882, guid: b55b125b9ad361c42bef6b6858ae26b9, type: 3}
+  - {fileID: 4471604829279100882, guid: 76e2cac96b93db7489662e2cb03c1093, type: 3}
+  - {fileID: 4471604829279100882, guid: ede903f2f171afa43af84c0224a0aefe, type: 3}
+  - {fileID: 4471604829279100882, guid: 46dba7eaea405fc44a3035205de2caab, type: 3}
+  - {fileID: 4471604829279100882, guid: 46cfbe9541618d5429acca4e6d34e857, type: 3}
+  - {fileID: 4471604829279100882, guid: a706fb62c23cc2b47b05b277832fbfe7, type: 3}
+  - {fileID: 4471604829279100882, guid: 8f0f1ff050bd7f14e89c08f6e8c4ebe9, type: 3}
+  - {fileID: 4471604829279100882, guid: 26c14a854804ffd419841e1ee6703c17, type: 3}
+  - {fileID: 4471604829279100882, guid: 7cb87c9aa2c8bf646893654059ff66e7, type: 3}
 --- !u!54 &610291891
 Rigidbody:
   m_ObjectHideFlags: 0
