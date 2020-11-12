@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d2f0ef739d33846b3a669e7ec6d606, type: 3}
+  m_Name: Firing
+  m_EditorClassIdentifier: 
+  m_clips:
+  - {fileID: 8300000, guid: 5a8c2e597fa4a284baa79603859fa438, type: 3}
+  - {fileID: 8300000, guid: b96ac298dfb475b4e828b8e77f09dcae, type: 3}
+  - {fileID: 8300000, guid: fb67d0d8d4e09b546b1601ad5b8544fc, type: 3}
+  - {fileID: 8300000, guid: 0fe515afdfc3aac47818f0f479ac83b2, type: 3}
+  - {fileID: 8300000, guid: adf4d7884ddb341459cf7715cf1b2a11, type: 3}
+  - {fileID: 8300000, guid: 05cb75bc0862d4949bb6103b7a28116b, type: 3}
+  m_toPlay: {fileID: 11400000, guid: d85d2d422be23934782b9ace8af7ed21, type: 2}
+  m_playOneShot: {fileID: 11400000, guid: 7d3ba351e25b68046929191148b434c2, type: 2}
