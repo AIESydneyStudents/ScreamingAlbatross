@@ -9,21 +9,18 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] GameObject middle;
     [SerializeField] GameObject right;
 
-    [SerializeField] GameObject ObstaclePrefab;
+    [SerializeField] GameObject[] Obstacles;
     [SerializeField] int repeatAllowed;
     
-    [SerializeField] float spawnChargeTimer;
-    
-    [SerializeField] float spawnDelay;
-    float spawnTimer;
-    private int spawnCount = 3;
+    [SerializeField] public ScriptableFloat spawnDelay;
+    public float spawnTimer;
+    public int spawnCount = 3;
 
     int laneSelect;
 
     bool leftUsed = false;
     bool rightUsed = false;
     bool middleUsed = false;
-
 
     int leftRepeats = 0;
     int rightRepeats = 0;
@@ -33,7 +30,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer > spawnChargeTimer)
+        if (spawnTimer > (25f / spawnDelay.m_Value))
         {
             spawnCount--;
             spawnTimer = 0;
@@ -45,21 +42,21 @@ public class ObstacleSpawner : MonoBehaviour
             laneSelect = Random.Range(0, 150);
             if (laneSelect < 50 && leftRepeats < repeatAllowed)
             {
-                Instantiate(ObstaclePrefab, left.transform);
+                Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], left.transform);
                 leftRepeats++;
                 rightRepeats = 0;
                 middleRepeats = 0;
             }
             if (laneSelect >= 50 && laneSelect < 100 && middleRepeats < repeatAllowed )
             {
-                Instantiate(ObstaclePrefab, middle.transform);
+                Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], middle.transform);
                 middleRepeats++;
                 leftRepeats = 0;
                 rightRepeats = 0;
             }
             if (laneSelect >= 100 && rightRepeats < repeatAllowed)
             {
-                Instantiate(ObstaclePrefab, right.transform);
+                Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], right.transform);
                 rightRepeats++;
                 leftRepeats = 0;
                 middleRepeats = 0;

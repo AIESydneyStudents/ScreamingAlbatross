@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -926,6 +926,7 @@ GameObject:
   - component: {fileID: 610291889}
   - component: {fileID: 610291891}
   - component: {fileID: 610291890}
+  - component: {fileID: 610291892}
   m_Layer: 0
   m_Name: Road Spawner
   m_TagString: Untagged
@@ -1002,6 +1003,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &610291892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610291887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca08196953ba8746bc796b3340bf403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
 --- !u!1 &612657989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,11 +2559,10 @@ MonoBehaviour:
   left: {fileID: 1599247553}
   middle: {fileID: 606978939}
   right: {fileID: 425639534}
-  ObstaclePrefab: {fileID: 2795966770613748664, guid: 78a6e7785f5f93749acdc1f7f7176910,
-    type: 3}
+  Obstacles:
+  - {fileID: 2795966770613748664, guid: 78a6e7785f5f93749acdc1f7f7176910, type: 3}
   repeatAllowed: 1
-  spawnChargeTimer: 0.8
-  spawnDelay: 0.7
+  spawnDelay: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
 --- !u!1 &1801308471
 GameObject:
   m_ObjectHideFlags: 0
