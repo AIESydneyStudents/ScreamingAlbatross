@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 3115675977778339917}
   - component: {fileID: 2470062897035606992}
   - component: {fileID: 4647341488133221594}
+  - component: {fileID: 8005972150687337058}
   m_Layer: 0
   m_Name: GenericCustomerVariant
   m_TagString: Customer
@@ -95,6 +96,19 @@ MonoBehaviour:
   m_comboObject: {fileID: 11400000, guid: 7cfa5e8adf1aed44faff8fbf2611285a, type: 2}
   m_cheeringSounds: {fileID: 11400000, guid: c26b337e2f7a34247945d65b0fa2175c, type: 2}
   m_IsSpecial: 0
+--- !u!65 &8005972150687337058
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8022031093945459954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1025444942397087351
 PrefabInstance:
   m_ObjectHideFlags: 0
