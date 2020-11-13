@@ -30,7 +30,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer > (25f / spawnDelay.m_Value))
+        if (spawnTimer > (20f / spawnDelay.m_Value))
         {
             spawnCount--;
             spawnTimer = 0;

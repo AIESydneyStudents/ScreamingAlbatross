@@ -129,7 +129,7 @@ public class StencilGeneration : MonoBehaviour
                 }
             }
 
-            rotateChildGroup.transform.rotation = Quaternion.Euler(rotateChildGroup.transform.rotation.x, rotateChildGroup.transform.rotation.y + 180, rotateChildGroup.transform.rotation.z);
+            rotateChildGroup.transform.localRotation *= Quaternion.Euler(0, 180, 0);
             GameObjectSceneryLeft.Add(newSceneryLeft);
 
             // adding scenery to right
