@@ -1,19 +1,14 @@
 fileFormatVersion: 2
-guid: 5aaa9c42dcd3daf44be804eba5b391d7
+guid: 5a5ffb09cb9001c459aaa4a898c47a74
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__Car_With_Tank
-    second: {fileID: 2100000, guid: 006194684a57af84584ca0adf8106496, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

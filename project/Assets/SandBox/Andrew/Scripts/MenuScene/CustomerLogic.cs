@@ -22,6 +22,11 @@ public class CustomerLogic : MonoBehaviour
 
         _score += m_comboObject.m_Value;
 
+        if (m_comboObject.m_Value < 10)
+        {
+            m_comboObject.m_Value++;
+        }
+
         if(m_IsSpecial)
         {
             _score *= 2;
