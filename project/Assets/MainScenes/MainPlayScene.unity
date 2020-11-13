@@ -2560,7 +2560,16 @@ MonoBehaviour:
   middle: {fileID: 606978939}
   right: {fileID: 425639534}
   Obstacles:
-  - {fileID: 2795966770613748664, guid: 78a6e7785f5f93749acdc1f7f7176910, type: 3}
+  - {fileID: 8022031093945459954, guid: ccbf8cf35289f09479a1c58335b96502, type: 3}
+  - {fileID: 8022031093945459954, guid: f66d4c05bae96a749b8c506a90abe73c, type: 3}
+  - {fileID: 8022031093945459954, guid: cdc8a39c0d756c246a7a567b443e5487, type: 3}
+  - {fileID: 8022031093945459954, guid: 2859e5f8ae741604a84c1ee9a81b7b89, type: 3}
+  - {fileID: 8022031093945459954, guid: 2c2ef87328c2ec946a0c0b0e60f98422, type: 3}
+  - {fileID: 8022031093945459954, guid: 8a305662517187c46b0ce049b5825cdb, type: 3}
+  - {fileID: 8022031093945459954, guid: 8a86bc59bc6581d43b9483671e8c7483, type: 3}
+  - {fileID: 8022031093945459954, guid: 866c05a46b7fcbb4c8247217f248ecad, type: 3}
+  - {fileID: 8022031093945459954, guid: db3e5cb6c21926948a0c48512b7158e8, type: 3}
+  - {fileID: 8022031093945459954, guid: 82750b0cc92b5a74f8d466e5322cdb0e, type: 3}
   repeatAllowed: 1
   spawnDelay: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
   spawnTimer: 0
