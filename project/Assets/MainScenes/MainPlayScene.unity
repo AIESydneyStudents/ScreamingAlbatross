@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -870,6 +870,8 @@ MonoBehaviour:
   - {fileID: 4471604829279100882, guid: 5e36400aeca71e841aeb83fd1eb104ac, type: 3}
   - {fileID: 4471604829279100882, guid: 149171d6d9ee8414080085268a055040, type: 3}
   - {fileID: 4471604829279100882, guid: 86d00a1191540f1418c03cb4e7739936, type: 3}
+  - {fileID: 4471604829279100882, guid: 188f123ce52eb2847b70fd058ba8e170, type: 3}
+  - {fileID: 4471604829279100882, guid: f497ab465735cd54eb7b8e056324dc48, type: 3}
   Roads:
   - {fileID: 4471604829279100882, guid: 681b3e1f72751fc43aa6d57aee542c27, type: 3}
 --- !u!54 &610291891
@@ -1904,6 +1906,7 @@ MonoBehaviour:
   - {fileID: 8022031093945459954, guid: 82750b0cc92b5a74f8d466e5322cdb0e, type: 3}
   - {fileID: 8022031093945459954, guid: 91d60764365d83b439fc9bd54e1d0ffe, type: 3}
   - {fileID: 8022031093945459954, guid: 29cc3eda4c85d4f42bbda9433bd55d13, type: 3}
+  - {fileID: 8022031093945459954, guid: a1573613b4fbac44abb0e91a6b6860d4, type: 3}
   repeatAllowed: 1
   spawnDelay: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
   spawnTimer: 0
