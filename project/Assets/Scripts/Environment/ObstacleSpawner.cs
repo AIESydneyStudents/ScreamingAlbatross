@@ -42,12 +42,13 @@ public class ObstacleSpawner : MonoBehaviour
             spawnTimer = 0;
         }
 
-        if (spawnTimer >= (20f / spawnDelay.m_Value))
+        if (spawnTimer >= (20f / spawnDelay.m_Value) + 1.0f)
         {
             spawnTimer = 0;
             spawnnow = true;
         }
-        else if (spawnnow)
+        
+        if (spawnnow)
         {
             if (usedLanes.Count > 0)
             {
@@ -95,7 +96,6 @@ public class ObstacleSpawner : MonoBehaviour
                 middleRepeats = 0;
                 int nright = 1;
                 usedLanes.Add(nright);
-
             }
             if (usedLanes.Count > 0)
             {
@@ -110,7 +110,6 @@ public class ObstacleSpawner : MonoBehaviour
         if (other.gameObject.tag == "Obstacle")
         {
             spawnCount++;
-           
         }
     }
 
