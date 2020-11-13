@@ -41,9 +41,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3115675977778339917}
   - component: {fileID: 2470062897035606992}
+  - component: {fileID: 4246975825655677840}
+  - component: {fileID: 2495709498234338145}
   m_Layer: 0
   m_Name: IndianCustomer
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +78,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
+--- !u!114 &4246975825655677840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8022031093945459954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f48ae6804a51b4f9b2b9bd54c5c3a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_scoreObject: {fileID: 11400000, guid: 12c4236d18b4fc248a4b032d5b3efc10, type: 2}
+  m_comboObject: {fileID: 11400000, guid: 7cfa5e8adf1aed44faff8fbf2611285a, type: 2}
+  m_cheeringSounds: {fileID: 11400000, guid: c26b337e2f7a34247945d65b0fa2175c, type: 2}
+  m_IsSpecial: 1
+--- !u!65 &2495709498234338145
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8022031093945459954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5352295786341199746
 PrefabInstance:
   m_ObjectHideFlags: 0
