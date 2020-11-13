@@ -1747,8 +1747,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 39.486473, z: 5.26}
-  m_Center: {x: -21.02, y: 16.907742, z: 0.0080862045}
+  m_Size: {x: 30, y: 39.486473, z: 5.26}
+  m_Center: {x: -50, y: 16.907742, z: 0.0080862045}
 --- !u!65 &1371063784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1760,8 +1760,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.493805, y: 39.357704, z: 15}
-  m_Center: {x: -5.6441574, y: 16.843357, z: 0.066101074}
+  m_Size: {x: 30, y: 39.357704, z: 15}
+  m_Center: {x: -20, y: 16.843357, z: 0.066101074}
 --- !u!65 &1371063785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1773,8 +1773,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.5654907, y: 39.742493, z: 37.6}
-  m_Center: {x: 2.6727524, y: 17.035751, z: 0.07274723}
+  m_Size: {x: 12.6, y: 39.742493, z: 37.6}
+  m_Center: {x: 1.3, y: 17.035751, z: 0.07274723}
 --- !u!54 &1371063786
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2563,6 +2563,8 @@ MonoBehaviour:
   - {fileID: 2795966770613748664, guid: 78a6e7785f5f93749acdc1f7f7176910, type: 3}
   repeatAllowed: 1
   spawnDelay: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
+  spawnTimer: 0
+  spawnCount: 3
 --- !u!1 &1801308471
 GameObject:
   m_ObjectHideFlags: 0
