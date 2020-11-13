@@ -107,15 +107,16 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Obstacle")
+        if (other.gameObject.tag == "Obstacle")
         {
             spawnCount++;
+           
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "Obstacle")
+        if (other.gameObject.tag == "Obstacle")
         {
             spawnCount--;
         }
