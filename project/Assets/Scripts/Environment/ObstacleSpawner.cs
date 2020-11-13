@@ -14,23 +14,31 @@ public class ObstacleSpawner : MonoBehaviour
 
     [SerializeField] public ScriptableFloat spawnDelay;
     public float spawnTimer;
-    public int spawnCount = 3;
+    public int spawnCount = 0;
     private bool spawnnow = true;
 
     int laneSelect;
+    private List<int> usedLanes;
 
     int leftRepeats = 0;
     int rightRepeats = 0;
     int middleRepeats = 0;
 
+    private void Start()
+    {
+        usedLanes = new List<int>();
+    }
+
     void Update()
     {
-        if (spawnCount <= 2)
+        if (spawnCount >= 2)
         {
+            spawnnow = false;
             spawnTimer += Time.deltaTime;
         }
         else
         {
+            spawnnow = true;
             spawnTimer = 0;
         }
 
@@ -41,29 +49,59 @@ public class ObstacleSpawner : MonoBehaviour
         }
         else if (spawnnow)
         {
-            laneSelect = Random.Range(1, 3);
-            if (laneSelect == 1 && leftRepeats < repeatAllowed)
+            if (usedLanes.Count > 0)
+            {
+                switch (usedLanes[0])
+                {
+                    case 1:
+                        leftRepeats = repeatAllowed;
+                        break;
+                    case 2:
+                        middleRepeats = repeatAllowed;
+                        break;
+                    case 3:
+                        rightRepeats = repeatAllowed;
+                        break;
+                }
+            }
+
+            // left lane
+            laneSelect = Random.Range(1, 4);
+            if (laneSelect == 1 && leftRepeats <= repeatAllowed)
             {
                 Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], left.transform);
                 leftRepeats++;
                 rightRepeats = 0;
                 middleRepeats = 0;
+                int nleft = 1;
+                usedLanes.Add(nleft);
             }
-            if (laneSelect == 2 && middleRepeats < repeatAllowed)
+            // middle lane
+            else if (laneSelect == 2 && middleRepeats <= repeatAllowed)
             {
                 Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], middle.transform);
                 middleRepeats++;
                 leftRepeats = 0;
                 rightRepeats = 0;
+                int nmiddle = 1;
+                usedLanes.Add(nmiddle);
             }
-            if (laneSelect == 3 && rightRepeats < repeatAllowed)
+            // right lane
+            else if (laneSelect == 3 && rightRepeats <= repeatAllowed)
             {
                 Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], right.transform);
                 rightRepeats++;
                 leftRepeats = 0;
                 middleRepeats = 0;
+                int nright = 1;
+                usedLanes.Add(nright);
 
             }
+            if (usedLanes.Count > 0)
+            {
+                usedLanes.RemoveAt(0);
+            }
+                spawnnow = false;
         }
     }
 
