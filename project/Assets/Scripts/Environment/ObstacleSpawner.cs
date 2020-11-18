@@ -35,7 +35,7 @@ public class ObstacleSpawner : MonoBehaviour
         laneSelect = Random.Range(1, 4);
         if (laneSelect == 1 && leftRepeats <= repeatAllowed)
         {
-            Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], left.transform);
+            Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], left.transform.position, left.transform.rotation);
             leftRepeats++;
             rightRepeats = 0;
             middleRepeats = 0;
@@ -43,7 +43,7 @@ public class ObstacleSpawner : MonoBehaviour
         // middle lane
         else if (laneSelect == 2 && middleRepeats <= repeatAllowed)
         {
-            Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], middle.transform);
+            Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], middle.transform.position, middle.transform.rotation);
             middleRepeats++;
             leftRepeats = 0;
             rightRepeats = 0;
@@ -51,29 +51,12 @@ public class ObstacleSpawner : MonoBehaviour
         // right lane
         else if (laneSelect == 3 && rightRepeats <= repeatAllowed)
         {
-            Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], right.transform);
+            Instantiate(Obstacles[Random.Range(0, Obstacles.Length - 1)], right.transform.position, right.transform.rotation);
             rightRepeats++;
             leftRepeats = 0;
             middleRepeats = 0;
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Obstacle")
-        {
-            spawnCount++;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Obstacle")
-        {
-            spawnCount--;
-        }
-    }
-
 
     private void OnTriggerEnter(Collider other)
     {

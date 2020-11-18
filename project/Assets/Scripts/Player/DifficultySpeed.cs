@@ -8,7 +8,7 @@ public class DifficultySpeed : MonoBehaviour
     private float speedTimer = 0.2f;
     private float timer;
     // speed increase per allocated tick
-    private float speedIncrease = 0.25f;
+    private float speedIncrease = 0.15f;
     // scriptable float linking to the global speed float
     public ScriptableFloat speed;
 
