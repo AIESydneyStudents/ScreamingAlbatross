@@ -10,17 +10,15 @@ public class NpcCollider : MonoBehaviour
     {
         if (collision.gameObject.tag == "Customer")
         {
-            cannonControl.target = collision.gameObject;
-            cannonControl.newCustomer = true;
+            NPCBehaviour temp = collision.gameObject.GetComponent<NPCBehaviour>();
+            if (temp.beenDelivered == false)
+            {
+                cannonControl.target = collision.gameObject.GetComponent<NPCBehaviour>();
+            }
+
         }
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Customer")
-        {
-            cannonControl.target = null;
-        }
-    }
+    
     
 
 }
