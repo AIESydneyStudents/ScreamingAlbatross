@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPCBehaviour : MonoBehaviour
 {
     [SerializeField] Vector3 moveDirection = new Vector3();
-    
+    public bool beenDelivered = false;
    
     void Update()
     {

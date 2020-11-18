@@ -4,29 +4,40 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
+    [SerializeField] ParticleSystem smokeParticle;
+    [SerializeField] ParticleSystem explodeParticle;
+
     [SerializeField] PlayerBehavior playerCar;
     private float speed = 2f;
-    public GameObject target;
-    private Quaternion normalDirection;
+    public NPCBehaviour target;
+    
     public GameObject projectile;
     [SerializeField] float projectileSpeed;
-    public bool newCustomer = true;
 
-    public float shootTimer;
-    private float shootTimeSinceLast = 0;
+    public Transform particleOffset;
+
+    
 
 
     private void Start()
     {
-        normalDirection = transform.rotation;
+        
+        
     }
 
     void Update()
     {
-        shootTimeSinceLast += Time.deltaTime;
-
+        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Destroy(Instantiate(smokeParticle.gameObject, particleOffset.position, particleOffset.rotation),1);
+            Destroy(Instantiate(explodeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1);
+        }
+       
         if (target != null)
         {
+            
+            
             speed = 10;
             Vector3 dirToTarget = target.transform.position - transform.position;
             dirToTarget.y = 0f;
@@ -41,17 +52,22 @@ public class Cannon : MonoBehaviour
             Quaternion lookAt = Quaternion.Euler(0, 0, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, lookAt, Time.deltaTime * speed);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && target != null && shootTimeSinceLast > shootTimer)
+        if (Input.GetKeyDown(KeyCode.Space) && target != null)
         {
-            shootTimeSinceLast = 0;
-            Vector3 tempPos = transform.position;
-            Quaternion tempRotate = transform.rotation;
-
-            GameObject temp = Instantiate(projectile, tempPos, tempRotate);
-            Projectile giveTarget = temp.GetComponent<Projectile>();
-            giveTarget.projectileTarget = target;
-            giveTarget.shootSpeed = projectileSpeed;
-            playerCar.teaAmount++;
+            if (target.beenDelivered == false)
+            {
+                target.beenDelivered = true;
+                
+                Destroy(Instantiate(smokeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1); 
+                Destroy(Instantiate(explodeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1);
+                
+                GameObject temp = Instantiate(projectile, transform.position, transform.rotation);
+                Projectile giveTarget = temp.GetComponent<Projectile>();
+                giveTarget.projectileTarget = target.gameObject;
+                giveTarget.shootSpeed = projectileSpeed;
+                playerCar.teaAmount++;
+                target = null;
+            }
         }
     }
 }
