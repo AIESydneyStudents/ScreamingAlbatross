@@ -9,6 +9,7 @@ public class PlayUIController : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
         fader.CrossFadeAlpha(0, 1.5f, true);
     }
 
@@ -29,6 +30,7 @@ public class PlayUIController : MonoBehaviour
     public void PauseGame()
     {
         //pause game
+        Cursor.visible = true;
         ResetTimeScale(true);
         //Display menu
         m_pauseContainer.SetActive(true);
@@ -36,6 +38,7 @@ public class PlayUIController : MonoBehaviour
 
     public void UnpauseGame()
     {
+        Cursor.visible = false;
         ResetTimeScale(false);
         m_pauseContainer.SetActive(false);
     }
@@ -43,6 +46,7 @@ public class PlayUIController : MonoBehaviour
     public void GameOver()
     {
         //game over logic
+        Cursor.visible = true;
         ResetTimeScale(true);
         //display game over
         m_gameOverContainer.SetActive(true);
