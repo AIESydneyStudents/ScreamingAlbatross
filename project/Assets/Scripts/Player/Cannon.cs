@@ -28,11 +28,7 @@ public class Cannon : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Destroy(Instantiate(smokeParticle.gameObject, particleOffset.position, particleOffset.rotation),1);
-            Destroy(Instantiate(explodeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1);
-        }
+        
        
         if (target != null)
         {
