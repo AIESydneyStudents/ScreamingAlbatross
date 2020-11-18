@@ -5,7 +5,7 @@ using UnityEngine;
 public class DifficultySpeed : MonoBehaviour
 {
     // setting tick timer and timer initialisation
-    private float speedTimer = 0.4f;
+    private float speedTimer = 0.2f;
     private float timer;
     // speed increase per allocated tick
     private float speedIncrease = 0.25f;
