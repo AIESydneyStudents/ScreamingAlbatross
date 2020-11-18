@@ -40,6 +40,17 @@ public class PlayerBehavior : MonoBehaviour
     private bool movingRight = false;
     public float turningSpeed = 2;
 
+    //add spaces in inspector
+
+    [SerializeField] ScriptableSoundObject Cheering;
+    [SerializeField] ScriptableSoundObject Drink;
+    [SerializeField] ScriptableSoundObject Firing;
+    [SerializeField] ScriptableSoundObject Horn;
+    [SerializeField] ScriptableSoundObject Pickup;
+    [SerializeField] ScriptableSoundObject TireScreech;
+
+
+
     public Animation turningAnimations;
 
     int scoreTimer = 0;
