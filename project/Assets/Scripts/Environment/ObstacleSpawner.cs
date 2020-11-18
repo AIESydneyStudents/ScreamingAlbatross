@@ -31,6 +31,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Update()
     {
+        
         if (spawnCount >= 2)
         {
             spawnnow = false;
