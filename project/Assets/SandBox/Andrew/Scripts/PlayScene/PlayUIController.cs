@@ -43,7 +43,7 @@ public class PlayUIController : MonoBehaviour
     public void GameOver()
     {
         //game over logic
-
+        ResetTimeScale(true);
         //display game over
         m_gameOverContainer.SetActive(true);
         m_mainPlayUIContainer.SetActive(false);
