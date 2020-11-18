@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -158,11 +158,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3770381786150368352, guid: e256ab0a5248ee248bcff08df1fb7614,
-        type: 3}
-      propertyPath: fader
-      value: 
-      objectReference: {fileID: 2063527569}
     - target: {fileID: 5353425353106487201, guid: e256ab0a5248ee248bcff08df1fb7614,
         type: 3}
       propertyPath: m_Name
@@ -422,18 +417,6 @@ Transform:
   m_Father: {fileID: 1899498484}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &447818816 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4570581168398222101, guid: e256ab0a5248ee248bcff08df1fb7614,
-    type: 3}
-  m_PrefabInstance: {fileID: 39491641}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &513482507 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8026441119616890198, guid: e256ab0a5248ee248bcff08df1fb7614,
-    type: 3}
-  m_PrefabInstance: {fileID: 39491641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &606978939
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,12 +860,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1246877556 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4385435207683611127, guid: e256ab0a5248ee248bcff08df1fb7614,
-    type: 3}
-  m_PrefabInstance: {fileID: 39491641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1327171623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,12 +1096,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannonControl: {fileID: 437018019}
---- !u!1 &1421824591 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3770381786652664937, guid: e256ab0a5248ee248bcff08df1fb7614,
-    type: 3}
-  m_PrefabInstance: {fileID: 39491641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1560402431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,12 +1567,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 17.017, y: -90.137, z: 0.001}
---- !u!1 &1854625186 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 490800807585197531, guid: e256ab0a5248ee248bcff08df1fb7614,
-    type: 3}
-  m_PrefabInstance: {fileID: 39491641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1899498483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,19 +1618,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dTime: 0.1
-  FailMenu: {fileID: 1246877556}
+  m_gameOver: {fileID: 11400000, guid: 73b062014624f414fbb4f2a61c204495, type: 2}
   teaAmount: 0
-  scoreUI: {fileID: 1854625186}
-  timeUI: {fileID: 1421824591}
-  teaDeliveredUI: {fileID: 447818816}
-  totalScoreUI: {fileID: 2092028750}
-  inGameScoreUI: {fileID: 513482507}
   CustomerCollider: {fileID: 1371063782}
   leftLane: {fileID: 1599247554}
   middleLane: {fileID: 606978940}
   rightLane: {fileID: 425639535}
   lanes: []
   turningSpeed: 2
+  Cheering: {fileID: 11400000, guid: c26b337e2f7a34247945d65b0fa2175c, type: 2}
+  Drink: {fileID: 11400000, guid: 2d661523075f90b4c85bf4f2142182a8, type: 2}
+  Firing: {fileID: 11400000, guid: a3a41dfff93cd7349a75c7412c0ccfaa, type: 2}
+  Horn: {fileID: 11400000, guid: 3a67b5886f6c1eb4f9503fe923ac4bf3, type: 2}
+  Pickup: {fileID: 11400000, guid: 47b3e68eab1ca0f4192e81293309f023, type: 2}
+  TireScreech: {fileID: 11400000, guid: 782651767274151469e08ae1a1896717, type: 2}
   turningAnimations: {fileID: 1899498488}
 --- !u!65 &1899498486
 BoxCollider:
@@ -1816,12 +1782,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063527567}
   m_CullTransparentMesh: 0
---- !u!1 &2092028750 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8431088451581679293, guid: e256ab0a5248ee248bcff08df1fb7614,
-    type: 3}
-  m_PrefabInstance: {fileID: 39491641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2108976119
 GameObject:
   m_ObjectHideFlags: 0

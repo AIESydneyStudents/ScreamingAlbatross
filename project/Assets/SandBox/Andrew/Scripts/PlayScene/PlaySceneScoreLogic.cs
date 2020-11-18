@@ -3,7 +3,7 @@ using UnityEngine.UI;
 public class PlaySceneScoreLogic : MonoBehaviour
 {
     [SerializeField] Text m_text;
-    [SerializeField] ScriptableFloat m_scoreVariable;
+    [SerializeField] ScriptableInt m_scoreVariable;
 
     private void OnEnable()
     {
