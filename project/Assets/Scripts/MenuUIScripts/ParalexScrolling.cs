@@ -10,8 +10,9 @@ public class ParalexScrollingLayer
 {
     public Sprite sprite;
     public Vector2 scrollSpeed = Vector2.zero;
-    public Vector2 offset = Vector2.zero;
 
+    [NonSerialized] public Vector2 offset = Vector2.zero;
+    
     [NonSerialized] public Material material;
 }
 
