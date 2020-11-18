@@ -2246,6 +2246,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4866526540581449893, guid: e6e60e79ab434bb43bd6c289f3669ead,
+        type: 3}
+      propertyPath: PickUps.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866526540581449893, guid: e6e60e79ab434bb43bd6c289f3669ead,
+        type: 3}
+      propertyPath: PickUps.Array.data[0]
+      value: 
+      objectReference: {fileID: 450407161004666523, guid: 33dc60087a73efb408baf468c399b11b,
+        type: 3}
+    - target: {fileID: 4866526540581449893, guid: e6e60e79ab434bb43bd6c289f3669ead,
+        type: 3}
+      propertyPath: pickupTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e60e79ab434bb43bd6c289f3669ead, type: 3}
 --- !u!23 &4905649224579384609
