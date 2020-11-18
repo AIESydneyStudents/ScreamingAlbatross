@@ -2888,6 +2888,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannonControl: {fileID: 788749363}
+  customerMarker: {fileID: -4030486842035403899, guid: b56bfcca827bca841a361eaf1857aed7,
+    type: 3}
 --- !u!1 &1911817465
 GameObject:
   m_ObjectHideFlags: 0

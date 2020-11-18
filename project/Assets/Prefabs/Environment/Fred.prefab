@@ -168,7 +168,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1151418754076126488}
   - component: {fileID: 4172580247586893490}
-  - component: {fileID: 6191429546018975588}
+  - component: {fileID: 4231953024200523996}
+  - component: {fileID: 1596940083550821310}
   m_Layer: 0
   m_Name: Fred
   m_TagString: Customer
@@ -205,7 +206,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 283.006, y: 386.84393, z: 101.314354}
   m_Center: {x: -4.2346478, y: 192.92195, z: -1.4801979}
---- !u!114 &6191429546018975588
+--- !u!114 &4231953024200523996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4152864872674680587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17c612e5d2d4d94fbbbe8356fdff7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
+--- !u!114 &1596940083550821310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,4 +231,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396636c9dcb6f2b4fab144b3ff9d7027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 20, y: 0, z: 0}
+  moveDirection: {x: 0, y: 0, z: 0}
+  beenDelivered: 0

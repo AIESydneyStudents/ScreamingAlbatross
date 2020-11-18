@@ -6,6 +6,7 @@ public class NPCBehaviour : MonoBehaviour
 {
     [SerializeField] Vector3 moveDirection = new Vector3();
     public bool beenDelivered = false;
+    public bool hasMarker = false;
    
     void Update()
     {

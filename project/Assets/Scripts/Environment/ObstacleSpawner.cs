@@ -84,6 +84,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     void SpawnPickup()
     {
+        Debug.Log(usedLanes.Count);
         int usedlane = usedLanes[usedLanes.Count];
         int newlane = 0;
         while (newlane != usedlane)
