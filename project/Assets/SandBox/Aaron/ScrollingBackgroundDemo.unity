@@ -709,5 +709,40 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 876113943606828502, guid: acf6223470ff9344ca572828e9f3ba9f,
+        type: 3}
+      propertyPath: layers.Array.data[6].scrollSpeed.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876113943606828502, guid: acf6223470ff9344ca572828e9f3ba9f,
+        type: 3}
+      propertyPath: layers.Array.data[7].scrollSpeed.x
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 876113943606828502, guid: acf6223470ff9344ca572828e9f3ba9f,
+        type: 3}
+      propertyPath: layers.Array.data[5].scrollSpeed.x
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 876113943606828502, guid: acf6223470ff9344ca572828e9f3ba9f,
+        type: 3}
+      propertyPath: layers.Array.data[1].scrollSpeed.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 876113943606828502, guid: acf6223470ff9344ca572828e9f3ba9f,
+        type: 3}
+      propertyPath: layers.Array.data[2].scrollSpeed.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 876113943606828502, guid: acf6223470ff9344ca572828e9f3ba9f,
+        type: 3}
+      propertyPath: layers.Array.data[3].scrollSpeed.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 876113943606828502, guid: acf6223470ff9344ca572828e9f3ba9f,
+        type: 3}
+      propertyPath: layers.Array.data[4].scrollSpeed.x
+      value: -0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acf6223470ff9344ca572828e9f3ba9f, type: 3}
