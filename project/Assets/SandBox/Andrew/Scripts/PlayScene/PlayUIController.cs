@@ -4,8 +4,7 @@ using UnityEngine.UI;
 
 public class PlayUIController : MonoBehaviour
 {
-    [SerializeField] GameObject m_pauseContainer;
-    [SerializeField] GameObject m_gameOverContainer;
+    [SerializeField] GameObject m_pauseContainer, m_gameOverContainer, m_mainPlayUIContainer;
     [SerializeField] Image fader;
 
     private void Start()
@@ -18,10 +17,13 @@ public class PlayUIController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape) && m_gameOverContainer.activeInHierarchy == false)
         {
             if (m_pauseContainer.activeInHierarchy)
+            {
                 UnpauseGame();
+            }
             else
+            {
                 PauseGame();
-
+            }
         }
     }
     public void PauseGame()
@@ -44,6 +46,7 @@ public class PlayUIController : MonoBehaviour
 
         //display game over
         m_gameOverContainer.SetActive(true);
+        m_mainPlayUIContainer.SetActive(false);
     }
 
     public void MainMenu()

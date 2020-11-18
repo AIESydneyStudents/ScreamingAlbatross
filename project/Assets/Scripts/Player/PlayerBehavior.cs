@@ -10,11 +10,15 @@ public class PlayerBehavior : MonoBehaviour
     private int intLane = 0;
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPos;
-    public GameObject FailMenu;
 
-    private int score;
+    //event to call the player has collided
+    [SerializeField] GameEvent m_gameOver;
+
+    /*public GameObject FailMenu;
+
+    private int score;*/
     public int teaAmount;
-    [SerializeField] GameObject scoreUI;
+    /*[SerializeField] GameObject scoreUI;
     Text scoreText;
     [SerializeField] GameObject timeUI;
     Text timeText;
@@ -24,7 +28,7 @@ public class PlayerBehavior : MonoBehaviour
     Text totalScoreText;
 
     [SerializeField] GameObject inGameScoreUI;
-    Text inGameScoreText;
+    Text inGameScoreText;*/
 
     private float totalRunTime = 0;
 
@@ -46,11 +50,11 @@ public class PlayerBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText = scoreUI.GetComponent<Text>();
+        /*scoreText = scoreUI.GetComponent<Text>();
         timeText = timeUI.GetComponent<Text>();
         teaAmountText = teaDeliveredUI.GetComponent<Text>();
         totalScoreText = totalScoreUI.GetComponent<Text>();
-        inGameScoreText = inGameScoreUI.GetComponent<Text>();
+        inGameScoreText = inGameScoreUI.GetComponent<Text>();*/
 
 
 
@@ -62,7 +66,7 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreTimer++;
+        /*scoreTimer++;
         if (scoreTimer > 3)
         {
             if (FailMenu.activeInHierarchy == false)
@@ -73,7 +77,7 @@ public class PlayerBehavior : MonoBehaviour
                 inGameScoreText.text = "Score: " + score;
             }
         }
-        totalRunTime += Time.deltaTime;
+        totalRunTime += Time.deltaTime;*/
         #region MOVEMENT
 
         Vector3 pos = transform.position;
@@ -135,12 +139,13 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
+            m_gameOver.Raise();
             LoadFail();
         }
     }
     private void LoadFail()
     {
-        FailMenu.SetActive(true);
+        /*FailMenu.SetActive(true);
         Time.timeScale = 0.0f;
 
         timeText.text = "Time: " + (int)totalRunTime;
@@ -148,6 +153,6 @@ public class PlayerBehavior : MonoBehaviour
         teaAmountText.text = "Tea Delivered: " + teaAmount;
 
         int totalScore = (int)totalRunTime + score + (teaAmount * 3);
-        totalScoreText.text = "Total Score: " + totalScore;
+        totalScoreText.text = "Total Score: " + totalScore;*/
     }
 }
