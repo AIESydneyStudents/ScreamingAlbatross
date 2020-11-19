@@ -45,7 +45,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 51836abd4c63dde498bb225588227bf6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 51836abd4c63dde498bb225588227bf6,
         type: 3}
@@ -95,6 +95,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ChineseProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 421343773686866411, guid: 01f8070cc6987a04780ebe58f3dd5877,
+        type: 3}
+      propertyPath: m_TagString
+      value: Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 8580589010017223792, guid: 01f8070cc6987a04780ebe58f3dd5877,
         type: 3}

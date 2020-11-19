@@ -6,6 +6,7 @@ public class NPCBehaviour : MonoBehaviour
 {
     [SerializeField] Vector3 moveDirection = new Vector3();
     public bool beenDelivered = false;
+    public bool projectileCollided = false;
     public bool hasMarker = false;
    
     void Update()
@@ -20,6 +21,7 @@ public class NPCBehaviour : MonoBehaviour
         }
         if (other.gameObject.tag == "Projectile")
         {
+            projectileCollided = true;
             Destroy(other.gameObject);
         }
     }

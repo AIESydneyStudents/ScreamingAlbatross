@@ -23,6 +23,7 @@ public class NpcCollider : MonoBehaviour
                     MarkerMove tempMarker = Instantiate(customerMarker);
                     tempMarker.transform.position = new Vector3(collision.transform.position.x, 100, collision.transform.position.z);
                     tempMarker.gameObject.transform.parent = null;
+                    tempMarker.customer = temp;
                     
                 }
                 cannonControl.target = temp;

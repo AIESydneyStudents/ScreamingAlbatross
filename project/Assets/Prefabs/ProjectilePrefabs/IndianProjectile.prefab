@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndianProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 421343773686866411, guid: 01f8070cc6987a04780ebe58f3dd5877,
+        type: 3}
+      propertyPath: m_TagString
+      value: Projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 8580589010017223792, guid: 01f8070cc6987a04780ebe58f3dd5877,
         type: 3}
       propertyPath: m_LocalPosition.x

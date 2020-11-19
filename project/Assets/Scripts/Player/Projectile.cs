@@ -13,10 +13,11 @@ public class Projectile : MonoBehaviour
     {
         transform.Rotate(0, 90, 0);
         transform.position += transform.forward * -scale;
+        Destroy(this, 10.0f);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.LookAt(projectileTarget.transform);
         transform.position += transform.forward * shootSpeed * Time.deltaTime;

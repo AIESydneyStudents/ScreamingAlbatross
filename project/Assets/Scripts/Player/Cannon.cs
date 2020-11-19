@@ -15,8 +15,8 @@ public class Cannon : MonoBehaviour
     [SerializeField] float projectileSpeed;
 
     public Transform particleOffset;
-
-    
+    [SerializeField] float rotationLimitPositive = 80;
+    [SerializeField] float rotationLimitNegative = 270;
 
 
     private void Start()
@@ -25,11 +25,18 @@ public class Cannon : MonoBehaviour
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        if (transform.localEulerAngles.y < rotationLimitNegative && transform.localEulerAngles.y > rotationLimitPositive)
+        {
+            target = null;
+
+        }
         
         
-       
+
+
+
         if (target != null)
         {
             
@@ -48,6 +55,8 @@ public class Cannon : MonoBehaviour
             Quaternion lookAt = Quaternion.Euler(0, 0, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, lookAt, Time.deltaTime * speed);
         }
+
+
         if (Input.GetKeyDown(KeyCode.Space) && target != null)
         {
             if (target.beenDelivered == false)
