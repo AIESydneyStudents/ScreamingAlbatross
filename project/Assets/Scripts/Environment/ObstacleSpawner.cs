@@ -86,8 +86,8 @@ public class ObstacleSpawner : MonoBehaviour
     {
         Debug.Log(usedLanes.Count);
         int usedlane = usedLanes[usedLanes.Count - 1];
-        int newlane = 0;
-        while (newlane != usedlane)
+        int newlane = usedlane;
+        while (newlane == usedlane)
         {
             newlane = Random.Range(1, 4);
         }

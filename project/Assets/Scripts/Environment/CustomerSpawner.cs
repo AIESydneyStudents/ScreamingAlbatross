@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CustomerSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject customerPrefab;
+    [SerializeField] GameObject[] customerPrefab;
     [SerializeField] GameObject leftSidewalk;
     [SerializeField] GameObject rightSidewalk;
 
@@ -19,9 +19,9 @@ public class CustomerSpawner : MonoBehaviour
         if (spawnTimer >= spawnRate)
         {
             if (Random.Range(0, 2) >= 1)
-                Instantiate(customerPrefab, leftSidewalk.transform);
+                Instantiate(customerPrefab[Random.Range(0, customerPrefab.Length)], leftSidewalk.transform);
             else
-                Instantiate(customerPrefab, rightSidewalk.transform);
+                Instantiate(customerPrefab[Random.Range(0, customerPrefab.Length)], rightSidewalk.transform);
 
             spawnTimer = 0;
         }
