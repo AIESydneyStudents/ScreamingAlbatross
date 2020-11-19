@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BritishProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 421343773686866411, guid: 01f8070cc6987a04780ebe58f3dd5877,
+        type: 3}
+      propertyPath: m_TagString
+      value: Projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 8580589010017223792, guid: 01f8070cc6987a04780ebe58f3dd5877,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -120,7 +125,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bc9d1cdb40e2158459eb1f7880ddedce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bc9d1cdb40e2158459eb1f7880ddedce,
         type: 3}

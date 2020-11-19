@@ -95,7 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 6
   speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
-  fallSpeed: 100
+  fallSpeed: 200
+  spinSpeed: 100
 --- !u!65 &880972784990948977
 BoxCollider:
   m_ObjectHideFlags: 0
