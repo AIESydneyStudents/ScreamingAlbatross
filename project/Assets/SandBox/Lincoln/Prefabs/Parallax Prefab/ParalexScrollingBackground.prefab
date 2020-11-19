@@ -52,17 +52,19 @@ MonoBehaviour:
   layers:
   - sprite: {fileID: 21300000, guid: e081652a53f94f44c91a9ec8dd385986, type: 3}
     scrollSpeed: {x: 0, y: 0}
-  - sprite: {fileID: 21300000, guid: baf08d86a6ffd734e822811033f233ed, type: 3}
-    scrollSpeed: {x: -0.0175, y: 0}
-  - sprite: {fileID: 21300000, guid: 756012429b922b24ba0e2b80b8c78a19, type: 3}
+  - sprite: {fileID: 21300000, guid: 1e75e3aec00cda94ab9daf020489176a, type: 3}
+    scrollSpeed: {x: -0.01, y: 0}
+  - sprite: {fileID: 21300000, guid: 24aa17e64a7ea104c98240a971a4437e, type: 3}
+    scrollSpeed: {x: -0.015, y: 0}
+  - sprite: {fileID: 21300000, guid: e993fd26e7c9daf4295bb724b8ff8a18, type: 3}
     scrollSpeed: {x: -0.02, y: 0}
-  - sprite: {fileID: 21300000, guid: 558db6c1382d4314e96e8772ca4d0090, type: 3}
+  - sprite: {fileID: 21300000, guid: 045cd1bd7464f6744a5810c269a5f2a6, type: 3}
     scrollSpeed: {x: -0.1, y: 0}
-  - sprite: {fileID: 21300000, guid: ce01459b62289164a9f6cc0341c7ae14, type: 3}
+  - sprite: {fileID: 21300000, guid: 8dba0c47641b37246871980fcaae6cbb, type: 3}
     scrollSpeed: {x: -0.2, y: 0}
-  - sprite: {fileID: 21300000, guid: dbe4b4cae7fc4104aab2995bb6b517b4, type: 3}
+  - sprite: {fileID: 21300000, guid: d12c592d0c63b3b4eb6f21f756dc1505, type: 3}
     scrollSpeed: {x: -0.3, y: 0}
   - sprite: {fileID: 21300000, guid: 8c2c4a8b751099944a99b8259c8de8e9, type: 3}
     scrollSpeed: {x: 0, y: 0}
-  - sprite: {fileID: 21300000, guid: 5af705cccfb75b849ae9bd7f4471169b, type: 3}
+  - sprite: {fileID: 21300000, guid: d46b4b48a7ec530419861736f10a81ac, type: 3}
     scrollSpeed: {x: -0.4, y: 0}
