@@ -64,5 +64,5 @@ MonoBehaviour:
     scrollSpeed: {x: -0.3, y: 0}
   - sprite: {fileID: 21300000, guid: 8c2c4a8b751099944a99b8259c8de8e9, type: 3}
     scrollSpeed: {x: 0, y: 0}
-  - sprite: {fileID: 21300000, guid: 3ae8725f52940134fb01688980a15dc5, type: 3}
+  - sprite: {fileID: 21300000, guid: 5af705cccfb75b849ae9bd7f4471169b, type: 3}
     scrollSpeed: {x: -0.4, y: 0}
