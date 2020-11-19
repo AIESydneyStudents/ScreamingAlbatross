@@ -52,8 +52,10 @@ MonoBehaviour:
   layers:
   - sprite: {fileID: 21300000, guid: e081652a53f94f44c91a9ec8dd385986, type: 3}
     scrollSpeed: {x: 0, y: 0}
+  - sprite: {fileID: 21300000, guid: 1e75e3aec00cda94ab9daf020489176a, type: 3}
+    scrollSpeed: {x: -0.01, y: 0}
   - sprite: {fileID: 21300000, guid: 24aa17e64a7ea104c98240a971a4437e, type: 3}
-    scrollSpeed: {x: -0.0175, y: 0}
+    scrollSpeed: {x: -0.015, y: 0}
   - sprite: {fileID: 21300000, guid: e993fd26e7c9daf4295bb724b8ff8a18, type: 3}
     scrollSpeed: {x: -0.02, y: 0}
   - sprite: {fileID: 21300000, guid: 045cd1bd7464f6744a5810c269a5f2a6, type: 3}
@@ -64,7 +66,5 @@ MonoBehaviour:
     scrollSpeed: {x: -0.3, y: 0}
   - sprite: {fileID: 21300000, guid: 8c2c4a8b751099944a99b8259c8de8e9, type: 3}
     scrollSpeed: {x: 0, y: 0}
-  - sprite: {fileID: 21300000, guid: d46b4b48a7ec530419861736f10a81ac, type: 3}
-    scrollSpeed: {x: -0.4, y: 0}
   - sprite: {fileID: 21300000, guid: d46b4b48a7ec530419861736f10a81ac, type: 3}
     scrollSpeed: {x: -0.4, y: 0}
