@@ -85,7 +85,7 @@ public class ObstacleSpawner : MonoBehaviour
     void SpawnPickup()
     {
         Debug.Log(usedLanes.Count);
-        int usedlane = usedLanes[usedLanes.Count];
+        int usedlane = usedLanes[usedLanes.Count - 1];
         int newlane = 0;
         while (newlane != usedlane)
         {
@@ -105,6 +105,9 @@ public class ObstacleSpawner : MonoBehaviour
             case 3:
                 GameObject newPickupRight = Instantiate(PickUps[Random.Range(0, PickUps.Length - 1)], right.transform.position, right.transform.rotation);
                 ExistingPickups.Add(newPickupRight);
+                break;
+            default:
+                Debug.Log("PickUp Not Spawned!");
                 break;
         }
 
