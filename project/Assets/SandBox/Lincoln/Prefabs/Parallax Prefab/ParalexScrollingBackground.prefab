@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shader: {fileID: -6465566751694194690, guid: f2c8fb8a50dca23468c6d7803f7b3d08, type: 3}
   layers:
-  - sprite: {fileID: 21300000, guid: ca66c44ad4e4cc940a03161942f3533a, type: 3}
+  - sprite: {fileID: 21300000, guid: e081652a53f94f44c91a9ec8dd385986, type: 3}
     scrollSpeed: {x: 0, y: 0}
   - sprite: {fileID: 21300000, guid: baf08d86a6ffd734e822811033f233ed, type: 3}
     scrollSpeed: {x: -0.0175, y: 0}
