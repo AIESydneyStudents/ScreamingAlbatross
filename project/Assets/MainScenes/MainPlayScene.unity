@@ -391,6 +391,8 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 50
   particleOffset: {fileID: 461533699}
+  rotationLimitPositive: 80
+  rotationLimitNegative: 270
 --- !u!4 &437018020
 Transform:
   m_ObjectHideFlags: 0
@@ -1281,7 +1283,7 @@ Transform:
   m_GameObject: {fileID: 1681383379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -67.6, y: 0, z: 0}
-  m_LocalScale: {x: 32.561077, y: 32.561077, z: 215.74643}
+  m_LocalScale: {x: 32.561077, y: 32.561077, z: 94.86745}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -2191,9 +2193,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1747829408}
     m_Modifications:
+    - target: {fileID: 425639535, guid: e6e60e79ab434bb43bd6c289f3669ead, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.75
+      objectReference: {fileID: 0}
     - target: {fileID: 516722001, guid: e6e60e79ab434bb43bd6c289f3669ead, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 606978940, guid: e6e60e79ab434bb43bd6c289f3669ead, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4866526540581449888, guid: e6e60e79ab434bb43bd6c289f3669ead,
         type: 3}
