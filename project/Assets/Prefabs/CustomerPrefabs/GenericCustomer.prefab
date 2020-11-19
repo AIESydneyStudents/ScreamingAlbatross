@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 2470062897035606992}
   - component: {fileID: 8639890167011550250}
   - component: {fileID: 3335144597804651557}
+  - component: {fileID: -3118387592911635959}
   m_Layer: 0
   m_Name: GenericCustomer
   m_TagString: Customer
@@ -58,7 +59,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8022031093945459954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2725773598843888801}
@@ -102,11 +103,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8022031093945459954}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4.5131598, z: 3.1970735}
+  m_Center: {x: 0, y: 1.7565799, z: -0.018388033}
+--- !u!114 &-3118387592911635959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8022031093945459954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396636c9dcb6f2b4fab144b3ff9d7027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDirection: {x: 0, y: 0, z: 0}
+  beenDelivered: 0
+  projectileCollided: 0
+  hasMarker: 0
 --- !u!1001 &5418602760820014303
 PrefabInstance:
   m_ObjectHideFlags: 0

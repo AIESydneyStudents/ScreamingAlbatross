@@ -28,19 +28,10 @@ public class Cannon : MonoBehaviour
     void FixedUpdate()
     {
         if (transform.localEulerAngles.y < rotationLimitNegative && transform.localEulerAngles.y > rotationLimitPositive)
-        {
             target = null;
-
-        }
-        
-        
-
-
 
         if (target != null)
         {
-            
-            
             speed = 10;
             Vector3 dirToTarget = target.transform.position - transform.position;
             dirToTarget.y = 0f;
