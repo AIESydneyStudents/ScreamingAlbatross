@@ -16,6 +16,12 @@ TagManager:
   - Right
   - Middle
   - Pickup
+  - Chinese
+  - British
+  - Indian
+  - IndianCustomer
+  - ChineseCustomer
+  - BritishCustomer
   layers:
   - Default
   - TransparentFX

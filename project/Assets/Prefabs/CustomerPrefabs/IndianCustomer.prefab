@@ -45,7 +45,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f587b9b2a380e5c499e883555716277c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f587b9b2a380e5c499e883555716277c,
         type: 3}
@@ -134,6 +134,11 @@ PrefabInstance:
     - target: {fileID: 8022031093945459954, guid: 594f1b14e992def4a817fca9d5d4f312,
         type: 3}
       propertyPath: m_Name
+      value: IndianCustomer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022031093945459954, guid: 594f1b14e992def4a817fca9d5d4f312,
+        type: 3}
+      propertyPath: m_TagString
       value: IndianCustomer
       objectReference: {fileID: 0}
     m_RemovedComponents: []

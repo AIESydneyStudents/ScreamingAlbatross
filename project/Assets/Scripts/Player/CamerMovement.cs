@@ -5,13 +5,15 @@ using UnityEngine;
 public class CamerMovement : MonoBehaviour
 {
     public GameObject target;
-    public float speed;
+    public float m_time;
+    private float m_velocity = 0.0f;
 
     // Update is called once per frame
     void Update()
     {
         Vector3 pos = transform.position;
-        pos.z = Mathf.Lerp(pos.z, Mathf.Clamp(target.transform.position.z, -3, 3), speed);
+        float targetZ = Mathf.Clamp(target.transform.position.z, -1f, 1f);
+        pos.z = Mathf.SmoothDamp(pos.z, targetZ, ref m_velocity, m_time);
         transform.position = pos;
     }
 }
