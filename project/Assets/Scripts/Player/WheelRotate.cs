@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class WheelRotate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] ScriptableFloat Speed;
+    public float mod;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(new Vector3(0, 0, -1), Speed.m_Value * mod);
     }
 }

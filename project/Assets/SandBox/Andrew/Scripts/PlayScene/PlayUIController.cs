@@ -4,13 +4,16 @@ using UnityEngine.UI;
 
 public class PlayUIController : MonoBehaviour
 {
-    [SerializeField] GameObject m_pauseContainer, m_gameOverContainer, m_mainPlayUIContainer;
+    [SerializeField] GameObject m_pauseContainer, m_gameOverContainer, m_mainPlayUIContainer, m_ingameInstructions;
     [SerializeField] Image fader;
+
 
     private void Start()
     {
+        m_ingameInstructions.SetActive(true);
         Cursor.visible = false;
         fader.CrossFadeAlpha(0, 1.5f, true);
+        Invoke("DisableInstructions", 8);
     }
 
     private void Update()
@@ -85,5 +88,10 @@ public class PlayUIController : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+    }
+
+    private void DisableInstructions()
+    {
+        m_ingameInstructions.SetActive(false);
     }
 }
