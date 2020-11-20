@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a8b3bea6bad964597fbf0aab9d362e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {fileID: 0}
+  Speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
   mod: 1
 --- !u!1 &1836448459089693365
 GameObject:
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a8b3bea6bad964597fbf0aab9d362e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {fileID: 0}
+  Speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
   mod: 1
 --- !u!1 &2678191058704268575
 GameObject:
@@ -578,6 +578,7 @@ MonoBehaviour:
   middleLane: {fileID: 0}
   rightLane: {fileID: 0}
   lanes: []
+  animationDelay: 0.2
   turningSpeed: 2
   m_Horn: {fileID: 11400000, guid: 3a67b5886f6c1eb4f9503fe923ac4bf3, type: 2}
   m_Pickup: {fileID: 11400000, guid: 47b3e68eab1ca0f4192e81293309f023, type: 2}
@@ -597,8 +598,10 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: f99e71ec8a00eb2448bd25ae032d8ae5, type: 2}
-  - {fileID: 7400000, guid: 994b209861f4bf64cb61c3dfe43f965c, type: 2}
+  - {fileID: 7400000, guid: 2dae1da2c76d82a42a5bfc3820a32a56, type: 2}
+  - {fileID: 7400000, guid: ac67f923add66d046b1abaa36d14c6d6, type: 2}
+  - {fileID: 7400000, guid: 583bcf22cf7f16945a34c19ec74cb031, type: 2}
+  - {fileID: 7400000, guid: 9a2a3abd8f1177642944d786f37f5889, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -821,8 +824,11 @@ MonoBehaviour:
     type: 3}
   playerCar: {fileID: 4750178751232705350}
   target: {fileID: 0}
-  projectile: {fileID: 711495001122036897, guid: 9cddcbde3a6760146ab87fec1253b5f7,
-    type: 3}
+  projectiles:
+  - {fileID: 711495001122036897, guid: 9cddcbde3a6760146ab87fec1253b5f7, type: 3}
+  - {fileID: 3518418702662262498, guid: c3a4fd3c6c589e248b9dd876097f23af, type: 3}
+  - {fileID: 7826310542112425702, guid: 56562d6d77324964cb29b69fa9a157e6, type: 3}
+  - {fileID: 5379730371416983817, guid: dcf245f1c61ca7344852a4dbc370d731, type: 3}
   projectileSpeed: 50
   particleOffset: {fileID: 4750178752668891824}
   rotationLimitPositive: 80
@@ -830,6 +836,10 @@ MonoBehaviour:
   m_Firing: {fileID: 11400000, guid: a3a41dfff93cd7349a75c7412c0ccfaa, type: 2}
   m_totalTeaCount: {fileID: 11400000, guid: 362424a966bfde6418096e5139e18342, type: 2}
   m_comboObject: {fileID: 11400000, guid: 7cfa5e8adf1aed44faff8fbf2611285a, type: 2}
+  BritishTeaAmount: {fileID: 11400000, guid: 1b5056248236c7c4f84473e085753d41, type: 2}
+  ChineseTeaAmount: {fileID: 11400000, guid: cd78a739e5b8c104b93c5588c6f58eb3, type: 2}
+  IndianTeaAmount: {fileID: 11400000, guid: e6809ea73ee61544898850ef27299bc0, type: 2}
+  m_pickupEvent: {fileID: 11400000, guid: cec95a073b2d90d42a9e1609df275f46, type: 2}
 --- !u!1 &5368464834780247406
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a8b3bea6bad964597fbf0aab9d362e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {fileID: 0}
+  Speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
   mod: 1
 --- !u!1 &5707320998529826390
 GameObject:
@@ -1016,7 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a8b3bea6bad964597fbf0aab9d362e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {fileID: 0}
+  Speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
   mod: 1
 --- !u!1 &6205876229429756861
 GameObject:
@@ -1110,7 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a8b3bea6bad964597fbf0aab9d362e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {fileID: 0}
+  Speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
   mod: 1
 --- !u!1 &6893761358332490704
 GameObject:
@@ -1204,7 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a8b3bea6bad964597fbf0aab9d362e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {fileID: 0}
+  Speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
   mod: 1
 --- !u!1 &7386023566591997064
 GameObject:

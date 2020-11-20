@@ -42,6 +42,12 @@ public class PlayerBehavior : MonoBehaviour
 
     private bool movingLeft = false;
     private bool movingRight = false;
+
+    //the move function thing is too slow as it approaches the lane so the delay for the animations has to be seperate 
+    //so its not moving with weird delays
+    private float animationTimer = 0;
+    [SerializeField] float animationDelay = 0.2f;
+    
     public float turningSpeed = 2;
 
     //add spaces in inspector
@@ -75,6 +81,22 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (movingLeft || movingRight)
+        {
+            animationTimer += Time.deltaTime;
+            if (movingLeft && animationTimer >= animationDelay)
+            {
+                turningAnimations.Play("LeftTurnFinish");
+                movingLeft = false;
+                animationTimer = 0;
+            }
+            if (movingRight && animationTimer >= animationDelay)
+            {
+                turningAnimations.Play("RightTurnFinish");
+                movingRight = false;
+                animationTimer = 0;
+            }
+        }
         /*scoreTimer++;
         if (scoreTimer > 3)
         {
@@ -97,7 +119,14 @@ public class PlayerBehavior : MonoBehaviour
 
             if (intLane != -1)
             {
-                turningAnimations.Play("TurningLeft");
+                //this is to stop the overlap of animations if already moving to the left
+                if (movingLeft == false)
+                {
+                    turningAnimations.Play("TurnLeftOnly");
+                }
+                movingLeft = true;
+                movingRight = false;
+                
                 StopCoroutine(MoveDirection());
                 targetPos = new Vector3(pos.x, pos.y, lanes[intLane].position.z);
                 intLane--;
@@ -112,7 +141,12 @@ public class PlayerBehavior : MonoBehaviour
 
             if (intLane != 1)
             {
-                turningAnimations.Play("TurningRight");
+                if (movingRight == false)
+                {
+                    turningAnimations.Play("TurnRightOnly");
+                }
+                movingRight = true;
+                movingLeft = false;
                 StopCoroutine(MoveDirection());
                 targetPos = new Vector3(pos.x, pos.y, lanes[intLane + 2].position.z);
                 intLane++;
@@ -134,6 +168,9 @@ public class PlayerBehavior : MonoBehaviour
             yield return null;
         }
         time = 0;
+
+        
+        
     }
 
     void TireScreechSound()
@@ -153,25 +190,50 @@ public class PlayerBehavior : MonoBehaviour
             LoadFail();
         }
 
-        if (other.tag == "Pickup")
+        //if (other.tag == "Pickup")
+        //{
+        //    m_Pickup.Play();
+        //    switch (other.GetComponent<PickupLogic>().m_Theme)
+        //    {
+        //        case Themes.British:
+        //            a_BritishTeaCount.m_Value++;
+        //            break;
+        //        case Themes.Chinese:
+        //            a_ChineseTeaCount.m_Value++;
+        //            break;
+        //        case Themes.Indian:
+        //            a_IndianTeaCount.m_Value++;
+        //            break;
+        //    }
+        //    Destroy(other.gameObject);
+        //    m_pickupEvent.Raise();
+        //}
+
+        if (other.gameObject.tag == "British")
         {
-            m_Pickup.Play();
-            switch (other.GetComponent<PickupLogic>().m_Theme)
-            {
-                case Themes.British:
-                    a_BritishTeaCount.m_Value++;
-                    break;
-                case Themes.Chinese:
-                    a_ChineseTeaCount.m_Value++;
-                    break;
-                case Themes.Indian:
-                    a_IndianTeaCount.m_Value++;
-                    break;
-            }
-            Destroy(other.gameObject);
-            m_pickupEvent.Raise();
+            a_BritishTeaCount.m_Value++;
+            PickUp(other);
+        }
+        if (other.gameObject.tag == "Chinese")
+        {
+            a_ChineseTeaCount.m_Value++;
+            PickUp(other);
+        }
+        if (other.gameObject.tag == "Indian")
+        {
+            a_IndianTeaCount.m_Value++;
+            PickUp(other);
         }
     }
+    
+    private void PickUp(Collider other)
+    {
+        m_Pickup.Play();
+        Destroy(other.gameObject);
+        m_pickupEvent.Raise();
+    }
+
+
     private void LoadFail()
     {
         /*FailMenu.SetActive(true);
