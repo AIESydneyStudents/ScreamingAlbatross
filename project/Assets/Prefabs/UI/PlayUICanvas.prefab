@@ -140,6 +140,8 @@ GameObject:
   - component: {fileID: 7227714053589012576}
   - component: {fileID: 5013712992223317499}
   - component: {fileID: 1765438370094533944}
+  - component: {fileID: 6658245616934543739}
+  - component: {fileID: 2584704652060810510}
   m_Layer: 5
   m_Name: SCORE
   m_TagString: Untagged
@@ -207,6 +209,48 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'SCORE:'
+--- !u!114 &6658245616934543739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490800807585197531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adee8f4ff543bf54e8908460df3910c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_scoreObject: {fileID: 11400000, guid: 12c4236d18b4fc248a4b032d5b3efc10, type: 2}
+  m_text: {fileID: 8262215778486398702}
+--- !u!114 &2584704652060810510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490800807585197531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4085be086abc464095f0353ad24d151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Event:
+  - {fileID: 11400000, guid: a782bc88f597cf343b3859638ec1fed3, type: 2}
+  m_Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6658245616934543739}
+        m_MethodName: UpdateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &496108221076435528
 GameObject:
   m_ObjectHideFlags: 0

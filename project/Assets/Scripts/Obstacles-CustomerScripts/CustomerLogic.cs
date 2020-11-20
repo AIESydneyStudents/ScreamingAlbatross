@@ -5,6 +5,7 @@ public class CustomerLogic : MonoBehaviour
     [SerializeField] ScriptableInt m_scoreObject, m_comboObject;
     [SerializeField] ScriptableSoundObject m_cheeringSounds;
     [SerializeField] bool m_IsSpecial;
+    [SerializeField] GameEvent m_updateScore;
     
     public void Initialize(bool b)
     {
@@ -33,5 +34,6 @@ public class CustomerLogic : MonoBehaviour
         }
 
         m_scoreObject.m_Value += _score;
+        m_updateScore.Raise();
     }
 }
