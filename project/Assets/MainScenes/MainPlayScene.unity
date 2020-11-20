@@ -714,10 +714,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerPrefab:
-  - {fileID: 8022031093945459954, guid: 9ef8ef916e1f03d4a95d5ea3db8ac0ec, type: 3}
-  - {fileID: 8022031093945459954, guid: 00b6d96e16c15144d82bde8242972133, type: 3}
-  - {fileID: 8022031093945459954, guid: 8dcc600359b7d7740bf85201f8b00201, type: 3}
-  - {fileID: 8022031093945459954, guid: 594f1b14e992def4a817fca9d5d4f312, type: 3}
+  - {fileID: 6591823804493641838, guid: 2cfef3fb9bbec854eb9e099d34a26f6a, type: 3}
+  - {fileID: 5909701007565027675, guid: 112abe186a6b24b469a0dc19158e7f86, type: 3}
+  - {fileID: 5945026280493167762, guid: d018bf67ecba81645aa4cb9abc6d8062, type: 3}
+  - {fileID: 3900901000377582674, guid: 6ed5ec0a8a6de3949a800dd6b27296ec, type: 3}
   leftSidewalk: {fileID: 1068195633}
   rightSidewalk: {fileID: 1657549973}
   spawnRate: 6

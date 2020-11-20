@@ -19,6 +19,8 @@ public class Cannon : MonoBehaviour
     [SerializeField] float rotationLimitNegative = 270;
 
     [SerializeField] ScriptableSoundObject m_Firing;
+    [SerializeField] ScriptableFloat m_totalTeaCount;
+    [SerializeField] ScriptableInt m_comboObject;
 
     private void Start()
     {
@@ -29,7 +31,9 @@ public class Cannon : MonoBehaviour
     void FixedUpdate()
     {
         if (transform.localEulerAngles.y < rotationLimitNegative && transform.localEulerAngles.y > rotationLimitPositive)
+        {
             target = null;
+        }
 
         if (target != null)
         {
@@ -47,12 +51,17 @@ public class Cannon : MonoBehaviour
             Quaternion lookAt = Quaternion.Euler(0, 0, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, lookAt, Time.deltaTime * speed);
         }
+        if (Input.GetKeyDown(KeyCode.Space) && target == null)
+        {
+            m_comboObject.Reset();
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && target != null)
         {
-            m_Firing.Play();
+            
             if (target.beenDelivered == false)
             {
+                m_Firing.Play();
                 target.beenDelivered = true;
                 
                 Destroy(Instantiate(smokeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1); 
@@ -62,7 +71,9 @@ public class Cannon : MonoBehaviour
                 Projectile giveTarget = temp.GetComponent<Projectile>();
                 giveTarget.projectileTarget = target.gameObject;
                 giveTarget.shootSpeed = projectileSpeed;
-                playerCar.teaAmount++;
+                //playerCar.teaAmount++;
+                m_totalTeaCount.m_Value++;
+                target.GetComponent<CustomerLogic>().UpdateScore();
                 target = null;
             }
         }
