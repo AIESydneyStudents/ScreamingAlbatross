@@ -21,6 +21,8 @@ public class StencilGeneration : MonoBehaviour
     // gameobject lists
     [SerializeField] List<GameObject> Scenery = new List<GameObject>();
     [SerializeField] List<GameObject> Roads = new List<GameObject>();
+    //bridge, 0 is MAIN 1 is base
+    [SerializeField] List<GameObject> Bridge = new List<GameObject>();
 
     // existing GameObject lists
     private List<GameObject> GameObjectSceneryLeft;
@@ -116,25 +118,37 @@ public class StencilGeneration : MonoBehaviour
                 }
             }
 
-            // adding scenery to left
-            GameObject newSceneryLeft = Instantiate(Scenery[Random.Range(0, Scenery.Count)], newPosLeft, transform.rotation);
-            GameObject rotateChildGroup = new GameObject();
-
-            foreach (Transform child in newSceneryLeft.transform)
+            // chacne to spawn a bride or nah
+            int bridgeChance = Random.Range(1, 50);
+            if (bridgeChance < 3)
             {
-                if (child.name == "GameObject")
-                {
-                    rotateChildGroup = child.gameObject;
-                    break;
-                }
+                GameObject brightMainRight = Instantiate(Bridge[0], newPosRight, transform.rotation);
+                GameObjectSceneryRight.Add(brightMainRight);
+                GameObject brightBaseLeft = Instantiate(Bridge[1], newPosLeft, transform.rotation);
+                GameObjectSceneryLeft.Add(brightBaseLeft);
             }
+            else
+            {
+                // adding scenery to left
+                GameObject newSceneryLeft = Instantiate(Scenery[Random.Range(0, Scenery.Count)], newPosLeft, transform.rotation);
+                GameObject rotateChildGroup = new GameObject();
 
-            rotateChildGroup.transform.localRotation *= Quaternion.Euler(0, 180, 0);
-            GameObjectSceneryLeft.Add(newSceneryLeft);
+                foreach (Transform child in newSceneryLeft.transform)
+                {
+                    if (child.name == "GameObject")
+                    {
+                        rotateChildGroup = child.gameObject;
+                        break;
+                    }
+                }
 
-            // adding scenery to right
-            GameObject newSceneryRight = Instantiate(Scenery[Random.Range(0, Scenery.Count)], newPosRight, transform.rotation);
-            GameObjectSceneryRight.Add(newSceneryRight);
+                rotateChildGroup.transform.localRotation *= Quaternion.Euler(0, 180, 0);
+                GameObjectSceneryLeft.Add(newSceneryLeft);
+
+                // adding scenery to right
+                GameObject newSceneryRight = Instantiate(Scenery[Random.Range(0, Scenery.Count)], newPosRight, transform.rotation);
+                GameObjectSceneryRight.Add(newSceneryRight);
+            }
         }
         #endregion
     }

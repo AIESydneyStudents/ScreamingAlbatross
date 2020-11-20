@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1545912445444581292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1545912445444581299}
+  - component: {fileID: 1545912445444581298}
+  - component: {fileID: 1545912445444581296}
+  - component: {fileID: 1545912445444581297}
+  - component: {fileID: 1545912445444581303}
+  m_Layer: 0
+  m_Name: Road Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1545912445444581299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545912445444581292}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -233.7, y: 0, z: 0}
+  m_LocalScale: {x: 9.7432, y: 64.317, z: 311.87}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1545912445444581298
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545912445444581292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40.23958, y: 1, z: 1}
+  m_Center: {x: -19.619783, y: 0, z: 0}
+--- !u!54 &1545912445444581296
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545912445444581292}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &1545912445444581297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545912445444581292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014bba68a21914a42afaa3be8a04e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnOnStartPos: {fileID: 0}
+  OnStartLeftScenery: {fileID: 0}
+  OnStartRightScenery: {fileID: 0}
+  LeftScenery: {fileID: 0}
+  RightScenery: {fileID: 0}
+  Scenery:
+  - {fileID: 4471604829279100882, guid: 74663ed8faccd8040acf2d3338a71930, type: 3}
+  - {fileID: 4471604829279100882, guid: b54e25c06b565be4690da1afde652973, type: 3}
+  - {fileID: 4471604829279100882, guid: 75909aeb9531fa1498f7043d507e3c62, type: 3}
+  - {fileID: 4471604829279100882, guid: 5e36400aeca71e841aeb83fd1eb104ac, type: 3}
+  - {fileID: 4471604829279100882, guid: 149171d6d9ee8414080085268a055040, type: 3}
+  - {fileID: 4471604829279100882, guid: 86d00a1191540f1418c03cb4e7739936, type: 3}
+  - {fileID: 4471604829279100882, guid: 188f123ce52eb2847b70fd058ba8e170, type: 3}
+  - {fileID: 4471604829279100882, guid: f497ab465735cd54eb7b8e056324dc48, type: 3}
+  Roads:
+  - {fileID: 4471604829279100882, guid: 681b3e1f72751fc43aa6d57aee542c27, type: 3}
+--- !u!114 &1545912445444581303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545912445444581292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca08196953ba8746bc796b3340bf403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
