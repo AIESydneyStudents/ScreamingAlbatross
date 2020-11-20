@@ -394,6 +394,8 @@ MonoBehaviour:
   rotationLimitPositive: 80
   rotationLimitNegative: 270
   m_Firing: {fileID: 11400000, guid: a3a41dfff93cd7349a75c7412c0ccfaa, type: 2}
+  m_totalTeaCount: {fileID: 11400000, guid: 362424a966bfde6418096e5139e18342, type: 2}
+  m_comboObject: {fileID: 11400000, guid: 7cfa5e8adf1aed44faff8fbf2611285a, type: 2}
 --- !u!4 &437018020
 Transform:
   m_ObjectHideFlags: 0
