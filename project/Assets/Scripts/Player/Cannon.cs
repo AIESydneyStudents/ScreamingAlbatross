@@ -11,7 +11,7 @@ public class Cannon : MonoBehaviour
     private float speed = 2f;
     public NPCBehaviour target;
     
-    public GameObject projectile;
+    public GameObject[] projectiles;
     [SerializeField] float projectileSpeed;
 
     public Transform particleOffset;
@@ -22,9 +22,14 @@ public class Cannon : MonoBehaviour
     [SerializeField] ScriptableFloat m_totalTeaCount;
     [SerializeField] ScriptableInt m_comboObject;
 
+    [SerializeField] ScriptableFloat BritishTeaAmount;
+    [SerializeField] ScriptableFloat ChineseTeaAmount;
+    [SerializeField] ScriptableFloat IndianTeaAmount;
+
+    [SerializeField] GameEvent m_pickupEvent;
+
     private void Start()
     {
-        
         
     }
 
@@ -66,16 +71,44 @@ public class Cannon : MonoBehaviour
                 
                 Destroy(Instantiate(smokeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1); 
                 Destroy(Instantiate(explodeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1);
-                
-                GameObject temp = Instantiate(projectile, transform.position, transform.rotation);
-                Projectile giveTarget = temp.GetComponent<Projectile>();
-                giveTarget.projectileTarget = target.gameObject;
-                giveTarget.shootSpeed = projectileSpeed;
+
+
+                if (target.tag == "Customer")
+                {
+                    LoadProjectile(0);
+                }
+                else if (target.tag == "BritishCustomer" && BritishTeaAmount.m_Value > 0)
+                {
+                    LoadProjectile(1);
+                    BritishTeaAmount.m_Value--;
+                }
+                else if (target.tag == "ChineseCustomer" && ChineseTeaAmount.m_Value > 0)
+                {
+                    LoadProjectile(2);
+                    ChineseTeaAmount.m_Value--;
+                }
+                else if (target.tag == "IndianCustomer" && IndianTeaAmount.m_Value > 0)
+                {
+                    LoadProjectile(3);
+                    IndianTeaAmount.m_Value--;
+                }
+                else
+                    LoadProjectile(0);
+
                 //playerCar.teaAmount++;
+                m_pickupEvent.Raise();
                 m_totalTeaCount.m_Value++;
                 target.GetComponent<CustomerLogic>().UpdateScore();
                 target = null;
             }
         }
+    }
+    private void LoadProjectile(int whichTea)
+    {
+        GameObject temp = Instantiate(projectiles[whichTea], transform.position, transform.rotation);
+
+        Projectile giveTarget = temp.GetComponent<Projectile>();
+        giveTarget.projectileTarget = target.gameObject;
+        giveTarget.shootSpeed = projectileSpeed;
     }
 }

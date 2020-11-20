@@ -8,6 +8,7 @@ public class NPCBehaviour : MonoBehaviour
     public bool beenDelivered = false;
     public bool projectileCollided = false;
     public bool hasMarker = false;
+    public bool isSpecial = false;
    
     void Update()
     {

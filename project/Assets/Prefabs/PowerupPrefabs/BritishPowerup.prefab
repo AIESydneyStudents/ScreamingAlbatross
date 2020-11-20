@@ -67,10 +67,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BritishPowerup
       objectReference: {fileID: 0}
-    - target: {fileID: 3590084192231277069, guid: b515e5e7512fcaf41af64f941c1f102d,
+    - target: {fileID: 1997377295021109963, guid: b515e5e7512fcaf41af64f941c1f102d,
         type: 3}
-      propertyPath: m_Theme
-      value: 1
+      propertyPath: m_TagString
+      value: British
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b515e5e7512fcaf41af64f941c1f102d, type: 3}
