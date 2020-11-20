@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PlayUIController : MonoBehaviour
 {
-    [SerializeField] GameObject m_pauseContainer, m_gameOverContainer, m_mainPlayUIContainer, m_ingameInstructions;
+    [SerializeField] GameObject m_pauseContainer, m_gameOverContainer, m_mainPlayUIContainer, m_ingameInstructions, m_confirmationPrompt;
     [SerializeField] Image fader;
 
 
@@ -66,6 +66,11 @@ public class PlayUIController : MonoBehaviour
     {
         ResetTimeScale(false);
         SceneManager.LoadScene(2);
+    }
+
+    public void QuitConfirmation()
+    {
+        m_confirmationPrompt.SetActive(true);
     }
 
     public void ExitGame()
