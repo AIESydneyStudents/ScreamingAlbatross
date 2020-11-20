@@ -393,6 +393,7 @@ MonoBehaviour:
   particleOffset: {fileID: 461533699}
   rotationLimitPositive: 80
   rotationLimitNegative: 270
+  m_Firing: {fileID: 11400000, guid: a3a41dfff93cd7349a75c7412c0ccfaa, type: 2}
 --- !u!4 &437018020
 Transform:
   m_ObjectHideFlags: 0
@@ -1540,6 +1541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dTime: 0.1
   m_gameOver: {fileID: 11400000, guid: 73b062014624f414fbb4f2a61c204495, type: 2}
+  m_pickupEvent: {fileID: 11400000, guid: cec95a073b2d90d42a9e1609df275f46, type: 2}
   teaAmount: 0
   CustomerCollider: {fileID: 1371063782}
   leftLane: {fileID: 1599247554}
@@ -1547,12 +1549,12 @@ MonoBehaviour:
   rightLane: {fileID: 425639535}
   lanes: []
   turningSpeed: 2
-  Cheering: {fileID: 11400000, guid: c26b337e2f7a34247945d65b0fa2175c, type: 2}
-  Drink: {fileID: 11400000, guid: 2d661523075f90b4c85bf4f2142182a8, type: 2}
-  Firing: {fileID: 11400000, guid: a3a41dfff93cd7349a75c7412c0ccfaa, type: 2}
-  Horn: {fileID: 11400000, guid: 3a67b5886f6c1eb4f9503fe923ac4bf3, type: 2}
-  Pickup: {fileID: 11400000, guid: 47b3e68eab1ca0f4192e81293309f023, type: 2}
-  TireScreech: {fileID: 11400000, guid: 782651767274151469e08ae1a1896717, type: 2}
+  m_Horn: {fileID: 11400000, guid: 3a67b5886f6c1eb4f9503fe923ac4bf3, type: 2}
+  m_Pickup: {fileID: 11400000, guid: 47b3e68eab1ca0f4192e81293309f023, type: 2}
+  m_TireScreech: {fileID: 11400000, guid: 782651767274151469e08ae1a1896717, type: 2}
+  a_BritishTeaCount: {fileID: 11400000, guid: 1b5056248236c7c4f84473e085753d41, type: 2}
+  a_ChineseTeaCount: {fileID: 11400000, guid: cd78a739e5b8c104b93c5588c6f58eb3, type: 2}
+  a_IndianTeaCount: {fileID: 11400000, guid: a8bad68b63848614ea0058ab17c9eb36, type: 2}
   turningAnimations: {fileID: 1899498488}
 --- !u!65 &1899498486
 BoxCollider:

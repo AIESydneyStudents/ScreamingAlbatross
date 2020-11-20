@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4547832331233613514}
   - component: {fileID: 426039126380616457}
   - component: {fileID: 899904875775510905}
+  - component: {fileID: 3590084192231277069}
   m_Layer: 0
   m_Name: PowerUpContainer
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,3 +90,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rotationSpeed: 80
   m_rotateDirection: {x: 0, y: 1, z: 0}
+--- !u!114 &3590084192231277069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997377295021109963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eacf74a955f0a8d4f8b9e3fe58c6856e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Theme: 0

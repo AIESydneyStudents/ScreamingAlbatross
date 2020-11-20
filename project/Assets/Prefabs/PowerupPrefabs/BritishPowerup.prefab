@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BritishPowerup
       objectReference: {fileID: 0}
+    - target: {fileID: 3590084192231277069, guid: b515e5e7512fcaf41af64f941c1f102d,
+        type: 3}
+      propertyPath: m_Theme
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b515e5e7512fcaf41af64f941c1f102d, type: 3}
 --- !u!4 &6245709000347130987 stripped
@@ -120,7 +125,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 72b8e22c6a26b944bb0ecbf873dd4e32,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 72b8e22c6a26b944bb0ecbf873dd4e32,
         type: 3}

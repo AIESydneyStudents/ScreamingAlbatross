@@ -12,7 +12,7 @@ public class PlayerBehavior : MonoBehaviour
     private Vector3 targetPos;
 
     //event to call the player has collided
-    [SerializeField] GameEvent m_gameOver;
+    [SerializeField] GameEvent m_gameOver, m_pickupEvent;
 
     /*public GameObject FailMenu;
 
@@ -46,13 +46,13 @@ public class PlayerBehavior : MonoBehaviour
 
     //add spaces in inspector
 
-    [SerializeField] ScriptableSoundObject Cheering;
-    [SerializeField] ScriptableSoundObject Drink;
-    [SerializeField] ScriptableSoundObject Firing;
-    [SerializeField] ScriptableSoundObject Horn;
-    [SerializeField] ScriptableSoundObject Pickup;
-    [SerializeField] ScriptableSoundObject TireScreech;
+    [SerializeField] ScriptableSoundObject m_Horn;
+    [SerializeField] ScriptableSoundObject m_Pickup;
+    [SerializeField] ScriptableSoundObject m_TireScreech;
 
+    [SerializeField] ScriptableFloat a_BritishTeaCount;
+    [SerializeField] ScriptableFloat a_ChineseTeaCount;
+    [SerializeField] ScriptableFloat a_IndianTeaCount;
 
 
     public Animation turningAnimations;
@@ -66,8 +66,6 @@ public class PlayerBehavior : MonoBehaviour
         teaAmountText = teaDeliveredUI.GetComponent<Text>();
         totalScoreText = totalScoreUI.GetComponent<Text>();
         inGameScoreText = inGameScoreUI.GetComponent<Text>();*/
-
-
 
         lanes.Add(leftLane);
         lanes.Add(middleLane);
@@ -92,12 +90,11 @@ public class PlayerBehavior : MonoBehaviour
         #region MOVEMENT
 
         Vector3 pos = transform.position;
-        // moveable == 0 means the player may move at any point 
-
         // on "A" or "LeftArrow" press
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            
+            TireScreechSound();
+
             if (intLane != -1)
             {
                 turningAnimations.Play("TurningLeft");
@@ -111,7 +108,8 @@ public class PlayerBehavior : MonoBehaviour
         // on "D" or "RightArrow" press
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            
+            TireScreechSound();
+
             if (intLane != 1)
             {
                 turningAnimations.Play("TurningRight");
@@ -123,14 +121,6 @@ public class PlayerBehavior : MonoBehaviour
             }
         }
         #endregion
-
-        #region SHOOTING
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-
-        }
-        #endregion
     }
 
     // move script
@@ -138,20 +128,48 @@ public class PlayerBehavior : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
-            
+
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
             CustomerCollider.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, time);
             yield return null;
         }
         time = 0;
     }
-    
+
+    void TireScreechSound()
+    {
+        int soundChance = Random.Range(1, 5);
+        if (soundChance == 1)
+        {
+            m_TireScreech.Play();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Obstacle")
+        if (other.tag == "Obstacle")
         {
             m_gameOver.Raise();
             LoadFail();
+        }
+
+        if (other.tag == "Pickup")
+        {
+            m_Pickup.Play();
+            switch (other.GetComponent<PickupLogic>().m_Theme)
+            {
+                case Themes.British:
+                    a_BritishTeaCount.m_Value++;
+                    break;
+                case Themes.Chinese:
+                    a_ChineseTeaCount.m_Value++;
+                    break;
+                case Themes.Indian:
+                    a_IndianTeaCount.m_Value++;
+                    break;
+            }
+            Destroy(other.gameObject);
+            m_pickupEvent.Raise();
         }
     }
     private void LoadFail()

@@ -15,6 +15,7 @@ TagManager:
   - Left
   - Right
   - Middle
+  - Pickup
   layers:
   - Default
   - TransparentFX

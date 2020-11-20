@@ -18,6 +18,7 @@ public class Cannon : MonoBehaviour
     [SerializeField] float rotationLimitPositive = 80;
     [SerializeField] float rotationLimitNegative = 270;
 
+    [SerializeField] ScriptableSoundObject m_Firing;
 
     private void Start()
     {
@@ -47,9 +48,9 @@ public class Cannon : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, lookAt, Time.deltaTime * speed);
         }
 
-
         if (Input.GetKeyDown(KeyCode.Space) && target != null)
         {
+            m_Firing.Play();
             if (target.beenDelivered == false)
             {
                 target.beenDelivered = true;
