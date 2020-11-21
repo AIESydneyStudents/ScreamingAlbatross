@@ -583,6 +583,7 @@ MonoBehaviour:
   m_Horn: {fileID: 11400000, guid: 3a67b5886f6c1eb4f9503fe923ac4bf3, type: 2}
   m_Pickup: {fileID: 11400000, guid: 47b3e68eab1ca0f4192e81293309f023, type: 2}
   m_TireScreech: {fileID: 11400000, guid: 782651767274151469e08ae1a1896717, type: 2}
+  m_Crash: {fileID: 11400000, guid: b9eacb73889ca9f44acc6fd261b60243, type: 2}
   a_BritishTeaCount: {fileID: 11400000, guid: 1b5056248236c7c4f84473e085753d41, type: 2}
   a_ChineseTeaCount: {fileID: 11400000, guid: cd78a739e5b8c104b93c5588c6f58eb3, type: 2}
   a_IndianTeaCount: {fileID: 11400000, guid: a8bad68b63848614ea0058ab17c9eb36, type: 2}

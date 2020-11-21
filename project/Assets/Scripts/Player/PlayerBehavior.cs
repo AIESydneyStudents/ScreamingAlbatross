@@ -55,6 +55,7 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField] ScriptableSoundObject m_Horn;
     [SerializeField] ScriptableSoundObject m_Pickup;
     [SerializeField] ScriptableSoundObject m_TireScreech;
+    [SerializeField] ScriptableSoundObject m_Crash;
 
     [SerializeField] ScriptableFloat a_BritishTeaCount;
     [SerializeField] ScriptableFloat a_ChineseTeaCount;
@@ -186,6 +187,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (other.tag == "Obstacle")
         {
+            m_Crash.Play();
             m_gameOver.Raise();
             LoadFail();
         }

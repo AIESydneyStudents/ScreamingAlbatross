@@ -1,13 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
     [SerializeField] ScriptableButtonEnum e_buttonPressed;
-    [SerializeField] GameObject m_mainMenuObject, m_optionsMenuObject, m_confirmationPrompt, m_continueButton;
-    [SerializeField] Text m_mouseControlsText;
+    [SerializeField] GameObject m_mainMenuObject, m_optionsMenuObject, m_confirmationPrompt, m_continueButton, m_creditsObject;
     [SerializeField] ScriptableVariableTransferObject m_vto;
 
     private void OnEnable()
@@ -40,9 +38,17 @@ public class MenuController : MonoBehaviour
             case MenuButtons.MouseControls:
                 MouseControlsButton();
                 break;
+            case MenuButtons.Theme:
+                CreditsButton();
+                break;
             case MenuButtons.None:
                 break;
         }
+    }
+    private void CreditsButton()
+    {
+        m_creditsObject.SetActive(true);
+        m_mainMenuObject.SetActive(false);
     }
 
     private void PlayButton()
@@ -69,6 +75,7 @@ public class MenuController : MonoBehaviour
         //return to the main menu
         m_mainMenuObject.SetActive(true);
         m_optionsMenuObject.SetActive(false);
+        m_creditsObject.SetActive(false);
     }
     private void ContinueButton()
     {
@@ -76,14 +83,7 @@ public class MenuController : MonoBehaviour
     }
     private void MouseControlsButton()
     {
-        m_vto.m_MouseControls = !m_vto.m_MouseControls;
-        if(m_vto.m_MouseControls)
-        {
-            m_mouseControlsText.text = "Enabled";
-        }else
-        {
-            m_mouseControlsText.text = "Disabled";
-        }
+
     }
 
     public void QuitApplication()
