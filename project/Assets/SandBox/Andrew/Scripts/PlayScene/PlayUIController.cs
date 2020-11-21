@@ -12,7 +12,7 @@ public class PlayUIController : MonoBehaviour
     {
         m_ingameInstructions.SetActive(true);
         Cursor.visible = false;
-        fader.CrossFadeAlpha(0, 1.5f, true);
+        fader.CrossFadeAlpha(0, 3f, true);
         Invoke("DisableInstructions", 8);
     }
 

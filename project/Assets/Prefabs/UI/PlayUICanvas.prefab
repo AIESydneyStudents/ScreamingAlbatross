@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1672,8 +1672,8 @@ RectTransform:
   m_Children:
   - {fileID: 1481628947403393433}
   - {fileID: 6387514573375751937}
-  - {fileID: 6364241956811499545}
   - {fileID: 2247380666534785590}
+  - {fileID: 6364241956811499545}
   m_Father: {fileID: 7795540685683662448}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1850,7 +1850,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -1860,7 +1860,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "QUIT TO \nMAIN MENU"
+  m_Text: MAIN MENU
 --- !u!1 &3686778146406060125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2000,7 +2000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3770381786150368355
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2860,7 +2860,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -2870,7 +2870,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: QUIT & SAVE
+  m_Text: EXIT GAME
 --- !u!1 &4735334178284589094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,7 +3294,7 @@ GameObject:
   - component: {fileID: 563775898127166962}
   - component: {fileID: 6505282500811851738}
   m_Layer: 5
-  m_Name: quit and save
+  m_Name: quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3313,11 +3313,11 @@ RectTransform:
   m_Children:
   - {fileID: 4796653961382672002}
   m_Father: {fileID: 3146450138105141933}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 273.05, y: -194.2}
+  m_AnchoredPosition: {x: 273.05, y: -270.325}
   m_SizeDelta: {x: 128.84, y: 33.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5410441615567809079
@@ -3519,11 +3519,11 @@ RectTransform:
   m_Children:
   - {fileID: 3621597284806600957}
   m_Father: {fileID: 3146450138105141933}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 273.05, y: -270.325}
+  m_AnchoredPosition: {x: 273.05, y: -194.2}
   m_SizeDelta: {x: 128.84, y: 33.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8666924542078646676
@@ -4751,7 +4751,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -5199,15 +5199,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d55beb81acec55441a609a5b4c9d27eb, type: 3}
---- !u!224 &8549524469150272377 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5874303039577030386, guid: d55beb81acec55441a609a5b4c9d27eb,
-    type: 3}
-  m_PrefabInstance: {fileID: 2820296015927195019}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8549524469150272376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5874303039577030387, guid: d55beb81acec55441a609a5b4c9d27eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2820296015927195019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &8549524469150272377 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5874303039577030386, guid: d55beb81acec55441a609a5b4c9d27eb,
     type: 3}
   m_PrefabInstance: {fileID: 2820296015927195019}
   m_PrefabAsset: {fileID: 0}
@@ -5330,15 +5330,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0736b05d2b0cfb34889363d726603d14, type: 3}
---- !u!1 &5164839953238791410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1046975647854975283, guid: 0736b05d2b0cfb34889363d726603d14,
-    type: 3}
-  m_PrefabInstance: {fileID: 5272211441182199233}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5164839953238791411 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
+    type: 3}
+  m_PrefabInstance: {fileID: 5272211441182199233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5164839953238791410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1046975647854975283, guid: 0736b05d2b0cfb34889363d726603d14,
     type: 3}
   m_PrefabInstance: {fileID: 5272211441182199233}
   m_PrefabAsset: {fileID: 0}

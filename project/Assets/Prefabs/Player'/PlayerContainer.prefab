@@ -587,6 +587,11 @@ MonoBehaviour:
   a_BritishTeaCount: {fileID: 11400000, guid: 1b5056248236c7c4f84473e085753d41, type: 2}
   a_ChineseTeaCount: {fileID: 11400000, guid: cd78a739e5b8c104b93c5588c6f58eb3, type: 2}
   a_IndianTeaCount: {fileID: 11400000, guid: a8bad68b63848614ea0058ab17c9eb36, type: 2}
+  m_totalBritishCount: {fileID: 11400000, guid: 2066857b9eeedd4438a82e0bf1b43d84,
+    type: 2}
+  m_totalIndianCount: {fileID: 11400000, guid: e6809ea73ee61544898850ef27299bc0, type: 2}
+  m_totalChineseCount: {fileID: 11400000, guid: 5bb8d87658a8093439eb8dba77a0a05f,
+    type: 2}
   turningAnimations: {fileID: 4750178751232705355}
 --- !u!111 &4750178751232705355
 Animation:
