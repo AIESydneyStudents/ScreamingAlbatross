@@ -6,17 +6,7 @@ public class CustomerLogic : MonoBehaviour
     [SerializeField] ScriptableSoundObject m_cheeringSounds;
     [SerializeField] bool m_IsSpecial;
     [SerializeField] GameEvent m_updateScore;
-    
-    public void Initialize(bool b)
-    {
-        m_IsSpecial = b;
-    }
-
-    public void PlaySound()
-    {
-        m_cheeringSounds.Play();
-    }
-
+    [SerializeField] ParticleSystem m_myEffect;
     public void UpdateScore()
     {
         int _score = 1;
@@ -35,5 +25,7 @@ public class CustomerLogic : MonoBehaviour
 
         m_scoreObject.m_Value += _score;
         m_updateScore.Raise();
+        m_myEffect.Play();
+        m_cheeringSounds.Play();
     }
 }

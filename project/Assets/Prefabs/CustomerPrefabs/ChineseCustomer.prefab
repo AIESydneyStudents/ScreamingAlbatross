@@ -141,6 +141,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: ChineseCustomer
       objectReference: {fileID: 0}
+    - target: {fileID: 8639890167011550250, guid: 594f1b14e992def4a817fca9d5d4f312,
+        type: 3}
+      propertyPath: m_IsSpecial
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 594f1b14e992def4a817fca9d5d4f312, type: 3}
 --- !u!4 &1766369429145647368 stripped

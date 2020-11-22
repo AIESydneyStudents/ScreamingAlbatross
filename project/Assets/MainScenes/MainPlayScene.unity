@@ -630,6 +630,9 @@ MonoBehaviour:
   - {fileID: 3900901000377582674, guid: 6ed5ec0a8a6de3949a800dd6b27296ec, type: 3}
   - {fileID: 8076543792211677691, guid: 5d98d6c433e0e124bbdd2e09d064d405, type: 3}
   - {fileID: 7469893811445271952, guid: cf210ba530078dd43a7dbacbb9dd262d, type: 3}
+  - {fileID: 9145996005729419543, guid: ac2363b93045e9144b78ff492cc993ca, type: 3}
+  - {fileID: 9173659033214705247, guid: c7aa5c992ab3e8748a7328d31aea5c32, type: 3}
+  - {fileID: 8524230511342313309, guid: 178d1c7b94b00c74e8f469a515b661be, type: 3}
   leftSidewalk: {fileID: 1068195633}
   rightSidewalk: {fileID: 1657549973}
   spawnRate: 6
