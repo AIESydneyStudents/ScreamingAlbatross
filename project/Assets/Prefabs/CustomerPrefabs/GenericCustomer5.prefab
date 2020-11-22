@@ -7,6 +7,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2725773598843888801, guid: 594f1b14e992def4a817fca9d5d4f312,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725773598843888801, guid: 594f1b14e992def4a817fca9d5d4f312,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725773598843888801, guid: 594f1b14e992def4a817fca9d5d4f312,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725773598843888801, guid: 594f1b14e992def4a817fca9d5d4f312,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725773598843888801, guid: 594f1b14e992def4a817fca9d5d4f312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 3115675977778339917, guid: 594f1b14e992def4a817fca9d5d4f312,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69,12 +94,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 594f1b14e992def4a817fca9d5d4f312, type: 3}
---- !u!4 &4260829955537181408 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3115675977778339917, guid: 594f1b14e992def4a817fca9d5d4f312,
-    type: 3}
-  m_PrefabInstance: {fileID: 1160970541194099373}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3877454328980266508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2725773598843888801, guid: 594f1b14e992def4a817fca9d5d4f312,
@@ -86,7 +105,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4260829955537181408}
+    m_TransformParent: {fileID: 3877454328980266508}
     m_Modifications:
     - target: {fileID: -4216859302048453862, guid: 0eb49b502b68bcf4589741051fbd61e8,
         type: 3}
@@ -126,7 +145,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0eb49b502b68bcf4589741051fbd61e8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0eb49b502b68bcf4589741051fbd61e8,
         type: 3}
