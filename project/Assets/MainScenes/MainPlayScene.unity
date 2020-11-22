@@ -628,6 +628,8 @@ MonoBehaviour:
   - {fileID: 5909701007565027675, guid: 112abe186a6b24b469a0dc19158e7f86, type: 3}
   - {fileID: 5945026280493167762, guid: d018bf67ecba81645aa4cb9abc6d8062, type: 3}
   - {fileID: 3900901000377582674, guid: 6ed5ec0a8a6de3949a800dd6b27296ec, type: 3}
+  - {fileID: 8076543792211677691, guid: 5d98d6c433e0e124bbdd2e09d064d405, type: 3}
+  - {fileID: 7469893811445271952, guid: cf210ba530078dd43a7dbacbb9dd262d, type: 3}
   leftSidewalk: {fileID: 1068195633}
   rightSidewalk: {fileID: 1657549973}
   spawnRate: 6
@@ -655,7 +657,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068195633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: -10.21}
+  m_LocalPosition: {x: 0, y: 0.8, z: -10.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 814009321}
@@ -1012,7 +1014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657549973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 10.99}
+  m_LocalPosition: {x: 0, y: 0.8, z: 10.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 814009321}
@@ -1512,6 +1514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: LR
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750178751232705349, guid: 560e5e9687942f6458594d56f5930856,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4750178751232705350, guid: 560e5e9687942f6458594d56f5930856,
         type: 3}
