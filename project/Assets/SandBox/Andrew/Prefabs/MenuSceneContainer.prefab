@@ -329,7 +329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14b4f9303cd3cb44c96c20b9bec61b4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c828d9a4ce7495479dfbb05efcc0180, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b96c353626e41d04da8e7ed5d86feb3c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4be5e8f13848f2e47984cf26ccc6e1c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1450,7 +1450,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14b4f9303cd3cb44c96c20b9bec61b4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e31bb79388eb9d7478fdf473d0d15dad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1981,7 +1981,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14b4f9303cd3cb44c96c20b9bec61b4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ad62f6020418b44fa427109338a9fc7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4144,13 +4144,13 @@ PrefabInstance:
     - target: {fileID: 1123881319369792103, guid: 6b18c2b3fd9d91147b317e2c3fd0df85,
         type: 3}
       propertyPath: m_Text
-      value: Credits
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6798756627337843910, guid: 6b18c2b3fd9d91147b317e2c3fd0df85,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7460a06966283664aa3b342e2185ba09,
+      objectReference: {fileID: 21300000, guid: 2d021b7c290ad3f43a1c69443b568c46,
         type: 3}
     - target: {fileID: 7459467220850144701, guid: 6b18c2b3fd9d91147b317e2c3fd0df85,
         type: 3}
@@ -4161,7 +4161,7 @@ PrefabInstance:
     - target: {fileID: 7645874590026929640, guid: 6b18c2b3fd9d91147b317e2c3fd0df85,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b18c2b3fd9d91147b317e2c3fd0df85, type: 3}
