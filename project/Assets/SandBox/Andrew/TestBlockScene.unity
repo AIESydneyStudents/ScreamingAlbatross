@@ -236,8 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_spawnObjects:
-  - {fileID: 2376880067679347703, guid: 895bbd97454cd124a937ae1d3d119bec, type: 3}
-  - {fileID: 2376880067679347703, guid: 569d14f8869ede9459b05b5b9a86741e, type: 3}
+  - {fileID: 4471604829279100882, guid: 29ec415d8da0c2c4fb894c8997083558, type: 3}
 --- !u!65 &1294672168
 BoxCollider:
   m_ObjectHideFlags: 0
