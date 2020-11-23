@@ -15,6 +15,7 @@ public class MenuController : MonoBehaviour
             m_continueButton.SetActive(true);
         }*/
         m_vto.Reset();
+        Cursor.visible = true;
     }
     public void ButtonPressed()
     {
