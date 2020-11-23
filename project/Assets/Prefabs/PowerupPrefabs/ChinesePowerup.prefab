@@ -72,6 +72,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Chinese
       objectReference: {fileID: 0}
+    - target: {fileID: 7013285806273713030, guid: b515e5e7512fcaf41af64f941c1f102d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672231978995083318, guid: b515e5e7512fcaf41af64f941c1f102d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.70980394
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672231978995083318, guid: b515e5e7512fcaf41af64f941c1f102d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.21568629
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672231978995083318, guid: b515e5e7512fcaf41af64f941c1f102d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.19215688
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b515e5e7512fcaf41af64f941c1f102d, type: 3}
 --- !u!4 &917708304741685853 stripped
