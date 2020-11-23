@@ -64,7 +64,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5e1f09aaaf4c39b4889353cfd612edaa, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -180,6 +180,12 @@ PrefabInstance:
       propertyPath: m_Text
       value: Yes
       objectReference: {fileID: 0}
+    - target: {fileID: 209174831707815960, guid: 44c94bec207078e4bacd1bf6bb87c622,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5e1f09aaaf4c39b4889353cfd612edaa,
+        type: 3}
     - target: {fileID: 228880280308323363, guid: 44c94bec207078e4bacd1bf6bb87c622,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -407,6 +413,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 209174831707815960, guid: 44c94bec207078e4bacd1bf6bb87c622,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5e1f09aaaf4c39b4889353cfd612edaa,
+        type: 3}
     - target: {fileID: 228880280308323363, guid: 44c94bec207078e4bacd1bf6bb87c622,
         type: 3}
       propertyPath: m_LocalPosition.x
