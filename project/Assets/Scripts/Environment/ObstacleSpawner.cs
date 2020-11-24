@@ -27,7 +27,7 @@ public class ObstacleSpawner : MonoBehaviour
     int middleRepeats = 0;
     int usedLane = 0;
 
-    void Update()
+    void FixedUpdate()
     {
         if (spawnCount < 1)
         {
