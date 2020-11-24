@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7077329758494725834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37234643901546315}
+  - component: {fileID: 2587401198237182587}
+  m_Layer: 0
+  m_Name: BridgeCustomerSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37234643901546315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077329758494725834}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16, y: 4.8112416, z: -26.500002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2587401198237182587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077329758494725834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5367ca5f09a24d409647137d6ff1700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_customerList:
+  - {fileID: 6591823804493641838, guid: 2cfef3fb9bbec854eb9e099d34a26f6a, type: 3}
+  - {fileID: 5909701007565027675, guid: 112abe186a6b24b469a0dc19158e7f86, type: 3}
+  - {fileID: 5945026280493167762, guid: d018bf67ecba81645aa4cb9abc6d8062, type: 3}
+  - {fileID: 3900901000377582674, guid: 6ed5ec0a8a6de3949a800dd6b27296ec, type: 3}
+  - {fileID: 8076543792211677691, guid: 5d98d6c433e0e124bbdd2e09d064d405, type: 3}
+  - {fileID: 7469893811445271952, guid: cf210ba530078dd43a7dbacbb9dd262d, type: 3}
+  - {fileID: 9145996005729419543, guid: ac2363b93045e9144b78ff492cc993ca, type: 3}
+  - {fileID: 9173659033214705247, guid: c7aa5c992ab3e8748a7328d31aea5c32, type: 3}
+  - {fileID: 8524230511342313309, guid: 178d1c7b94b00c74e8f469a515b661be, type: 3}
