@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PlayUIController : MonoBehaviour
 {
-    [SerializeField] GameObject m_pauseContainer, m_gameOverContainer, m_mainPlayUIContainer, m_ingameInstructions, m_confirmationPrompt;
+    [SerializeField] GameObject m_pauseContainer, m_gameOverContainer, m_mainPlayUIContainer, m_ingameInstructions, m_confirmationPrompt, m_options;
     [SerializeField] Image fader;
 
 
@@ -18,15 +18,22 @@ public class PlayUIController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && m_gameOverContainer.activeInHierarchy == false)
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if (m_pauseContainer.activeInHierarchy)
+            if (!m_gameOverContainer.activeInHierarchy)
             {
-                UnpauseGame();
-            }
-            else
-            {
-                PauseGame();
+                if(m_options.activeInHierarchy)
+                {
+                    Back();
+                }
+                else if (m_pauseContainer.activeInHierarchy)
+                {
+                    UnpauseGame();
+                }
+                else
+                {
+                    PauseGame();
+                }
             }
         }
     }
@@ -80,7 +87,14 @@ public class PlayUIController : MonoBehaviour
 
     public void Options()
     {
+        m_pauseContainer.SetActive(false);
+        m_options.SetActive(true);
+    }
 
+    public void Back()
+    {
+        m_pauseContainer.SetActive(true);
+        m_options.SetActive(false);
     }
 
     private void ResetTimeScale(bool pause)

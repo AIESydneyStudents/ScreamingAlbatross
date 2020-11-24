@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8af2ba93408174a8602c0477e76f55, type: 3}
   m_Name: Volume Transfer Object
   m_EditorClassIdentifier: 
-  m_Master: 1
-  m_SFX: 0.86234766
-  m_Music: 0.041669168
+  m_Master: 0.5
+  m_SFX: 0.5
+  m_Music: 0.5
