@@ -13,7 +13,7 @@ public class WaveTranslation : MonoBehaviour
     {
         y = 0f;
     }
-    void Update()
+    void FixedUpdate()
     {
         Vector3 pos = transform.position;
         pos.y = 0.6f * Mathf.Sin(y) + 2;
