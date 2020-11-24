@@ -19,9 +19,12 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.LookAt(projectileTarget.transform);
-        transform.position += transform.forward * shootSpeed * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 3f, 90), transform.position.z);
+        if (projectileTarget != null)
+        {
+            transform.LookAt(projectileTarget.transform);
+            transform.position += transform.forward * shootSpeed * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 3f, 90), transform.position.z);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
