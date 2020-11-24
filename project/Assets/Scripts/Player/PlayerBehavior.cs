@@ -60,7 +60,6 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField] ScriptableFloat a_BritishTeaCount;
     [SerializeField] ScriptableFloat a_ChineseTeaCount;
     [SerializeField] ScriptableFloat a_IndianTeaCount;
-    [SerializeField] ScriptableFloat m_totalBritishCount, m_totalIndianCount, m_totalChineseCount;
 
     public Animation turningAnimations;
 
@@ -214,19 +213,16 @@ public class PlayerBehavior : MonoBehaviour
         if (other.gameObject.tag == "British")
         {
             a_BritishTeaCount.m_Value++;
-            m_totalBritishCount.m_Value++;
             PickUp(other);
         }
         if (other.gameObject.tag == "Chinese")
         {
             a_ChineseTeaCount.m_Value++;
-            m_totalChineseCount.m_Value++;
             PickUp(other);
         }
         if (other.gameObject.tag == "Indian")
         {
             a_IndianTeaCount.m_Value++;
-            m_totalIndianCount.m_Value++;
             PickUp(other);
         }
     }

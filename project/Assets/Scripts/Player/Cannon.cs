@@ -19,7 +19,7 @@ public class Cannon : MonoBehaviour
     [SerializeField] float rotationLimitNegative = 270;
 
     [SerializeField] ScriptableSoundObject m_Firing;
-    [SerializeField] ScriptableFloat m_totalTeaCount;
+    [SerializeField] ScriptableFloat m_totalTeaCount, m_totalBritishCount, m_totalIndianCount, m_totalChineseCount;
     [SerializeField] ScriptableInt m_comboObject;
 
     [SerializeField] ScriptableFloat BritishTeaAmount;
@@ -81,16 +81,19 @@ public class Cannon : MonoBehaviour
                 {
                     LoadProjectile(1);
                     BritishTeaAmount.m_Value--;
+                    m_totalBritishCount.m_Value++;
                 }
                 else if (target.tag == "ChineseCustomer" && ChineseTeaAmount.m_Value > 0)
                 {
                     LoadProjectile(2);
                     ChineseTeaAmount.m_Value--;
-                }
+                    m_totalChineseCount.m_Value++;
+                 }
                 else if (target.tag == "IndianCustomer" && IndianTeaAmount.m_Value > 0)
                 {
                     LoadProjectile(3);
                     IndianTeaAmount.m_Value--;
+                    m_totalIndianCount.m_Value++;
                 }
                 else
                     LoadProjectile(0);
