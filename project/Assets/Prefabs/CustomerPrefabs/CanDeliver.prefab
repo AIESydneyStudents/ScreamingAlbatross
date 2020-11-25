@@ -93,9 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69c2ed5bda1a114e9068615507e544d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customer: {fileID: 0}
   height: 6
   speed: {fileID: 11400000, guid: 3f41cd3e243230149a53d879937879a0, type: 2}
-  fallSpeed: 200
+  fallSpeed: 400
   spinSpeed: 100
 --- !u!65 &880972784990948977
 BoxCollider:

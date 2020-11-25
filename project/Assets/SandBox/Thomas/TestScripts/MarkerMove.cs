@@ -17,16 +17,16 @@ public class MarkerMove : MonoBehaviour
         if (customer.projectileCollided == false)
         {
 
-            if (transform.position.y > 25)
+            if (transform.position.y > customer.gameObject.transform.position.y + 25)
                 transform.position = new Vector3(transform.position.x, transform.position.y - fallSpeed * Time.deltaTime, transform.position.z);
 
-            else if (transform.position.y > 15)
+            else if (transform.position.y > customer.gameObject.transform.position.y + 15)
                 transform.position = new Vector3(transform.position.x, (transform.position.y - fallSpeed * Time.deltaTime * 0.2f), transform.position.z);
 
-            else if (transform.position.y > 10)
+            else if (transform.position.y > customer.gameObject.transform.position.y + 10)
                 transform.position = new Vector3(transform.position.x, (transform.position.y - fallSpeed * Time.deltaTime * 0.1f), transform.position.z);
 
-            else if (transform.position.y > height)
+            else if (transform.position.y > customer.gameObject.transform.position.y + height)
                 transform.position = new Vector3(transform.position.x, (transform.position.y - fallSpeed * Time.deltaTime * 0.05f), transform.position.z);
         }
         else
