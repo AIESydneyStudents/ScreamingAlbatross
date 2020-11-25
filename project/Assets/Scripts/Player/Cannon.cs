@@ -61,24 +61,28 @@ public class Cannon : MonoBehaviour
                     if (target.tag == "Customer")
                     {
                         LoadProjectile(0);
+                        target.GetComponent<CustomerLogic>().UpdateScore(false);
                     }
                     else if (target.tag == "BritishCustomer" && BritishTeaAmount.m_Value > 0)
                     {
                         LoadProjectile(1);
                         BritishTeaAmount.m_Value--;
                         m_totalBritishCount.m_Value++;
+                        target.GetComponent<CustomerLogic>().UpdateScore(true);
                     }
                     else if (target.tag == "ChineseCustomer" && ChineseTeaAmount.m_Value > 0)
                     {
                         LoadProjectile(2);
                         ChineseTeaAmount.m_Value--;
                         m_totalChineseCount.m_Value++;
+                        target.GetComponent<CustomerLogic>().UpdateScore(true);
                     }
                     else if (target.tag == "IndianCustomer" && IndianTeaAmount.m_Value > 0)
                     {
                         LoadProjectile(3);
                         IndianTeaAmount.m_Value--;
                         m_totalIndianCount.m_Value++;
+                        target.GetComponent<CustomerLogic>().UpdateScore(true);
                     }
                     else
                         LoadProjectile(0);
@@ -86,7 +90,6 @@ public class Cannon : MonoBehaviour
                     //playerCar.teaAmount++;
                     m_pickupEvent.Raise();
                     m_totalTeaCount.m_Value++;
-                    target.GetComponent<CustomerLogic>().UpdateScore();
                     target = null;
                 }
             }else

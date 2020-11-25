@@ -4,10 +4,9 @@ public class CustomerLogic : MonoBehaviour
 {
     [SerializeField] ScriptableInt m_scoreObject, m_comboObject;
     [SerializeField] ScriptableSoundObject m_cheeringSounds;
-    [SerializeField] bool m_IsSpecial;
     [SerializeField] GameEvent m_updateScore;
     [SerializeField] ParticleSystem m_myEffect;
-    public void UpdateScore()
+    public void UpdateScore(bool _isSpecial)
     {
         int _score = 1;
 
@@ -18,7 +17,7 @@ public class CustomerLogic : MonoBehaviour
             m_comboObject.m_Value++;
         }
 
-        if(m_IsSpecial)
+        if(_isSpecial)
         {
             _score *= 2;
         }
