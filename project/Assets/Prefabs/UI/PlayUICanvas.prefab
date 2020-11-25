@@ -1878,7 +1878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3770381786150368355
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5183,42 +5183,42 @@ PrefabInstance:
     - target: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 131
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1046975647854975282, guid: 0736b05d2b0cfb34889363d726603d14,
         type: 3}
@@ -5234,6 +5234,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TutPanel UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412547286572867721, guid: 0736b05d2b0cfb34889363d726603d14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3770381786150368352}
+    - target: {fileID: 4412547286572867721, guid: 0736b05d2b0cfb34889363d726603d14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisableInstructions
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412547286572867721, guid: 0736b05d2b0cfb34889363d726603d14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0736b05d2b0cfb34889363d726603d14, type: 3}

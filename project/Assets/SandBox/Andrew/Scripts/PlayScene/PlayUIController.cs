@@ -11,7 +11,6 @@ public class PlayUIController : MonoBehaviour
     private void Start()
     {
         m_ingameInstructions.SetActive(true);
-        Cursor.visible = false;
         fader.CrossFadeAlpha(0, 3f, true);
         Invoke("DisableInstructions", 8);
     }
@@ -20,7 +19,11 @@ public class PlayUIController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!m_gameOverContainer.activeInHierarchy)
+            if(m_ingameInstructions.activeInHierarchy)
+            {
+                DisableInstructions();
+            }
+            else if (!m_gameOverContainer.activeInHierarchy)
             {
                 if(m_options.activeInHierarchy)
                 {
@@ -109,8 +112,9 @@ public class PlayUIController : MonoBehaviour
         }
     }
 
-    private void DisableInstructions()
+    public void DisableInstructions()
     {
         m_ingameInstructions.SetActive(false);
+        Cursor.visible = false;
     }
 }

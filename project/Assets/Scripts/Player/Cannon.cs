@@ -85,7 +85,10 @@ public class Cannon : MonoBehaviour
                         target.GetComponent<CustomerLogic>().UpdateScore(true);
                     }
                     else
+                    {
                         LoadProjectile(0);
+                        target.GetComponent<CustomerLogic>().UpdateScore(false);
+                    }
 
                     //playerCar.teaAmount++;
                     m_pickupEvent.Raise();
