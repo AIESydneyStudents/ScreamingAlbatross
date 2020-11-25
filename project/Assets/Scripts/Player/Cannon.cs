@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
@@ -18,7 +16,7 @@ public class Cannon : MonoBehaviour
     [SerializeField] float rotationLimitPositive = 80;
     [SerializeField] float rotationLimitNegative = 270;
 
-    [SerializeField] ScriptableSoundObject m_Firing;
+    [SerializeField] ScriptableSoundObject m_Firing, m_Miss;
     [SerializeField] ScriptableFloat m_totalTeaCount, m_totalBritishCount, m_totalIndianCount, m_totalChineseCount;
     [SerializeField] ScriptableInt m_comboObject;
 
@@ -28,18 +26,8 @@ public class Cannon : MonoBehaviour
 
     [SerializeField] GameEvent m_pickupEvent;
 
-    private void Start()
+    void Update()
     {
-        
-    }
-
-    void FixedUpdate()
-    {
-        if (transform.localEulerAngles.y < rotationLimitNegative && transform.localEulerAngles.y > rotationLimitPositive)
-        {
-            target = null;
-        }
-
         if (target != null)
         {
             speed = 10;
@@ -56,54 +44,61 @@ public class Cannon : MonoBehaviour
             Quaternion lookAt = Quaternion.Euler(0, 0, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, lookAt, Time.deltaTime * speed);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && target == null)
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            m_comboObject.Reset();
+            if (target != null)
+            {
+                if (target.beenDelivered == false)
+                {
+                    m_Firing.Play();
+                    target.beenDelivered = true;
+
+                    Destroy(Instantiate(smokeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1);
+                    Destroy(Instantiate(explodeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1);
+
+
+                    if (target.tag == "Customer")
+                    {
+                        LoadProjectile(0);
+                    }
+                    else if (target.tag == "BritishCustomer" && BritishTeaAmount.m_Value > 0)
+                    {
+                        LoadProjectile(1);
+                        BritishTeaAmount.m_Value--;
+                        m_totalBritishCount.m_Value++;
+                    }
+                    else if (target.tag == "ChineseCustomer" && ChineseTeaAmount.m_Value > 0)
+                    {
+                        LoadProjectile(2);
+                        ChineseTeaAmount.m_Value--;
+                        m_totalChineseCount.m_Value++;
+                    }
+                    else if (target.tag == "IndianCustomer" && IndianTeaAmount.m_Value > 0)
+                    {
+                        LoadProjectile(3);
+                        IndianTeaAmount.m_Value--;
+                        m_totalIndianCount.m_Value++;
+                    }
+                    else
+                        LoadProjectile(0);
+
+                    //playerCar.teaAmount++;
+                    m_pickupEvent.Raise();
+                    m_totalTeaCount.m_Value++;
+                    target.GetComponent<CustomerLogic>().UpdateScore();
+                    target = null;
+                }
+            }else
+            {
+                m_comboObject.Reset();
+                m_Miss.Play();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && target != null)
+        if (transform.localEulerAngles.y < rotationLimitNegative && transform.localEulerAngles.y > rotationLimitPositive)
         {
-            
-            if (target.beenDelivered == false)
-            {
-                m_Firing.Play();
-                target.beenDelivered = true;
-                
-                Destroy(Instantiate(smokeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1); 
-                Destroy(Instantiate(explodeParticle.gameObject, particleOffset.position, particleOffset.rotation), 1);
-
-
-                if (target.tag == "Customer")
-                {
-                    LoadProjectile(0);
-                }
-                else if (target.tag == "BritishCustomer" && BritishTeaAmount.m_Value > 0)
-                {
-                    LoadProjectile(1);
-                    BritishTeaAmount.m_Value--;
-                    m_totalBritishCount.m_Value++;
-                }
-                else if (target.tag == "ChineseCustomer" && ChineseTeaAmount.m_Value > 0)
-                {
-                    LoadProjectile(2);
-                    ChineseTeaAmount.m_Value--;
-                    m_totalChineseCount.m_Value++;
-                 }
-                else if (target.tag == "IndianCustomer" && IndianTeaAmount.m_Value > 0)
-                {
-                    LoadProjectile(3);
-                    IndianTeaAmount.m_Value--;
-                    m_totalIndianCount.m_Value++;
-                }
-                else
-                    LoadProjectile(0);
-
-                //playerCar.teaAmount++;
-                m_pickupEvent.Raise();
-                m_totalTeaCount.m_Value++;
-                target.GetComponent<CustomerLogic>().UpdateScore();
-                target = null;
-            }
+            target = null;
         }
     }
     private void LoadProjectile(int whichTea)

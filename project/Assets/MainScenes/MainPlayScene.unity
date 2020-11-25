@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -211,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 5353425353106487261, guid: e256ab0a5248ee248bcff08df1fb7614,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5353425353106487261, guid: e256ab0a5248ee248bcff08df1fb7614,
         type: 3}
@@ -312,7 +312,7 @@ Transform:
   - {fileID: 1327171624}
   - {fileID: 306525649}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &306525648
 GameObject:
@@ -352,102 +352,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4866526539953840649}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &437018018
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 437018020}
-  - component: {fileID: 437018019}
-  m_Layer: 0
-  m_Name: CannonMount
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &437018019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437018018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99e778dec7ee6ec4fb851e8569ed6521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smokeParticle: {fileID: 5961879990887526941, guid: e99912886b21d8143ad6abb54abf8e35,
-    type: 3}
-  explodeParticle: {fileID: 7355761905581100541, guid: e68d9252a1670a748a5a98520e3430d5,
-    type: 3}
-  playerCar: {fileID: 0}
-  target: {fileID: 0}
-  projectiles:
-  - {fileID: 711495001122036897, guid: 9cddcbde3a6760146ab87fec1253b5f7, type: 3}
-  - {fileID: 3518418702662262498, guid: c3a4fd3c6c589e248b9dd876097f23af, type: 3}
-  - {fileID: 7826310542112425702, guid: 56562d6d77324964cb29b69fa9a157e6, type: 3}
-  - {fileID: 5379730371416983817, guid: dcf245f1c61ca7344852a4dbc370d731, type: 3}
-  projectileSpeed: 50
-  particleOffset: {fileID: 461533699}
-  rotationLimitPositive: 80
-  rotationLimitNegative: 270
-  m_Firing: {fileID: 11400000, guid: a3a41dfff93cd7349a75c7412c0ccfaa, type: 2}
-  m_totalTeaCount: {fileID: 11400000, guid: 362424a966bfde6418096e5139e18342, type: 2}
-  m_comboObject: {fileID: 11400000, guid: 7cfa5e8adf1aed44faff8fbf2611285a, type: 2}
-  BritishTeaAmount: {fileID: 11400000, guid: 1b5056248236c7c4f84473e085753d41, type: 2}
-  ChineseTeaAmount: {fileID: 11400000, guid: cd78a739e5b8c104b93c5588c6f58eb3, type: 2}
-  IndianTeaAmount: {fileID: 11400000, guid: a8bad68b63848614ea0058ab17c9eb36, type: 2}
-  m_pickupEvent: {fileID: 11400000, guid: cec95a073b2d90d42a9e1609df275f46, type: 2}
---- !u!4 &437018020
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437018018}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.279999, y: 3.34, z: 0}
-  m_LocalScale: {x: 0.92764, y: 0.92764, z: 0.92764}
-  m_Children:
-  - {fileID: 461533699}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &461533698
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 461533699}
-  m_Layer: 0
-  m_Name: ParticleOffset
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &461533699
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461533698}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -4.991157, y: 1.0995642, z: -0.053747147}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 437018020}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: -90.00001, z: 0}
 --- !u!4 &606978940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 606978940, guid: e6e60e79ab434bb43bd6c289f3669ead,
@@ -549,7 +453,7 @@ PrefabInstance:
     - target: {fileID: 3397619622637369896, guid: dbc54132dc0226242879526119f2523f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3397619622637369896, guid: dbc54132dc0226242879526119f2523f,
         type: 3}
@@ -756,7 +660,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1193205325
 GameObject:
@@ -786,7 +690,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327171623
 GameObject:
@@ -1115,7 +1019,7 @@ Transform:
   m_LocalScale: {x: 32.561077, y: 32.561077, z: 94.86745}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1747829407
 GameObject:
@@ -1150,7 +1054,7 @@ Transform:
   - {fileID: 610291888}
   - {fileID: 680411226}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1789629097 stripped
 Transform:
@@ -1272,7 +1176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 17.017, y: -90.137, z: 0.001}
 --- !u!114 &1801308476
 MonoBehaviour:
@@ -1601,7 +1505,7 @@ PrefabInstance:
     - target: {fileID: 4750178752302040650, guid: 560e5e9687942f6458594d56f5930856,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4750178752302040650, guid: 560e5e9687942f6458594d56f5930856,
         type: 3}
@@ -1623,59 +1527,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerContainer
       objectReference: {fileID: 0}
-    - target: {fileID: 4750178752693130512, guid: 560e5e9687942f6458594d56f5930856,
-        type: 3}
-      propertyPath: projectiles.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4750178752693130512, guid: 560e5e9687942f6458594d56f5930856,
-        type: 3}
-      propertyPath: BritishTeaAmount
-      value: 
-      objectReference: {fileID: 11400000, guid: 1b5056248236c7c4f84473e085753d41,
-        type: 2}
-    - target: {fileID: 4750178752693130512, guid: 560e5e9687942f6458594d56f5930856,
-        type: 3}
-      propertyPath: ChineseTeaAmount
-      value: 
-      objectReference: {fileID: 11400000, guid: cd78a739e5b8c104b93c5588c6f58eb3,
-        type: 2}
-    - target: {fileID: 4750178752693130512, guid: 560e5e9687942f6458594d56f5930856,
-        type: 3}
-      propertyPath: IndianTeaAmount
-      value: 
-      objectReference: {fileID: 11400000, guid: e6809ea73ee61544898850ef27299bc0,
-        type: 2}
-    - target: {fileID: 4750178752693130512, guid: 560e5e9687942f6458594d56f5930856,
-        type: 3}
-      propertyPath: m_pickupEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: cec95a073b2d90d42a9e1609df275f46,
-        type: 2}
-    - target: {fileID: 4750178752693130512, guid: 560e5e9687942f6458594d56f5930856,
-        type: 3}
-      propertyPath: projectiles.Array.data[0]
-      value: 
-      objectReference: {fileID: 711495001122036897, guid: 9cddcbde3a6760146ab87fec1253b5f7,
-        type: 3}
-    - target: {fileID: 4750178752693130512, guid: 560e5e9687942f6458594d56f5930856,
-        type: 3}
-      propertyPath: projectiles.Array.data[1]
-      value: 
-      objectReference: {fileID: 3518418702662262498, guid: c3a4fd3c6c589e248b9dd876097f23af,
-        type: 3}
-    - target: {fileID: 4750178752693130512, guid: 560e5e9687942f6458594d56f5930856,
-        type: 3}
-      propertyPath: projectiles.Array.data[2]
-      value: 
-      objectReference: {fileID: 7826310542112425702, guid: 56562d6d77324964cb29b69fa9a157e6,
-        type: 3}
-    - target: {fileID: 4750178752693130512, guid: 560e5e9687942f6458594d56f5930856,
-        type: 3}
-      propertyPath: projectiles.Array.data[3]
-      value: 
-      objectReference: {fileID: 5379730371416983817, guid: dcf245f1c61ca7344852a4dbc370d731,
-        type: 3}
     - target: {fileID: 5405375776829330358, guid: 560e5e9687942f6458594d56f5930856,
         type: 3}
       propertyPath: Speed

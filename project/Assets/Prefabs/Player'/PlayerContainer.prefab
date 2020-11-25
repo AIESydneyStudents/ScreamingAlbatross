@@ -835,6 +835,7 @@ MonoBehaviour:
   rotationLimitPositive: 80
   rotationLimitNegative: 270
   m_Firing: {fileID: 11400000, guid: a3a41dfff93cd7349a75c7412c0ccfaa, type: 2}
+  m_Miss: {fileID: 11400000, guid: 36e81b8c4d4ac46459622adc19e88d40, type: 2}
   m_totalTeaCount: {fileID: 11400000, guid: 362424a966bfde6418096e5139e18342, type: 2}
   m_totalBritishCount: {fileID: 11400000, guid: 2066857b9eeedd4438a82e0bf1b43d84,
     type: 2}
