@@ -11,7 +11,7 @@ public class PlayUIController : MonoBehaviour
     private void Start()
     {
         m_ingameInstructions.SetActive(true);
-        fader.CrossFadeAlpha(0, 3f, true);
+        Invoke("FaderToClear", 1);
         Invoke("DisableInstructions", 8);
     }
 
@@ -117,4 +117,10 @@ public class PlayUIController : MonoBehaviour
         m_ingameInstructions.SetActive(false);
         Cursor.visible = false;
     }
+    
+    void FaderToClear()
+    {
+        fader.CrossFadeAlpha(0, 3, true);
+    }
+
 }

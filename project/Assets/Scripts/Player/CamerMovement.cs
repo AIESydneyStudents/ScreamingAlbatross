@@ -9,7 +9,7 @@ public class CamerMovement : MonoBehaviour
     private float m_velocity = 0.0f;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 pos = transform.position;
         float targetZ = Mathf.Clamp(target.transform.position.z, -1f, 1f);
