@@ -35,7 +35,7 @@ public class DifficultySpeed : MonoBehaviour
             }
             if (speed.m_Value > 80f)
             {
-a                isRunning = false;
+                isRunning = false;
             }
         }
 
